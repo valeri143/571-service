@@ -4,10 +4,10 @@
 //     StyledH1,
 //     StyledH2,
 //   } from 'pages/Home/Home.styled';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 export const NotFound = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <h1>OOOps</h1>
     //   <BackGroundImage>
