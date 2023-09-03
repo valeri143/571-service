@@ -109,6 +109,7 @@ img{
 button {
   cursor: pointer;
   font-family: inherit;
+  color: var(--primary-color);
 }
 section{
   background-color: var(--background-color);

@@ -1,21 +1,21 @@
-import { NavLink } from 'react-router-dom';
+import {
+  StyledBackGroundImage,
+  StyledButton,
+  StyledContainer,
+  StyledH1,
+  StyledP,
+} from './Hero.styled';
 
-export const Hero = () => {
+export const Hero = ({ content }) => {
   return (
-    <div>
-      <ul>
-        <li>
-          <div>
-            <NavLink to={'/ua/contacts'}>HomePage</NavLink>
-          </div>
-        </li>
-        <li>
-          <div></div>
-        </li>
-        <li>
-          <div></div>
-        </li>
-      </ul>
-    </div>
+    <section>
+      <StyledBackGroundImage>
+        <StyledContainer>
+          <StyledH1>{content.h1}</StyledH1>
+          <StyledP>{content.p}</StyledP>
+          <StyledButton>{content.buttonText}</StyledButton>
+        </StyledContainer>
+      </StyledBackGroundImage>
+    </section>
   );
 };
