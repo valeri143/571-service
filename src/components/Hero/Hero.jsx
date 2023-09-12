@@ -1,5 +1,4 @@
 import {
-  StyledBackGroundImage,
   StyledButton,
   StyledContainer,
   StyledH1,
@@ -8,14 +7,12 @@ import {
 
 export const Hero = ({ content }) => {
   return (
-    <section>
-      <StyledBackGroundImage>
-        <StyledContainer>
-          <StyledH1>{content.h1}</StyledH1>
-          <StyledP>{content.p}</StyledP>
-          <StyledButton>{content.buttonText}</StyledButton>
-        </StyledContainer>
-      </StyledBackGroundImage>
+    <section id="hero">
+      <StyledContainer>
+        <StyledH1>{content.h1}</StyledH1>
+        <StyledP>{content.p}</StyledP>
+        <StyledButton type="button">{content.buttonText}</StyledButton>
+      </StyledContainer>
     </section>
   );
 };

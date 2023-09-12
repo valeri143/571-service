@@ -21,7 +21,7 @@ import sprite from '../../images/sprite.svg';
 
 export const SectionServices = ({ content }) => {
   return (
-    <section>
+    <section id="services">
       <StyledContainer>
         <StyledBenefitsUl>
           <li>

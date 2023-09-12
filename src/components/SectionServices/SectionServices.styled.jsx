@@ -7,7 +7,6 @@ export const StyledContainer = styled.div`
   outline: solid tomato;
   max-width: 1920px;
   padding: 200px 185px 135px 185px;
-  margin-top: 680px;
   position: relative;
 `;
 export const StyledBenefitsUl = styled.ul`
@@ -31,6 +30,7 @@ export const StyledBenefitsDiv = styled.div`
 `;
 
 export const StyledNumP = styled.p`
+  font-family: Gilroy Bold;
   color: var(--accent-color);
   font-size: 48px;
   line-height: 1.2;
@@ -52,12 +52,14 @@ export const StyledBenefitsSpan = styled.span`
 `;
 
 export const StyledH2 = styled.h2`
+  font-family: Gilroy Bold;
   font-size: 40px;
   line-height: 1.2;
   margin-bottom: 5px;
 `;
 
 export const StyledP = styled.p`
+  font-family: Gilroy Regular;
   width: 739px;
   line-height: 2;
   margin-bottom: 40px;
@@ -91,6 +93,7 @@ export const StyledSvg = styled.svg`
 
 export const StyledH3 = styled.h3`
   text-align: center;
+  font-family: Gilroy Bold;
   font-size: 24px;
   line-height: 1.3;
   margin-bottom: 11px;
@@ -112,6 +115,7 @@ export const StyledServicesDiv = styled.div`
 export const StyledNavLink = styled(NavLink)`
   width: 200px;
   height: 58px;
+  font-family: Gilroy Bold;
   border-radius: 666px;
   background: var(--button-color);
   box-shadow: 0px 21px 20px -17px rgba(253, 199, 5, 0.65);
