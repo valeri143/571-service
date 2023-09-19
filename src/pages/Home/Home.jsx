@@ -2,17 +2,16 @@ import { useEffect, useState } from 'react';
 import { Hero } from 'components/Hero/Hero';
 import { SectionServices } from 'components/SectionServices/SectionServices';
 import { SectionCertifications } from 'components/SectionCertifications/SectionCertifications';
-import { heroEnContent, heroRuContent, heroUaContent } from 'components/Hero/';
+import { heroRuContent, heroUaContent } from 'components/Hero/';
 import {
-  servicesEnContent,
   servicesRuContent,
   servicesUaContent,
 } from 'components/SectionServices';
 import {
-  certificationsEnContent,
   certificationsRuContent,
   certificationsUaContent,
 } from 'components/SectionCertifications';
+import { Form } from 'components/Form/Form';
 
 const Home = ({ lang }) => {
   const [heroContent, setHeroContent] = useState(null);
@@ -33,12 +32,6 @@ const Home = ({ lang }) => {
         setCertificationsContent(certificationsUaContent);
         break;
 
-      case 'en':
-        setHeroContent(heroEnContent);
-        setServicesContent(servicesEnContent);
-        setCertificationsContent(certificationsEnContent);
-        break;
-
       default:
         break;
     }
@@ -47,9 +40,10 @@ const Home = ({ lang }) => {
     <>
       {heroContent && <Hero content={heroContent} />}
       {servicesContent && <SectionServices content={servicesContent} />}
-      {certificationsContent && (
+      {/* {certificationsContent && (
         <SectionCertifications content={certificationsContent} />
       )}
+      {certificationsContent && <Form />} */}
     </>
   );
 };

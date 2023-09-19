@@ -1,68 +1,13 @@
 @import-normalize; /* bring in normalize.css styles */
-/* FONTS */
-@font-face {
-  font-family: 'Gilroy Light';
-  src: url('./fonts/Gilroy-Light.eot');
-  src: url('./fonts/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
-  url('./fonts/Gilroy-Light.woff') format('woff'),
-  url('./fonts/Gilroy-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  }
 
-  @font-face {
-    font-family: 'Gilroy Bold';
-    src: url('./fonts/Gilroy-Bold.eot');
-    src: url('./fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
-    url('./fonts/Gilroy-Bold.woff') format('woff'),
-    url('./fonts/Gilroy-Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    }
-
-  @font-face {
-      font-family: 'Gilroy Semibold';
-      src: url('./fonts/Gilroy-SemiBold.eot');
-      src: url('./fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Gilroy-SemiBold.woff') format('woff'),
-      url('./fonts/Gilroy-SemiBold.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    @font-face {
-      font-family: 'Gilroy Regular';
-      src: url('./fonts/Gilroy-Regular.eot');
-      src: url('./fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
-      url('./fonts/Gilroy-Regular.woff') format('woff'),
-      url('./fonts/Gilroy-Regular.ttf') format('truetype');
-      font-weight: normal;
-      font-style: normal;
-      }
-
-      @font-face {
-        font-family: 'Gilroy Medium';
-        src: url('./fonts/Gilroy-Medium.eot');
-        src: url('./fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
-        url('./fonts/Gilroy-Medium.woff') format('woff'),
-        url('./fonts/Gilroy-Medium.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-        }
-
-        @font-face {
-          font-family: 'Roboto Light';
-          src: url('./fonts/Roboto-Light.eot');
-          src: url('./fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
-          url('./fonts/Roboto-Light.woff') format('woff'),
-          url('./fonts/Roboto-Light.ttf') format('truetype');
-          font-weight: normal;
-          font-style: normal;
-          }
+/* font-family: 'Abel', sans-serif; */
+/* font-family: 'Ubuntu', sans-serif; */
 
 :root{
-  --background-color:#fff;
-  --primary-color: #222222;
+  --background-color:#F5F5F5;
+  --primary-color: #242424;
+  --light-color: #fff;
+  --grey-color: #F1F1F1;
   --accent-color: #FDC70D;
   --button-color: #FDC705;
   --animation-cubic:cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,7 +19,8 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Gilroy Light', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
   font-size: 18px;
   color: var(--primary-color);
   -webkit-font-smoothing: antialiased;
@@ -95,7 +41,7 @@ a{
 
 ul,h1,h2,p,h3, h4,h5{
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
   color: var(--primary-color);
@@ -109,10 +55,36 @@ img{
 button {
   cursor: pointer;
   font-family: inherit;
+  font-size: inherit;
   color: var(--primary-color);
 }
 section{
   background-color: var(--background-color);
 }
 
+/* .container{
+  padding: 50px 15px 80px 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+   outline: solid tomato;   
+  position: relative;
+}
+@media screen and (min-width: 390px) {
+.container {
+  min-width: 390px;
+}
+}
 
+@media screen and (min-width: 768px) {
+.container {
+  width: 768px;
+}
+}
+
+@media screen and (min-width: 1512px) {
+.container {
+  width: 1512px;
+  padding: 100px 156px 150px 156px;
+}}
+
+ */

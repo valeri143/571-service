@@ -2,11 +2,7 @@ import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Header } from './Header/Header';
 import { useEffect, useState } from 'react';
-import {
-  headerEnContent,
-  headerRuContent,
-  headerUaContent,
-} from './Header/index';
+import { headerRuContent, headerUaContent } from './Header/index';
 // import { ThreeDots } from 'react-loader-spinner';
 
 export const Layout = ({ lang }) => {
@@ -20,10 +16,6 @@ export const Layout = ({ lang }) => {
 
       case 'ua':
         setContent(headerUaContent);
-        break;
-
-      case 'en':
-        setContent(headerEnContent);
         break;
 
       default:

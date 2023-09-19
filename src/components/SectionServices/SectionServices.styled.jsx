@@ -2,133 +2,163 @@ import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const StyledContainer = styled.div`
+  padding: 80px 15px 80px 15px;
   margin: 0 auto;
   box-sizing: border-box;
   outline: solid tomato;
-  max-width: 1920px;
-  padding: 200px 185px 135px 185px;
   position: relative;
+  text-align: left;
+  @media screen and (min-width: 360px) {
+    min-width: 360px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1512px) {
+    width: 1512px;
+    padding: 100px 156px 150px 156px;
+  }
 `;
-export const StyledBenefitsUl = styled.ul`
-  display: flex;
-  gap: 30px;
-  justify-content: center;
+
+export const StyledBgSvg = styled.svg`
   position: absolute;
-  top: -65px;
-`;
-
-export const StyledBenefitsDiv = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  width: 370px;
-  height: 130px;
-  padding-left: 31px;
-  border-radius: 8px;
-  background: var(--background-color);
-  box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
-`;
-
-export const StyledNumP = styled.p`
-  font-family: Gilroy Bold;
-  color: var(--accent-color);
-  font-size: 48px;
-  line-height: 1.2;
-`;
-
-export const StyledBenefitsP = styled.p`
-  font-size: 24px;
-`;
-
-export const StyledLineDiv = styled.div`
-  width: 1.5px;
-  height: 98px;
-  background-color: #dadada;
-`;
-
-export const StyledBenefitsSpan = styled.span`
-  font-size: 24px;
-  font-family: 'Gilroy Bold';
-`;
-
-export const StyledH2 = styled.h2`
-  font-family: Gilroy Bold;
-  font-size: 40px;
-  line-height: 1.2;
-  margin-bottom: 5px;
-`;
-
-export const StyledP = styled.p`
-  font-family: Gilroy Regular;
-  width: 739px;
-  line-height: 2;
-  margin-bottom: 40px;
+  top: 24px;
+  right: 7px;
 `;
 
 export const StyledDiv = styled.div`
-  width: 370px;
-  height: 595px;
-  border-radius: 8px;
-  background: var(--background-color);
-  box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
-  padding: 39px 28px 0px 32px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 `;
 
 export const StyledCircleDiv = styled.div`
-  width: 120px;
-  height: 120px;
-  border-radius: 600px;
-  background-color: #f5f5f5;
-  margin-left: auto;
-  margin-right: auto;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: linear-gradient(95deg, #fdc70d 0%, #fdab0d 100%);
+`;
+
+export const StyledH2 = styled.h2`
+  text-align: right;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.5;
+`;
+
+export const StyledH3 = styled.h3`
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
   position: relative;
-  margin-bottom: 24px;
+  z-index: 2;
+  margin-bottom: 20px;
+`;
+
+export const StyledSpan = styled.span`
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-transform: uppercase;
+`;
+
+export const StyledP = styled.p`
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
 `;
 
 export const StyledSvg = styled.svg`
   position: absolute;
-  top: 25px;
-  left: 25px;
+  top: 20px;
+  right: 20px;
 `;
 
-export const StyledH3 = styled.h3`
-  text-align: center;
-  font-family: Gilroy Bold;
-  font-size: 24px;
-  line-height: 1.3;
-  margin-bottom: 11px;
+export const StyledH4 = styled.h4`
+  color: var(--light-color);
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 16px;
+`;
+export const StyledH402 = styled.h4`
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-left: 16px;
+`;
+
+export const StyledServicesDiv = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 360px;
+  max-height: 374px;
+  border-radius: 8px;
+  background: #242424;
+  box-shadow: 10px 10px 15px 0px rgba(71, 71, 71, 0.2);
+  padding-bottom: 16px;
+  cursor: pointer;
+`;
+
+export const StyledServicesDiv02 = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 360px;
+  max-height: 374px;
+  border-radius: 8px;
+  background: radial-gradient(50% 50% at 50% 50%, #efd98f 0%, #ffc600 100%);
+  box-shadow: 10px 10px 15px 0px rgba(71, 71, 71, 0.2);
+  padding-bottom: 16px;
+  cursor: pointer;
 `;
 
 export const StyledServicesUl = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  margin-bottom: 52px;
-`;
-
-export const StyledServicesDiv = styled.div`
-  display: flex;
-  gap: 10px;
+  justify-content: center;
   align-items: center;
+  gap: 30px;
 `;
 
 export const StyledNavLink = styled(NavLink)`
-  width: 200px;
-  height: 58px;
-  font-family: Gilroy Bold;
-  border-radius: 666px;
-  background: var(--button-color);
-  box-shadow: 0px 21px 20px -17px rgba(253, 199, 5, 0.65);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
+  color: var(--light-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  display: inline-flex;
+  padding: 5px 10px;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+`;
+
+export const StyledNavLink02 = styled(NavLink)`
+  display: inline-flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
   cursor: pointer;
 `;
 
 export const StyledUl = styled.ul`
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 4px;
+  row-gap: 10px;
+  margin-left: 16px;
 `;
