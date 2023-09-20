@@ -16,14 +16,9 @@ import {
   StyledMenuButton,
   StyledMenuNavLinkUl,
   StyledNavLink,
-  StyledNavLinkUl,
-  StyledNavUL,
-  StyledP,
   StyledSvg,
-  StyledSvgUp,
   StyledTel,
   StyledTelDiv,
-  StyledTelUnderDiv,
 } from './Header.styled';
 import { StyledBackGroundImage } from './Header.styled';
 export const Header = ({ content }) => {
@@ -54,52 +49,6 @@ export const Header = ({ content }) => {
               </svg>
             )}
           </StyledMenuButton>
-          {/* <nav>
-          <StyledNavUL>
-            <li>
-              <a href="#hero">{content.nav[0]}</a>
-            </li>
-            <li>
-              <a href="#services">{content.nav[1]}</a>
-            </li>
-            <li>
-              <a href="#feedbacks">{content.nav[2]}</a>
-            </li>
-            <li>
-              <a href="#blog">{content.nav[3]}</a>
-            </li>
-            <li>
-              <a href="#vacancies">{content.nav[4]}</a>
-            </li>
-            <li>
-              <a href="#contacts">{content.nav[5]}</a>
-            </li>
-          </StyledNavUL>
-        </nav> */}
-          {/* <StyledTelDiv>
-          <svg width="18" height="18">
-            <use href={`${sprite}#icon-phone-white`}></use>
-          </svg>
-          <StyledTel href="tel:050 936 34 00">050 936 34 00</StyledTel>
-        </StyledTelDiv>
-        <StyledLangUL>
-          <li>
-            <StyledLangButton
-              type="button"
-              onClick={() => navigate(content.navigateTo[0])}
-            >
-              {content.lang[0]}
-            </StyledLangButton>
-          </li>
-          <li>
-            <StyledLangButton
-              type="button"
-              onClick={() => navigate(content.navigateTo[1])}
-            >
-              {content.lang[1]}
-            </StyledLangButton>
-          </li>
-        </StyledLangUL> */}
         </StyledDiv>
       </StyledBackGroundImage>
       {isMenuOpen && (

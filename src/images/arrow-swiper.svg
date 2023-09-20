@@ -1,0 +1,24 @@
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="&#208;&#161;&#209;&#130;&#209;&#128;&#208;&#181;&#208;&#187;&#208;&#186;&#208;&#176;">
+<g id="Ellipse 21" filter="url(#filter0_d_182_3088)">
+<circle cx="27" cy="23" r="23" transform="rotate(-180 27 23)" fill="url(#paint0_linear_182_3088)"/>
+</g>
+<path id="Vector 28" d="M23 31L31 23L23 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_182_3088" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_182_3088"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_182_3088" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_182_3088" x1="4" y1="-1.90735e-06" x2="53.4257" y2="4.03475" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FDC70D"/>
+<stop offset="1" stop-color="#FDAB0D"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const StyledContainer = styled.div`
@@ -8,8 +8,8 @@ export const StyledContainer = styled.div`
   outline: solid tomato;
   position: relative;
   text-align: left;
-  @media screen and (min-width: 360px) {
-    min-width: 360px;
+  @media screen and (min-width: 390px) {
+    width: 390px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
@@ -92,6 +92,7 @@ export const StyledH402 = styled.h4`
 
 export const StyledServicesDiv = styled.div`
   position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -114,7 +115,7 @@ export const StyledServicesDiv02 = styled.div`
   border-radius: 8px;
   background: radial-gradient(50% 50% at 50% 50%, #efd98f 0%, #ffc600 100%);
   box-shadow: 10px 10px 15px 0px rgba(71, 71, 71, 0.2);
-  padding-bottom: 16px;
+  padding-bottom: 26px;
   cursor: pointer;
 `;
 

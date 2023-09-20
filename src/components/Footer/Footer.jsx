@@ -1,0 +1,160 @@
+import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
+import {
+  StyledConfidenceP,
+  StyledContactsDiv,
+  StyledFlexBoxDiv,
+  StyledFooter,
+  StyledFooterLineDiv,
+  StyledImgDiv,
+  StyledItemNavLink,
+  StyledNavLink,
+  StyledNavLinksListUl,
+  StyledNumberDiv,
+  StyledP,
+  StyledPhoneP,
+  StyledRightsP,
+  StyledSpan,
+  StyledTimeDiv,
+} from './Footer.styled';
+import logo from '../../images/logo.svg';
+
+export const Footer = ({ content }) => {
+  return (
+    <StyledFooter>
+      <StyledContainer style={{ paddingBottom: 41 }}>
+        <StyledFlexBoxDiv>
+          <div>
+            <StyledImgDiv>
+              <img src={logo} alt="logo" loading="lazy" />
+            </StyledImgDiv>
+            <StyledContactsDiv>
+              <StyledNumberDiv>
+                <StyledPhoneP>050 936 34 00</StyledPhoneP>
+                <StyledPhoneP>044 698 98 98</StyledPhoneP>
+              </StyledNumberDiv>
+              <div>
+                <StyledP>E-mail:</StyledP>
+                <StyledSpan>info@571Service.com</StyledSpan>
+              </div>
+              <div>
+                <StyledP>{content.time}</StyledP>
+                <ul>
+                  <li>
+                    <StyledTimeDiv>
+                      <StyledP>Пн- Пт </StyledP>
+                      <StyledSpan>с 9:00-22:00</StyledSpan>
+                    </StyledTimeDiv>
+                  </li>
+                  <li>
+                    <StyledTimeDiv>
+                      <StyledP>Сб-Вс </StyledP>
+                      <StyledSpan>с 9:00-22:00</StyledSpan>
+                    </StyledTimeDiv>
+                  </li>
+                </ul>
+              </div>
+            </StyledContactsDiv>
+          </div>
+          <div>
+            <StyledNavLink>{content.navLinksTitles[0]}</StyledNavLink>
+            <StyledNavLinksListUl>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[0]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[1]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[2]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[3]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[4]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carServiceList[5]}
+                </StyledItemNavLink>
+              </li>
+            </StyledNavLinksListUl>
+          </div>
+          <div>
+            <StyledNavLink>{content.navLinksTitles[1]}</StyledNavLink>
+            <StyledNavLinksListUl>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[0]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[1]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[2]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[3]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[4]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.carWashServiceList[5]}
+                </StyledItemNavLink>
+              </li>
+            </StyledNavLinksListUl>
+          </div>
+          <div>
+            <StyledNavLink>{content.navLinksTitles[2]}</StyledNavLink>
+            <StyledNavLinksListUl>
+              <li>
+                <StyledItemNavLink>
+                  {content.tireServiceList[0]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.tireServiceList[1]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.tireServiceList[2]}
+                </StyledItemNavLink>
+              </li>
+              <li>
+                <StyledItemNavLink>
+                  {content.tireServiceList[3]}
+                </StyledItemNavLink>
+              </li>
+            </StyledNavLinksListUl>
+          </div>
+        </StyledFlexBoxDiv>
+        <StyledFooterLineDiv></StyledFooterLineDiv>
+        <StyledConfidenceP>{content.confidance}</StyledConfidenceP>
+        <StyledRightsP>{content.rights}</StyledRightsP>
+      </StyledContainer>
+    </StyledFooter>
+  );
+};

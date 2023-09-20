@@ -7,8 +7,8 @@ export const StyledContainer = styled.div`
   outline: solid tomato;
   position: relative;
   text-align: left;
-  @media screen and (min-width: 360px) {
-    min-width: 360px;
+  @media screen and (min-width: 390px) {
+    width: 390px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;

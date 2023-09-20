@@ -1,150 +1,134 @@
+import React from 'react';
+import { Navigation, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import arrowSwiper from '../../images/arrow-swiper.svg';
+import arrowSwiperPrev from '../../images/arrow-swiper-prev.svg';
+import certififcate0101x from '../../images/certifications/certificate01@1x-min.jpg';
+import certififcate0102x from '../../images/certifications/certificate01@2x-min.jpg';
+import certififcate0201x from '../../images/certifications/certificate02@1x-min.jpg';
+import certififcate0202x from '../../images/certifications/certificate02@2x-min.jpg';
+import certififcate0301x from '../../images/certifications/certificate03@1x-min.jpg';
+import certififcate0302x from '../../images/certifications/certificate03@2x-min.jpg';
+import certififcate0401x from '../../images/certifications/certificate04@1x-min.jpg';
+import certififcate0402x from '../../images/certifications/certificate04@2x-min.jpg';
+
 import {
-  StyledContainer,
-  StyledBackGroundImage,
-  StyledH2,
-  StyledP,
-  StyledImgBox,
-  StyledButton,
+  StyledCircleDiv,
   StyledDiv,
+  StyledH2,
+  StyledH3,
+  StyledP,
+  StyledSpan,
+} from 'components/SectionServices/SectionServices.styled';
+import {
+  StyledImgBox,
+  StyledContainer,
+  StyledContentContainer,
+  SwiperContainer,
+  StyledArrowImg,
 } from './SectionCertifications.styled';
-import certificate01 from '../../images/certifications/certificate01.jpg';
-import certificate02 from '../../images/certifications/certificate02.jpg';
-import certificate03 from '../../images/certifications/certificate03.jpg';
-import certificate04 from '../../images/certifications/certificate04.jpg';
-import sprite from '../../images/sprite.svg';
-
-import { register } from 'swiper/element/bundle';
-
-register();
 
 export const SectionCertifications = ({ content }) => {
   return (
     <section>
-      <StyledBackGroundImage>
-        <StyledContainer>
-          <StyledH2>{content.h2}</StyledH2>
-          <StyledP>{content.p}</StyledP>
-          <swiper-container
-            slides-per-view="4"
-            speed="500"
-            loop="true"
-            css-mode="true"
-            space-between="30px"
-          >
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate01}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate02}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate03}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate04}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            {/* 2-part */}
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate01}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate02}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate03}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-            <swiper-slide>
-              <StyledImgBox>
-                <img
-                  src={certificate04}
-                  alt="certificate"
-                  loading="lazy"
-                  width={250}
-                  height={320}
-                />
-              </StyledImgBox>
-            </swiper-slide>
-          </swiper-container>
+      <StyledContainer>
+        <StyledContentContainer>
           <StyledDiv>
-            <StyledButton
-              type="button"
-              onClick={() =>
-                document.querySelector('swiper-container').swiper.slidePrev()
-              }
-            >
-              <svg width="50" height="15">
-                <use href={`${sprite}#icon-swiper-arrow-left`}></use>
-              </svg>
-            </StyledButton>
-            <StyledButton
-              type="button"
-              onClick={() =>
-                document.querySelector('swiper-container').swiper.slideNext()
-              }
-            >
-              <svg width="50" height="15">
-                <use href={`${sprite}#icon-swiper-arrow-right`}></use>
-              </svg>
-            </StyledButton>
+            <StyledCircleDiv></StyledCircleDiv>
+            <StyledH2>{content.h2}</StyledH2>
           </StyledDiv>
-        </StyledContainer>
-      </StyledBackGroundImage>
+          <StyledH3>
+            <StyledSpan>{content.h3[0]}</StyledSpan>
+            {content.h3[1]}
+          </StyledH3>
+          <StyledP>{content.p}</StyledP>
+        </StyledContentContainer>
+        <SwiperContainer>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={10}
+            slidesPerView={1.5}
+            navigation={{
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }}
+            pagination={{ clickable: false }}
+            loop={true}
+            centeredSlides={true}
+          >
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0101x} 1x, ${certififcate0102x} 2x`}
+                  src={certififcate0101x}
+                  alt="certificate01"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0201x} 1x, ${certififcate0202x} 2x`}
+                  src={certififcate0201x}
+                  alt="certificate02"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0301x} 1x, ${certififcate0302x} 2x`}
+                  src={certififcate0301x}
+                  alt="certificate03"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0401x} 1x, ${certififcate0402x} 2x`}
+                  src={certififcate0401x}
+                  alt="certificate04"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+          </Swiper>
+          <button className="swiper-button-prev">
+            <StyledArrowImg
+              src={arrowSwiperPrev}
+              alt="Previous"
+              width={46}
+              height={46}
+              loading="lazy"
+            />
+          </button>
+          <button className="swiper-button-next">
+            <StyledArrowImg
+              src={arrowSwiper}
+              alt="Next"
+              width={46}
+              height={46}
+              loading="lazy"
+            />
+          </button>
+        </SwiperContainer>
+      </StyledContainer>
     </section>
   );
 };

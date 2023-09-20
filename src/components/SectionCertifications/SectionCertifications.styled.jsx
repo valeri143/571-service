@@ -1,64 +1,78 @@
-import styled from '@emotion/styled';
-import bg1x from '../../images/desktop/backgrounds/bg@1x-min.jpg';
-import bg2x from '../../images/desktop/backgrounds/bg@2x-min.jpg';
-
-export const StyledBackGroundImage = styled.div`
-  background-image: linear-gradient(
-      rgba(17, 19, 39, 0.6),
-      rgba(17, 19, 39, 0.6)
-    ),
-    url(${bg1x});
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: auto;
-  height: 879px;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(${bg2x});
-  }
-`;
+import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
+  padding: 50px 0px 80px 0px;
   margin: 0 auto;
   box-sizing: border-box;
   outline: solid tomato;
-  max-width: 1920px;
-  padding: 156px 185px 135px 185px;
-  text-align: left;
   position: relative;
+  text-align: left;
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1512px) {
+    width: 1512px;
+    padding: 100px 0px 150px 0px;
+  }
 `;
 
-export const StyledH2 = styled.h2`
-  color: var(--background-color);
-  font-family: Gilroy Bold;
-  font-size: 40px;
-  line-height: 1.3;
-  margin-bottom: 5px;
-`;
-
-export const StyledP = styled.p`
-  width: 938px;
-  color: var(--background-color);
-  line-height: 2;
-  margin-bottom: 45px;
+export const StyledContentContainer = styled.div`
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 1512px) {
+    padding-left: 156px;
+    padding-right: 156px;
+  }
 `;
 
 export const StyledImgBox = styled.div`
-  padding: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 258px;
+  max-height: 349px;
+  padding: 20px 20px;
   border-radius: 8px;
-  background: var(--background-color);
+  background: var(--light-color);
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
 `;
 
-export const StyledDiv = styled.div`
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+export const SwiperContainer = styled.div`
+  .swiper-pagination-bullet-active {
+    background-color: var(--accent-color);
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination {
+    position: static;
+    margin-top: 48px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: unset;
+    bottom: 7%;
+    border: none;
+    background: none;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    content: none;
+  }
+  .swiper-button-prev {
+    left: 30%;
+  }
+  .swiper-button-next {
+    right: 30%;
+  }
 `;
 
-export const StyledButton = styled.button`
-  background: none;
-  border: none;
+export const StyledArrowImg = styled.img`
+  max-width: 46px;
 `;

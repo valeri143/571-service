@@ -62,29 +62,25 @@ section{
   background-color: var(--background-color);
 }
 
-/* .container{
-  padding: 50px 15px 80px 15px;
-  margin: 0 auto;
-  box-sizing: border-box;
-   outline: solid tomato;   
-  position: relative;
-}
-@media screen and (min-width: 390px) {
-.container {
-  min-width: 390px;
-}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-@media screen and (min-width: 768px) {
-.container {
-  width: 768px;
-}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
-@media screen and (min-width: 1512px) {
-.container {
-  width: 1512px;
-  padding: 100px 156px 150px 156px;
-}}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
 
- */
+
+
+

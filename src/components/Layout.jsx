@@ -3,19 +3,25 @@ import { Suspense } from 'react';
 import { Header } from './Header/Header';
 import { useEffect, useState } from 'react';
 import { headerRuContent, headerUaContent } from './Header/index';
+import { footerRuContent, footerUaContent } from './Footer';
+import { SectionContacts } from './SectionContacts/SectionContacts';
+import { Footer } from './Footer/Footer';
 // import { ThreeDots } from 'react-loader-spinner';
 
 export const Layout = ({ lang }) => {
   const [content, setContent] = useState(null);
+  const [footerContent, setFooterContent] = useState(null);
 
   useEffect(() => {
     switch (lang) {
       case 'ru':
         setContent(headerRuContent);
+        setFooterContent(footerRuContent);
         break;
 
       case 'ua':
         setContent(headerUaContent);
+        setFooterContent(footerUaContent);
         break;
 
       default:
@@ -43,8 +49,9 @@ export const Layout = ({ lang }) => {
       >
         <main>
           <Outlet />
+          {footerContent && <SectionContacts content={footerContent} />}
         </main>
-        {/* <StyledFooter>PhoneBook. Created by Valeria Vasahlo</StyledFooter> */}
+        {footerContent && <Footer content={footerContent} />}
       </Suspense>
     </>
   );

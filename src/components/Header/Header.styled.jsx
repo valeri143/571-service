@@ -44,16 +44,6 @@ export const StyledMenuButton = styled.button`
   }
 `;
 
-export const StyledNavUL = styled.ul`
-  display: flex;
-  gap: 40px;
-  font-size: 15px;
-  font-family: 'Gilroy Semibold';
-  color: var(--background-color);
-  margin-right: 177px;
-  margin-left: 99px;
-`;
-
 export const StyledTelDiv = styled.div`
   display: flex;
   align-items: center;
@@ -71,16 +61,6 @@ export const StyledTel = styled.a`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-`;
-
-export const StyledSvgUp = styled.svg`
-  transform: rotate(180deg);
-`;
-
-export const StyledP = styled.p`
-  color: var(--background-color);
-  font-size: 13px;
-  font-family: Gilroy Semibold;
 `;
 
 export const StyledLangUL = styled.ul`
@@ -169,7 +149,7 @@ export const StyledButtonDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   background: linear-gradient(95deg, #fdc70d 0%, #fdab0d 100%);
   box-shadow: 0px 24px 50px -20px #fdab0d;
   transition: background-color 500ms 50ms var(--animation-cubic);
