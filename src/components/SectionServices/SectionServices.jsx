@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   StyledBgSvg,
   StyledCircleDiv,
@@ -23,7 +25,9 @@ import carWash2x from '../../images/mobile/services/car-wash@2x-min.jpg';
 import carService1x from '../../images/mobile/services/car-service@1x-min.png';
 import carService2x from '../../images/mobile/services/car-service@2x-min.png';
 import carTire from '../../images/mobile/services/car-tire-min.jpg';
-export const SectionServices = ({ content }) => {
+export const SectionServices = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <section>
       <StyledContainer>
@@ -32,13 +36,13 @@ export const SectionServices = ({ content }) => {
         </StyledBgSvg>
         <StyledDiv>
           <StyledCircleDiv></StyledCircleDiv>
-          <StyledH2>{content.h2}</StyledH2>
+          <StyledH2>{t('header.navLinksList.0')}</StyledH2>
         </StyledDiv>
         <StyledH3>
-          <StyledSpan>{content.h3[0]}</StyledSpan>
-          {content.h3[1]}
+          <StyledSpan>{t('services.h3.0')}</StyledSpan>
+          {t('services.h3.1')}
         </StyledH3>
-        <StyledP>{content.p}</StyledP>
+        <StyledP>{t('services.p')}</StyledP>
         <StyledServicesUl>
           <li>
             <StyledServicesDiv>
@@ -47,23 +51,29 @@ export const SectionServices = ({ content }) => {
                 src={carWash1x}
                 alt="car-wash-img"
                 loading="lazy"
+                width={360}
+                height={222}
               />
-              <StyledSvg width="30" height="30">
+              <StyledSvg
+                width="30"
+                height="30"
+                onClick={() => navigate('car-wash-service')}
+              >
                 <use href={`${sprite}#icon-arrow-yellow`}></use>
               </StyledSvg>
-              <StyledH4>{content.servicesUlText[0]}</StyledH4>
+              <StyledH4>{t('services.servicesUlText.0')}</StyledH4>
               <StyledUl>
                 <li>
-                  <StyledNavLink>{content.carWashItem[0]}</StyledNavLink>
+                  <StyledNavLink>{t('services.carWashItem.0')}</StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.carWashItem[1]}</StyledNavLink>
+                  <StyledNavLink>{t('services.carWashItem.1')}</StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.carWashItem[2]}</StyledNavLink>
+                  <StyledNavLink>{t('services.carWashItem.2')}</StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.carWashItem[3]}</StyledNavLink>
+                  <StyledNavLink>{t('services.carWashItem.3')}</StyledNavLink>
                 </li>
               </StyledUl>
             </StyledServicesDiv>
@@ -75,46 +85,78 @@ export const SectionServices = ({ content }) => {
                 src={carService1x}
                 alt="car-service-img"
                 loading="lazy"
+                width={360}
+                height={212}
               />
-              <StyledSvg width="30" height="30">
+              <StyledSvg
+                width="30"
+                height="30"
+                onClick={() => navigate('car-service')}
+              >
                 <use href={`${sprite}#icon-arrow-black`}></use>
               </StyledSvg>
-              <StyledH402>{content.servicesUlText[1]}</StyledH402>
+              <StyledH402>{t('services.servicesUlText.1')}</StyledH402>
               <StyledUl>
                 <li>
-                  <StyledNavLink02>{content.carServiceItem[0]}</StyledNavLink02>
+                  <StyledNavLink02>
+                    {t('services.carServiceItem.0')}
+                  </StyledNavLink02>
                 </li>
                 <li>
-                  <StyledNavLink02>{content.carServiceItem[1]}</StyledNavLink02>
+                  <StyledNavLink02>
+                    {t('services.carServiceItem.1')}
+                  </StyledNavLink02>
                 </li>
                 <li>
-                  <StyledNavLink02>{content.carServiceItem[2]}</StyledNavLink02>
+                  <StyledNavLink02>
+                    {t('services.carServiceItem.2')}
+                  </StyledNavLink02>
                 </li>
                 <li>
-                  <StyledNavLink02>{content.carServiceItem[3]}</StyledNavLink02>
+                  <StyledNavLink02>
+                    {t('services.carServiceItem.3')}
+                  </StyledNavLink02>
                 </li>
               </StyledUl>
             </StyledServicesDiv02>
           </li>
           <li>
             <StyledServicesDiv>
-              <img src={carTire} alt="tire-service-img" loading="lazy" />
-              <StyledSvg width="30" height="30">
+              <img
+                src={carTire}
+                alt="tire-service-img"
+                loading="lazy"
+                width={360}
+                height={222}
+              />
+              <StyledSvg
+                width="30"
+                height="30"
+                onClick={() => navigate('car-tire-service')}
+              >
                 <use href={`${sprite}#icon-arrow-yellow`}></use>
               </StyledSvg>
-              <StyledH4>{content.servicesUlText[2]}</StyledH4>
+              <StyledH4>{t('services.servicesUlText.2')}</StyledH4>
               <StyledUl>
                 <li>
-                  <StyledNavLink>{content.tireServiceItem[0]}</StyledNavLink>
+                  <StyledNavLink>
+                    {t('services.tireServiceItem.0')}
+                  </StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.tireServiceItem[1]}</StyledNavLink>
+                  <StyledNavLink>
+                    {t('services.tireServiceItem.1')}
+                  </StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.tireServiceItem[2]}</StyledNavLink>
+                  <StyledNavLink>
+                    {t('services.tireServiceItem.2')}
+                  </StyledNavLink>
                 </li>
                 <li>
-                  <StyledNavLink>{content.tireServiceItem[3]}</StyledNavLink>
+                  <StyledNavLink>
+                    {t('services.tireServiceItem.3')}
+                  </StyledNavLink>
                 </li>
               </StyledUl>
             </StyledServicesDiv>

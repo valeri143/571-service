@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Navigation, Pagination } from 'swiper/modules';
+import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -26,18 +26,19 @@ import {
   StyledSwiperDiv,
   StyledNavLink,
 } from 'components/SectionFeedbacks/SectionFeedbacks.styled';
-export const SectionBlog = ({ content }) => {
+const SectionBlog = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <StyledContainer>
         <StyledDiv>
           <StyledCircleDiv></StyledCircleDiv>
-          <StyledH2>{content.h2}</StyledH2>
+          <StyledH2>{t('header.navLinksList.2')}</StyledH2>
         </StyledDiv>
         <StyledH3>
-          {content.h3[0]}
-          <StyledSpan>{content.h3[1]}</StyledSpan>
-          {content.h3[2]}
+          {t('blog.h3.0')}
+          <StyledSpan>{t('blog.h3.1')}</StyledSpan>
+          {t('blog.h3.2')}
         </StyledH3>
         <StyledSwiperDiv>
           <Swiper
@@ -54,8 +55,8 @@ export const SectionBlog = ({ content }) => {
                 post01x={post0101x}
                 post02x={post0102x}
                 date="10.06.2023"
-                title={content.posts[0][0]}
-                text={content.posts[0][1]}
+                title={t('blog.posts.0.0')}
+                text={t('blog.posts.0.1')}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -63,8 +64,8 @@ export const SectionBlog = ({ content }) => {
                 post01x={post0201x}
                 post02x={post0202x}
                 date="09.06.2023"
-                title={content.posts[1][0]}
-                text={content.posts[1][1]}
+                title={t('blog.posts.1.0')}
+                text={t('blog.posts.1.1')}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -72,8 +73,8 @@ export const SectionBlog = ({ content }) => {
                 post01x={post0301x}
                 post02x={post0302x}
                 date="10.06.2023"
-                title={content.posts[2][0]}
-                text={content.posts[2][1]}
+                title={t('blog.posts.2.0')}
+                text={t('blog.posts.2.1')}
               />
             </SwiperSlide>
           </Swiper>
@@ -87,10 +88,10 @@ export const SectionBlog = ({ content }) => {
             />
           </StyledSwiperButton>
         </StyledSwiperDiv>
-        <StyledNavLink to={content.navLinkTo}>
-          {content.buttonText}
-        </StyledNavLink>
+        <StyledNavLink to="blog">{t('blog.buttonText')}</StyledNavLink>
       </StyledContainer>
     </section>
   );
 };
+
+export default SectionBlog;

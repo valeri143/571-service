@@ -1,4 +1,3 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
@@ -10,7 +9,7 @@ export const StyledFlexBoxDiv = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   row-gap: 30px;
   flex-basis: calc((100% - 20px) / 2);
 `;
@@ -55,21 +54,19 @@ export const StyledContactsDiv = styled.div`
   gap: 20px;
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledH5 = styled.h5`
   color: var(--light-color);
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 20px;
-  cursor: pointer;
 `;
 
-export const StyledItemNavLink = styled(NavLink)`
+export const StyledItemP = styled.p`
   color: var(--grey-color);
   font-size: 12px;
   font-weight: 300;
   line-height: 1.5;
   opacity: 0.8;
-  cursor: pointer;
 `;
 
 export const StyledNavLinksListUl = styled.ul`

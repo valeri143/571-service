@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Formik, ErrorMessage, Form } from 'formik';
 import * as yup from 'yup';
 import { formatPhoneNumber } from 'helpers/phoneUaInput';
@@ -43,11 +44,12 @@ const schema = yup.object().shape({
   checkbox: yup.boolean().required('Please check the checkbox to continue'),
 });
 
-export const SectionForm = ({ content }) => {
+const SectionForm = () => {
+  const [t] = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const handleSubmit = ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
-    console.log(name, number);
+    // console.log(name, number);
     // sending data
     resetForm();
   };
@@ -59,9 +61,9 @@ export const SectionForm = ({ content }) => {
           <StyledBgImg src={bg} alt="background-circle" loading="lazy" />
           <StyledDiv>
             <StyledCircleDiv></StyledCircleDiv>
-            <StyledH2>{content.h2}</StyledH2>
+            <StyledH2>{t('form.h2')}</StyledH2>
           </StyledDiv>
-          <StyledH3>{content.h3}</StyledH3>
+          <StyledH3>{t('form.h3')}</StyledH3>
           <Formik
             initialValues={{ name: '', number: '', checkbox: false }}
             validationSchema={schema}
@@ -70,7 +72,9 @@ export const SectionForm = ({ content }) => {
             {({ setFieldValue }) => (
               <Form>
                 <StyledFormDiv>
-                  <StyledLabel htmlFor="name">{content.labels[0]} </StyledLabel>
+                  <StyledLabel htmlFor="name">
+                    {t('form.labels.0')}{' '}
+                  </StyledLabel>
                   <StyledBorder></StyledBorder>
                   <StyledSvg width="22" height="22">
                     <use href={`${sprite}#icon-address-book`}></use>
@@ -78,7 +82,7 @@ export const SectionForm = ({ content }) => {
                   <StyledField
                     name="name"
                     id="name"
-                    placeholder={content.placeholderName}
+                    placeholder={t('form.placeholderName')}
                     autoComplete="off"
                   />
                   <ErrorMessage name="name" component={Error} />
@@ -86,7 +90,7 @@ export const SectionForm = ({ content }) => {
 
                 <StyledFormDiv>
                   <StyledLabel htmlFor="number">
-                    {content.labels[1]}
+                    {t('form.labels.1')}
                   </StyledLabel>
                   <StyledBorderNumber></StyledBorderNumber>
                   <StyledSvg width="22" height="22">
@@ -95,6 +99,7 @@ export const SectionForm = ({ content }) => {
                   <StyledField
                     name="number"
                     id="number"
+                    type="tel"
                     placeholder="+380 XXX XX XX XX"
                     autoComplete="off"
                     onChange={e => {
@@ -118,20 +123,20 @@ export const SectionForm = ({ content }) => {
                       required
                     />
                     <ErrorMessage name="checkbox" component={Error} />
-                    {content.checkboxText}
+                    {t('form.checkboxText')}
                   </StyledCheckboxLabel>
                   {!formSubmitted && (
                     <StyledButton type="submit">
-                      {content.buttonText}
+                      {t('header.buttonText')}
                     </StyledButton>
                   )}
                   {formSubmitted && (
                     <StyledSubmittedButton>
                       <StyledSubmittedP>
                         <StyledSubmittedSpan>
-                          {content.buttonSubmittedText[0]}
+                          {t('form.buttonSubmittedText.0')}
                         </StyledSubmittedSpan>
-                        {content.buttonSubmittedText[1]}
+                        {t('form.buttonSubmittedText.1')}
                       </StyledSubmittedP>
                     </StyledSubmittedButton>
                   )}
@@ -142,7 +147,7 @@ export const SectionForm = ({ content }) => {
           <StyledFlexDiv>
             <StyledLineDiv></StyledLineDiv>
             <div>
-              <StyledP>{content.p}</StyledP>
+              <StyledP>{t('form.p')}</StyledP>
               <StyledLink href="tel:050 936 34 00">050 936 34 00</StyledLink>
             </div>
           </StyledFlexDiv>
@@ -151,3 +156,5 @@ export const SectionForm = ({ content }) => {
     </section>
   );
 };
+
+export default SectionForm;

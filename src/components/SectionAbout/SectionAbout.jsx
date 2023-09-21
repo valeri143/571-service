@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { StyledContainer } from 'components/Hero/Hero.styled';
 import {
   StyledAboutDiv,
@@ -24,20 +25,21 @@ import about021x from '../../images/mobile/about/about-item02@1x-min.jpg';
 import about022x from '../../images/mobile/about/about-item02@2x-min.jpg';
 import logo from '../../images/mobile/about/about-logo-min.png';
 
-export const SectionAbout = ({ content }) => {
+const SectionAbout = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <StyledContainer>
         <StyledBgImg src={bg} alt="background-circle" loading="lazy" />
         <StyledDiv>
           <StyledCircleDiv></StyledCircleDiv>
-          <StyledH2>{content.h2}</StyledH2>
+          <StyledH2>{t('about.h2')}</StyledH2>
         </StyledDiv>
         <StyledH3>
-          <StyledSpan>{content.h3[0]}</StyledSpan>
-          {content.h3[1]}
+          <StyledSpan>{t('about.h3.0')}</StyledSpan>
+          {t('about.h3.1')}
         </StyledH3>
-        <StyledP style={{ maxWidth: 360 }}>{content.p}</StyledP>
+        <StyledP style={{ maxWidth: 360 }}>{t('about.p')}</StyledP>
         <StyledServicesUl>
           <li>
             <StyledAboutDiv>
@@ -47,11 +49,10 @@ export const SectionAbout = ({ content }) => {
                 alt="about-car-service-img"
                 loading="lazy"
                 width={360}
-                height={368}
               />
               <StyledPositionImg src={logo} alt="logo" loading="lazy" />
-              <StyledH4>{content.h4List[0]}</StyledH4>
-              <StyledAboutP>{content.pList[0]}</StyledAboutP>
+              <StyledH4>{t('about.h4List.0')}</StyledH4>
+              <StyledAboutP>{t('about.pList.0')}</StyledAboutP>
             </StyledAboutDiv>
           </li>
           <li>
@@ -64,8 +65,8 @@ export const SectionAbout = ({ content }) => {
                 width={360}
                 height={368}
               />
-              <StyledH402>{content.h4List[1]}</StyledH402>
-              <StyledAboutP>{content.pList[1]}</StyledAboutP>
+              <StyledH402>{t('about.h4List.1')}</StyledH402>
+              <StyledAboutP>{t('about.pList.1')}</StyledAboutP>
             </StyledAboutDiv>
           </li>
         </StyledServicesUl>
@@ -73,3 +74,5 @@ export const SectionAbout = ({ content }) => {
     </section>
   );
 };
+
+export default SectionAbout;

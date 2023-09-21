@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import {
   StyledContainer,
   StyledH3,
@@ -11,8 +12,8 @@ import {
   StyledContactsUl,
   StyledLink,
 } from './SectionContacts.styled';
-
-export const SectionContacts = ({ content }) => {
+const SectionContacts = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <StyledContainer style={{ paddingBottom: 0 }}>
@@ -24,8 +25,8 @@ export const SectionContacts = ({ content }) => {
             textAlign: 'center',
           }}
         >
-          <StyledSpan>{content.h3[0]}</StyledSpan>
-          {content.h3[1]}
+          <StyledSpan>{t('contacts.h3.0')}</StyledSpan>
+          {t('contacts.h3.1')}
         </StyledH3>
         <StyledContactsUl>
           <li>
@@ -35,7 +36,7 @@ export const SectionContacts = ({ content }) => {
                   <use href={`${sprite}#icon-call-white-outline`}></use>
                 </svg>
               </StyledContactsSvg>
-              <StyledContactsP>{content.actions[0]}</StyledContactsP>
+              <StyledContactsP>{t('contacts.actions.0')}</StyledContactsP>
               <StyledLink href="tel:050 936 34 00">050 936 34 00</StyledLink>
               <StyledLink href="tel:044 698 98 98">044 698 98 98</StyledLink>
             </StyledContactsDiv>
@@ -47,7 +48,7 @@ export const SectionContacts = ({ content }) => {
                   <use href={`${sprite}#icon-email`}></use>
                 </svg>
               </StyledContactsSvg>
-              <StyledContactsP>{content.actions[2]}</StyledContactsP>
+              <StyledContactsP>{t('contacts.actions.1')}</StyledContactsP>
               <StyledLink href="mailto:info@571Service.com">
                 info@571Service.com
               </StyledLink>
@@ -60,12 +61,12 @@ export const SectionContacts = ({ content }) => {
                   <use href={`${sprite}#icon-map-pin`}></use>
                 </svg>
               </StyledContactsSvg>
-              <StyledContactsP>{content.actions[3]}</StyledContactsP>
+              <StyledContactsP>{t('contacts.actions.2')}</StyledContactsP>
               <StyledLink
                 href="https://maps.app.goo.gl/WCqPA8hvKJcHS3WBA"
                 target="_blank"
               >
-                {content.address}
+                {t('contacts.address')}
               </StyledLink>
             </StyledContactsDiv>
           </li>
@@ -84,3 +85,5 @@ export const SectionContacts = ({ content }) => {
     </section>
   );
 };
+
+export default SectionContacts;

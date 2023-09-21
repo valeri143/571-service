@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import sprite from '../../images/sprite.svg';
 import logo from '../../images/logo.svg';
@@ -20,9 +19,9 @@ import {
   StyledTel,
   StyledTelDiv,
 } from './Header.styled';
-import { StyledBackGroundImage } from './Header.styled';
-export const Header = ({ content }) => {
-  const navigate = useNavigate();
+import { useTranslation } from 'react-i18next';
+export const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -32,49 +31,68 @@ export const Header = ({ content }) => {
 
   return (
     <header>
-      <StyledBackGroundImage>
-        <StyledDiv>
-          <div>
-            <StyledImg src={logo} alt="logo" loading="lazy" />
-          </div>
-          <StyledMenuButton onClick={toggleMenu}>
-            {!isMenuOpen && (
-              <svg width="40" height="23">
-                <use href={`${sprite}#icon-header-menu`}></use>
-              </svg>
-            )}
-            {isMenuOpen && (
-              <svg width="40" height="23">
-                <use href={`${sprite}#icon-header-cross`}></use>
-              </svg>
-            )}
-          </StyledMenuButton>
-        </StyledDiv>
-      </StyledBackGroundImage>
+      <StyledDiv>
+        <div>
+          <StyledImg
+            src={logo}
+            alt="logo"
+            loading="lazy"
+            width={43}
+            height={38}
+          />
+        </div>
+        <StyledMenuButton onClick={toggleMenu}>
+          {!isMenuOpen && (
+            <svg width="40" height="23">
+              <use href={`${sprite}#icon-header-menu`}></use>
+            </svg>
+          )}
+          {isMenuOpen && (
+            <svg width="40" height="23">
+              <use href={`${sprite}#icon-header-cross`}></use>
+            </svg>
+          )}
+        </StyledMenuButton>
+      </StyledDiv>
       {isMenuOpen && (
         <StyledHamburgerMenu>
           <nav>
             <StyledMenuNavLinkUl>
               <li>
-                <StyledNavLink to="/services">{content.nav[0]}</StyledNavLink>
+                <StyledNavLink to="/services">
+                  {t('header.navLinksList.0')}
+                </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/feedbacks">{content.nav[1]}</StyledNavLink>
+                <StyledNavLink to="/feedbacks">
+                  {t('header.navLinksList.1')}
+                </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/blog">{content.nav[2]}</StyledNavLink>
+                <StyledNavLink to="/blog">
+                  {t('header.navLinksList.2')}
+                </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/vacancies">{content.nav[3]}</StyledNavLink>
+                <StyledNavLink to="/vacancies">
+                  {t('header.navLinksList.3')}
+                </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/contacts">{content.nav[4]}</StyledNavLink>
+                <StyledNavLink to="/contacts">
+                  {t('header.navLinksList.4')}
+                </StyledNavLink>
               </li>
             </StyledMenuNavLinkUl>
           </nav>
           <StyledLangUL>
             <li>
-              <StyledLangButton type="button" onClick={() => navigate('/')}>
+              <StyledLangButton
+                type="submit"
+                key="ru"
+                onClick={() => i18n.changeLanguage('ru')}
+                disabled={i18n.resolvedLanguage === 'ru'}
+              >
                 RU
               </StyledLangButton>
             </li>
@@ -82,7 +100,12 @@ export const Header = ({ content }) => {
               <StyledLangLine></StyledLangLine>
             </li>
             <li>
-              <StyledLangButton type="button" onClick={() => navigate('/ua')}>
+              <StyledLangButton
+                type="submit"
+                key="ua"
+                onClick={() => i18n.changeLanguage('ua')}
+                disabled={i18n.resolvedLanguage === 'ua'}
+              >
                 UA
               </StyledLangButton>
             </li>
@@ -92,7 +115,7 @@ export const Header = ({ content }) => {
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-tools`}></use>
             </StyledSvg>
-            <StyledButtonP>{content.buttonText}</StyledButtonP>
+            <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
           </StyledButtonDiv>
           <StyledTelDiv>
             <img src={call} alt="call" width={18} height={18} loading="lazy" />

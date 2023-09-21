@@ -9,7 +9,7 @@ export const StyledContactsUl = styled.ul`
 `;
 
 export const StyledContactsDiv = styled.div`
-  width: 100vw;
+  width: 98vw;
   height: 170px;
   max-height: 234px;
   padding-top: 60px;

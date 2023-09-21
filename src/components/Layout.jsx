@@ -1,57 +1,40 @@
 import { Outlet } from 'react-router-dom';
-import { Suspense } from 'react';
+import { Suspense, lazy } from 'react';
+import { RotatingLines } from 'react-loader-spinner';
 import { Header } from './Header/Header';
-import { useEffect, useState } from 'react';
-import { headerRuContent, headerUaContent } from './Header/index';
-import { footerRuContent, footerUaContent } from './Footer';
-import { SectionContacts } from './SectionContacts/SectionContacts';
-import { Footer } from './Footer/Footer';
-// import { ThreeDots } from 'react-loader-spinner';
+
+const SectionContacts = lazy(() => import('./SectionContacts/SectionContacts'));
+const Footer = lazy(() => import('./Footer/Footer'));
+
+const loaderStyle = {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100vh',
+};
 
 export const Layout = ({ lang }) => {
-  const [content, setContent] = useState(null);
-  const [footerContent, setFooterContent] = useState(null);
-
-  useEffect(() => {
-    switch (lang) {
-      case 'ru':
-        setContent(headerRuContent);
-        setFooterContent(footerRuContent);
-        break;
-
-      case 'ua':
-        setContent(headerUaContent);
-        setFooterContent(footerUaContent);
-        break;
-
-      default:
-        break;
-    }
-  }, [lang]);
-
   return (
     <>
-      {content && <Header content={content} />}
+      <Header />
       <Suspense
         fallback={
-          <h1>Loadiiing</h1>
-          //   <ThreeDots
-          //     height="80"
-          //     width="80"
-          //     radius="9"
-          //     color="black"
-          //     ariaLabel="three-dots-loading"
-          //     wrapperStyle={{}}
-          //     wrapperClassName=""
-          //     visible={true}
-          //   />
+          <div style={loaderStyle}>
+            <RotatingLines
+              strokeColor="#FDC70D"
+              strokeWidth="5"
+              animationDuration="0.75"
+              width="66"
+              visible={true}
+            />
+          </div>
         }
       >
         <main>
           <Outlet />
-          {footerContent && <SectionContacts content={footerContent} />}
+          <SectionContacts />
         </main>
-        {footerContent && <Footer content={footerContent} />}
+        <Footer />
       </Suspense>
     </>
   );

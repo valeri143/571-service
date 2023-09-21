@@ -1,4 +1,6 @@
+import { useTranslation } from 'react-i18next';
 import {
+  StyledBackGroundImage,
   StyledAnimationDiv01,
   StyledAnimationDiv02,
   StyledAnimationDiv03,
@@ -27,73 +29,81 @@ import {
   StyledCircleDiv,
   StyledSvg,
 } from 'components/Header/Header.styled';
-export const Hero = ({ content }) => {
+export const Hero = () => {
+  const { t } = useTranslation();
   return (
     <section>
-      <StyledContainer>
-        <StyledH1>
-          {content.h1[0]} <span>{content.h1[1]}</span>
-          <StyledSpan>{content.h1[2]}</StyledSpan> {content.h1[3]}
-        </StyledH1>
-        <StyledP>{content.p}</StyledP>
-        <StyledButtonDiv style={{ margin: 0 }}>
-          <StyledCircleDiv></StyledCircleDiv>
-          <StyledSvg width="18" height="18">
-            <use href={`${sprite}#icon-tools`}></use>
-          </StyledSvg>
-          <StyledButtonP>{content.buttonText}</StyledButtonP>
-        </StyledButtonDiv>
-        <div>
-          <StyledAnimationUl>
+      <StyledBackGroundImage>
+        <StyledContainer>
+          <StyledH1>
+            {t('hero.h1.0')} <span>{t('hero.h1.1')}</span>
+            <StyledSpan>{t('hero.h1.2')}</StyledSpan> {t('hero.h1.3')}
+          </StyledH1>
+          <StyledP>{t('hero.p')}</StyledP>
+          <StyledButtonDiv style={{ margin: 0 }}>
+            <StyledCircleDiv></StyledCircleDiv>
+            <StyledSvg width="18" height="18">
+              <use href={`${sprite}#icon-tools`}></use>
+            </StyledSvg>
+            <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
+          </StyledButtonDiv>
+          <div>
+            <StyledAnimationUl>
+              <li>
+                <StyledAnimationDiv01>
+                  <StyledAnimationP>
+                    {t('hero.animationText.0')}
+                  </StyledAnimationP>
+                </StyledAnimationDiv01>
+              </li>
+              <li>
+                <StyledAnimationDiv02>
+                  <StyledAnimationP>
+                    {t('hero.animationText.1')}
+                  </StyledAnimationP>
+                </StyledAnimationDiv02>
+              </li>
+              <li>
+                <StyledAnimationDiv03>
+                  <StyledAnimationP>
+                    {t('hero.animationText.2')}
+                  </StyledAnimationP>
+                </StyledAnimationDiv03>
+              </li>
+            </StyledAnimationUl>
+            <StyledImg
+              srcSet={`${bgCarMobile1x} 1x, ${bgCarMobile2x} 2x`}
+              src={bgCarMobile1x}
+              width={702}
+              alt="background-car"
+              loading="lazy"
+            />
+          </div>
+          <StyledBenefitsUl>
             <li>
-              <StyledAnimationDiv01>
-                <StyledAnimationP>{content.animationText[0]}</StyledAnimationP>
-              </StyledAnimationDiv01>
+              <StyledBenefitsDiv01>
+                <StyledNumP01>+4698</StyledNumP01>
+                <StyledLineDiv></StyledLineDiv>
+                <StyledBenefitsP>{t('hero.benefits.0')}</StyledBenefitsP>
+              </StyledBenefitsDiv01>
             </li>
             <li>
-              <StyledAnimationDiv02>
-                <StyledAnimationP>{content.animationText[1]}</StyledAnimationP>
-              </StyledAnimationDiv02>
+              <StyledBenefitsDiv02>
+                <StyledNumP>37</StyledNumP>
+                <StyledLineDiv></StyledLineDiv>
+                <StyledBenefitsP>{t('hero.benefits.1')}</StyledBenefitsP>
+              </StyledBenefitsDiv02>
             </li>
             <li>
-              <StyledAnimationDiv03>
-                <StyledAnimationP>{content.animationText[2]}</StyledAnimationP>
-              </StyledAnimationDiv03>
+              <StyledBenefitsDiv>
+                <StyledNumP>+15</StyledNumP>
+                <StyledLineDiv></StyledLineDiv>
+                <StyledBenefitsP>{t('hero.benefits.2')}</StyledBenefitsP>
+              </StyledBenefitsDiv>
             </li>
-          </StyledAnimationUl>
-          <StyledImg
-            srcSet={`${bgCarMobile1x} 1x, ${bgCarMobile2x} 2x`}
-            src={bgCarMobile1x}
-            width={702}
-            height={389}
-            alt="background-car"
-            loading="lazy"
-          />
-        </div>
-        <StyledBenefitsUl>
-          <li>
-            <StyledBenefitsDiv01>
-              <StyledNumP01>+4698</StyledNumP01>
-              <StyledLineDiv></StyledLineDiv>
-              <StyledBenefitsP>{content.benefitsUl[0]}</StyledBenefitsP>
-            </StyledBenefitsDiv01>
-          </li>
-          <li>
-            <StyledBenefitsDiv02>
-              <StyledNumP>37</StyledNumP>
-              <StyledLineDiv></StyledLineDiv>
-              <StyledBenefitsP>{content.benefitsUl[1]}</StyledBenefitsP>
-            </StyledBenefitsDiv02>
-          </li>
-          <li>
-            <StyledBenefitsDiv>
-              <StyledNumP>+15</StyledNumP>
-              <StyledLineDiv></StyledLineDiv>
-              <StyledBenefitsP>{content.benefitsUl[2]}</StyledBenefitsP>
-            </StyledBenefitsDiv>
-          </li>
-        </StyledBenefitsUl>
-      </StyledContainer>
+          </StyledBenefitsUl>
+        </StyledContainer>
+      </StyledBackGroundImage>
     </section>
   );
 };

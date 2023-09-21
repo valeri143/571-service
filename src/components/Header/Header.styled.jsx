@@ -1,24 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import bg1x from '../../images/mobile/backgrounds/bg@1x-min.jpg';
-import bg2x from '../../images/mobile/backgrounds/bg@2x-min.jpg';
-
-export const StyledBackGroundImage = styled.div`
-  background-image: url(${bg1x});
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 1301px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(${bg2x});
-  }
-`;
 
 export const StyledImg = styled.img`
   width: 43px;

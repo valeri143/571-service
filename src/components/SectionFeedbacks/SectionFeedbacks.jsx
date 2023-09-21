@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { FeedbacksItem } from 'components/FeedbacksItem/FeedbacksItem';
 import { StyledContainer } from 'components/Hero/Hero.styled';
 import {
@@ -19,19 +20,20 @@ import { register } from 'swiper/element/bundle';
 
 register();
 
-export const SectionFeedbacks = ({ content }) => {
+const SectionFeedbacks = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <StyledContainer>
         <StyledDiv>
           <StyledCircleDiv></StyledCircleDiv>
-          <StyledH2>{content.h2}</StyledH2>
+          <StyledH2>{t('header.navLinksList.1')}</StyledH2>
         </StyledDiv>
         <StyledH3>
-          {content.h3[0]}
-          <StyledSpan>{content.h3[1]}</StyledSpan>
+          {t('feedbacks.h3.0')}
+          <StyledSpan> {t('feedbacks.h3.1')}</StyledSpan>
         </StyledH3>
-        <StyledP>{content.p}</StyledP>
+        <StyledP> {t('feedbacks.p')}</StyledP>
 
         <StyledSwiperDiv>
           <swiper-container
@@ -42,36 +44,36 @@ export const SectionFeedbacks = ({ content }) => {
           >
             <swiper-slide>
               <FeedbacksItem
-                h4={content.feedbacks[0][0]}
-                paragraph={content.feedbacks[0][1]}
-                name={content.feedbacks[0][2]}
+                h4={t('feedbacks.feedbacks.0.0')}
+                paragraph={t('feedbacks.feedbacks.0.1')}
+                name={t('feedbacks.feedbacks.0.2')}
                 starsRating="icon-rating"
                 rating="5.0"
               />
             </swiper-slide>
             <swiper-slide>
               <FeedbacksItem
-                h4={content.feedbacks[1][0]}
-                paragraph={content.feedbacks[1][1]}
-                name={content.feedbacks[1][2]}
+                h4={t('feedbacks.feedbacks.1.0')}
+                paragraph={t('feedbacks.feedbacks.1.1')}
+                name={t('feedbacks.feedbacks.1.2')}
                 starsRating="icon-rating"
                 rating="5.0"
               />
             </swiper-slide>
             <swiper-slide>
               <FeedbacksItem
-                h4={content.feedbacks[2][0]}
-                paragraph={content.feedbacks[2][1]}
-                name={content.feedbacks[2][2]}
+                h4={t('feedbacks.feedbacks.2.0')}
+                paragraph={t('feedbacks.feedbacks.2.1')}
+                name={t('feedbacks.feedbacks.2.2')}
                 starsRating="icon-rating"
                 rating="5.0"
               />
             </swiper-slide>
             <swiper-slide>
               <FeedbacksItem
-                h4={content.feedbacks[3][0]}
-                paragraph={content.feedbacks[3][1]}
-                name={content.feedbacks[3][2]}
+                h4={t('feedbacks.feedbacks.3.0')}
+                paragraph={t('feedbacks.feedbacks.3.1')}
+                name={t('feedbacks.feedbacks.3.2')}
                 starsRating="icon-rating"
                 rating="5.0"
               />
@@ -90,10 +92,12 @@ export const SectionFeedbacks = ({ content }) => {
             />
           </StyledSwiperButton>
         </StyledSwiperDiv>
-        <StyledNavLink to={content.navLinkTo}>
-          {content.buttonText}
+        <StyledNavLink to="feedbacks">
+          {t('feedbacks.buttonText')}
         </StyledNavLink>
       </StyledContainer>
     </section>
   );
 };
+
+export default SectionFeedbacks;

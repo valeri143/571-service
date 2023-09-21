@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
 import {
   StyledConfidenceP,
@@ -6,8 +7,8 @@ import {
   StyledFooter,
   StyledFooterLineDiv,
   StyledImgDiv,
-  StyledItemNavLink,
-  StyledNavLink,
+  StyledItemP,
+  StyledH5,
   StyledNavLinksListUl,
   StyledNumberDiv,
   StyledP,
@@ -18,14 +19,21 @@ import {
 } from './Footer.styled';
 import logo from '../../images/logo.svg';
 
-export const Footer = ({ content }) => {
+const Footer = () => {
+  const { t } = useTranslation();
   return (
     <StyledFooter>
       <StyledContainer style={{ paddingBottom: 41 }}>
         <StyledFlexBoxDiv>
           <div>
             <StyledImgDiv>
-              <img src={logo} alt="logo" loading="lazy" />
+              <img
+                src={logo}
+                alt="logo"
+                loading="lazy"
+                width={43}
+                height={38}
+              />
             </StyledImgDiv>
             <StyledContactsDiv>
               <StyledNumberDiv>
@@ -37,7 +45,7 @@ export const Footer = ({ content }) => {
                 <StyledSpan>info@571Service.com</StyledSpan>
               </div>
               <div>
-                <StyledP>{content.time}</StyledP>
+                <StyledP>{t('footer.time')}</StyledP>
                 <ul>
                   <li>
                     <StyledTimeDiv>
@@ -56,105 +64,75 @@ export const Footer = ({ content }) => {
             </StyledContactsDiv>
           </div>
           <div>
-            <StyledNavLink>{content.navLinksTitles[0]}</StyledNavLink>
+            <StyledH5>{t('footer.navLinksTitles.0')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[0]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.0')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[1]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.1')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[2]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.2')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[3]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.3')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[4]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.4')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carServiceList[5]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carServiceList.5')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>
           <div>
-            <StyledNavLink>{content.navLinksTitles[1]}</StyledNavLink>
+            <StyledH5>{t('footer.navLinksTitles.1')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[0]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.0')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[1]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.1')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[2]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.2')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[3]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.3')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[4]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.4')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.carWashServiceList[5]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.carWashServiceList.5')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>
           <div>
-            <StyledNavLink>{content.navLinksTitles[2]}</StyledNavLink>
+            <StyledH5>{t('footer.navLinksTitles.2')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemNavLink>
-                  {content.tireServiceList[0]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.tireServiceList.0')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.tireServiceList[1]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.tireServiceList.1')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.tireServiceList[2]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.tireServiceList.2')}</StyledItemP>
               </li>
               <li>
-                <StyledItemNavLink>
-                  {content.tireServiceList[3]}
-                </StyledItemNavLink>
+                <StyledItemP>{t('footer.tireServiceList.3')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>
         </StyledFlexBoxDiv>
         <StyledFooterLineDiv></StyledFooterLineDiv>
-        <StyledConfidenceP>{content.confidance}</StyledConfidenceP>
-        <StyledRightsP>{content.rights}</StyledRightsP>
+        <StyledConfidenceP>{t('footer.confidance')}</StyledConfidenceP>
+        <StyledRightsP>{t('footer.rights')}</StyledRightsP>
       </StyledContainer>
     </StyledFooter>
   );
 };
+
+export default Footer;

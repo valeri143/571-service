@@ -1,4 +1,23 @@
 import styled from 'styled-components';
+import bg1x from '../../images/mobile/backgrounds/bg@1x-min.jpg';
+import bg2x from '../../images/mobile/backgrounds/bg@2x-min.jpg';
+
+export const StyledBackGroundImage = styled.div`
+  background-image: url(${bg1x});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 1301px;
+  position: relative;
+  top: -60px;
+  left: 0;
+  right: 0;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${bg2x});
+  }
+`;
 
 export const StyledContainer = styled.div`
   padding: 50px 15px 80px 15px;
@@ -117,7 +136,7 @@ export const StyledBenefitsDiv = styled.div`
   display: flex;
   align-items: center;
   padding-left: 43px;
-  gap: 20px;
+  gap: 17px;
   height: 95px;
   border-radius: 8px;
   background: var(--light-color);
@@ -129,7 +148,7 @@ export const StyledBenefitsDiv01 = styled.div`
   display: flex;
   align-items: center;
   padding-left: 35px;
-  gap: 20px;
+  gap: 16px;
   height: 95px;
   border-radius: 8px;
   background: var(--light-color);

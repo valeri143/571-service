@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -32,20 +33,21 @@ import {
   StyledArrowImg,
 } from './SectionCertifications.styled';
 
-export const SectionCertifications = ({ content }) => {
+const SectionCertifications = () => {
+  const { t } = useTranslation();
   return (
     <section>
       <StyledContainer>
         <StyledContentContainer>
           <StyledDiv>
             <StyledCircleDiv></StyledCircleDiv>
-            <StyledH2>{content.h2}</StyledH2>
+            <StyledH2>{t('certifications.h2')}</StyledH2>
           </StyledDiv>
           <StyledH3>
-            <StyledSpan>{content.h3[0]}</StyledSpan>
-            {content.h3[1]}
+            <StyledSpan>{t('certifications.h3.0')}</StyledSpan>
+            {t('certifications.h3.1')}
           </StyledH3>
-          <StyledP>{content.p}</StyledP>
+          <StyledP>{t('certifications.p')}</StyledP>
         </StyledContentContainer>
         <SwiperContainer>
           <Swiper
@@ -132,3 +134,5 @@ export const SectionCertifications = ({ content }) => {
     </section>
   );
 };
+
+export default SectionCertifications;
