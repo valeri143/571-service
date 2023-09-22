@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 export const StyledImg = styled.img`
   width: 43px;
   height: 38px;
+  cursor: pointer;
 `;
 
 export const StyledDiv = styled.div`

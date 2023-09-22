@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import sprite from '../../images/sprite.svg';
 import logo from '../../images/logo.svg';
 import call from '../../images/call.svg';
@@ -23,6 +23,7 @@ import {
 import { useTranslation } from 'react-i18next';
 export const Header = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,6 +53,7 @@ export const Header = () => {
             loading="lazy"
             width={43}
             height={38}
+            onClick={() => navigate('/')}
           />
         </div>
         <StyledMenuButton onClick={toggleMenu}>

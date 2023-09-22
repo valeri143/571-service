@@ -37,8 +37,8 @@ export const CarWashServiceHero = () => {
               margin: 0,
               justifyContent: 'normal',
               gap: '20px',
-              paddingRight: 0,
-              maxWidth: 'inherit',
+              paddingRight: '10px',
+              maxWidth: 'max-content',
             }}
           >
             <StyledCircleDiv></StyledCircleDiv>

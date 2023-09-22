@@ -67,12 +67,33 @@ export const StyledSvg = styled.svg`
 `;
 
 export const StyledFormikDiv = styled.div`
+  margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
   max-width: 360px;
   max-height: 470px;
   border-radius: 8px;
   background: var(--primary-color);
+  @media screen and (min-width: 768px) {
+    max-height: 390px;
+  }
+`;
+export const StyledFormikContactsDiv = styled.div`
+  padding-top: 50px;
+  padding-bottom: 50px;
+  max-width: 360px;
+  max-height: 470px;
+  border-radius: 8px;
+  background: var(--primary-color);
+  position: absolute;
+  z-index: 6;
+  bottom: -80px;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media screen and (min-width: 768px) {
+    max-height: 390px;
+    position: static;
+  }
 `;
 
 export const StyledH2 = styled.h2`
@@ -92,6 +113,10 @@ export const StyledPriceSpan = styled.span`
 export const StyledTable = styled.table`
   width: 100%;
   border-collapse: collapse;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    margin: 0 auto;
+  }
 `;
 
 export const ServiceHeader = styled.th`
@@ -136,4 +161,15 @@ export const PriceCell = styled.td`
   font-size: 16px;
   font-weight: 300;
   line-height: 1.1;
+`;
+
+export const StyledFlexDesktopDiv = styled.div`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const StyledMarginDiv = styled.div`
+  margin-bottom: 80px;
 `;

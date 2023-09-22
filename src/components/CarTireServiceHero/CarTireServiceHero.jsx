@@ -36,9 +36,9 @@ export const CarTireServiceHero = () => {
             style={{
               margin: 0,
               justifyContent: 'normal',
-              gap: '15px',
-              paddingRight: 0,
-              maxWidth: 'inherit',
+              gap: '10px',
+              paddingRight: '5px',
+              maxWidth: 'max-content',
             }}
           >
             <StyledCircleDiv></StyledCircleDiv>

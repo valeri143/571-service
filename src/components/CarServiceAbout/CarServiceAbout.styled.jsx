@@ -6,6 +6,11 @@ export const StyledCarServiceUl = styled.ul`
   align-items: center;
   justify-content: center;
   gap: 30px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 `;
 
 export const StyledCarServiceDiv = styled.div`

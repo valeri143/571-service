@@ -14,6 +14,7 @@ export const StyledSpan = styled.span`
 
 export const StyledButton = styled.button`
   display: flex;
+  margin: 0 auto;
   width: 360px;
   height: 60px;
   justify-content: center;
@@ -39,4 +40,18 @@ export const StyledNewDiv = styled.div`
   border-top-right-radius: 8px;
   position: absolute;
   right: 13.5px;
+`;
+
+export const StyledUl = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const StyledBlogUl = styled.ul`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
 `;

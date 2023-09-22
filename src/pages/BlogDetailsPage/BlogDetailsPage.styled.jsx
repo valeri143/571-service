@@ -22,3 +22,9 @@ export const StyledP = styled.p`
 export const StyledLi = styled.li`
   margin-bottom: 30px;
 `;
+
+export const StyledImg = styled.img`
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+  }
+`;

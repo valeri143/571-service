@@ -7,7 +7,12 @@ import {
 } from 'components/SectionServices/SectionServices.styled';
 import { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
-import { StyledButton, StyledH3, StyledSpan } from './FeedbacksPage.styled';
+import {
+  StyledButton,
+  StyledH3,
+  StyledSpan,
+  StyledUl,
+} from './FeedbacksPage.styled';
 import { FeedbacksItem } from 'components/FeedbacksItem/FeedbacksItem';
 
 const SectionContacts = lazy(() =>
@@ -30,7 +35,7 @@ const FeedbacksPage = () => {
             <StyledSpan> {t('feedbacks.h3.1')}</StyledSpan>
           </StyledH3>
           <StyledP> {t('feedbacks.p')}</StyledP>
-          <ul>
+          <StyledUl>
             {feedbacks.map((feedback, index) => (
               <li key={index}>
                 <FeedbacksItem
@@ -42,7 +47,7 @@ const FeedbacksPage = () => {
                 />
               </li>
             ))}
-          </ul>
+          </StyledUl>
           <StyledButton type="button">{t('buttonTextList.0')}</StyledButton>
         </StyledContainer>
       </section>

@@ -57,6 +57,11 @@ export const StyledH3 = styled.h3`
 
 export const StyledFormDiv = styled.div`
   position: relative;
+  @media screen and (min-width: 768px) {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const StyledField = styled(Field)`
@@ -221,6 +226,9 @@ export const StyledFlexDiv = styled.div`
   align-items: center;
   justify-content: center;
   gap: 10px;
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+  }
 `;
 
 export const StyledLineDiv = styled.div`

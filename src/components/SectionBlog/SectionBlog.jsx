@@ -27,6 +27,13 @@ import {
 } from 'components/SectionFeedbacks/SectionFeedbacks.styled';
 const SectionBlog = () => {
   const { t } = useTranslation();
+  const getSlidesPerView = () => {
+    if (window.innerWidth >= 768) {
+      return 2;
+    } else {
+      return 1;
+    }
+  };
   return (
     <section>
       <StyledContainer>
@@ -41,7 +48,7 @@ const SectionBlog = () => {
         </StyledH3>
         <Swiper
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={getSlidesPerView()}
           navigation={{
             nextEl: '.swiper-button-next-el',
           }}

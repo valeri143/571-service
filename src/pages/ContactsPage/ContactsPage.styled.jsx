@@ -33,6 +33,8 @@ export const StyledSvgDiv = styled.div`
 export const StyledLink = styled.a`
   font-size: 16px;
   line-height: 1.5;
+  position: relative;
+  z-index: 5;
 `;
 
 export const StyledLinkDiv = styled.div`
@@ -62,4 +64,7 @@ export const StyledBgSvg = styled.svg`
   position: absolute;
   top: 285px;
   right: 20px;
+  @media screen and (min-width: 768px) {
+    left: 150px;
+  }
 `;

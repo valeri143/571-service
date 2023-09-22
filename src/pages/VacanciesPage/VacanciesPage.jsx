@@ -11,7 +11,11 @@ import {
   StyledP,
 } from 'components/SectionServices/SectionServices.styled';
 import { lazy } from 'react';
-import { StyledH3, StyledSpan } from '../FeedbacksPage/FeedbacksPage.styled';
+import {
+  StyledH3,
+  StyledSpan,
+  StyledUl,
+} from '../FeedbacksPage/FeedbacksPage.styled';
 import sprite from '../../images/sprite.svg';
 import call from '../../images/call.svg';
 import {
@@ -73,7 +77,7 @@ const VacanciesPage = () => {
             <StyledSpan> {t('vacancies.h3.1')}</StyledSpan>
           </StyledH3>
           <StyledP> {t('vacancies.p')}</StyledP>
-          <ul>
+          <StyledUl>
             <li>
               <StyledFeedbackDiv>
                 <StyledFeedbackH4>
@@ -410,12 +414,12 @@ const VacanciesPage = () => {
                 </StyledFeedbackFlexDiv>
               </StyledFeedbackDiv>
             </li>
-          </ul>
+          </StyledUl>
         </StyledContainer>
       </section>
       <section>
         <StyledContainer>
-          <StyledFormikDiv>
+          <StyledFormikDiv style={{ paddingBottom: 70 }}>
             <StyledFormH3>{t('vacancies.form')}</StyledFormH3>
             <StyledFormP>{t('vacancies.formP')}</StyledFormP>
             <Formik

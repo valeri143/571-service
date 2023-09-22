@@ -125,6 +125,11 @@ export const StyledServicesUl = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 30px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 `;
 
 export const StyledNavLink = styled(NavLink)`

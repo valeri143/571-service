@@ -9,6 +9,7 @@ import post0202x from '../../images/posts/post02@2x-min.jpg';
 import {
   StyledDateP,
   StyledH3,
+  StyledImg,
   StyledLi,
   StyledP,
 } from './BlogDetailsPage.styled';
@@ -28,7 +29,7 @@ const BlogDetailsPage = () => {
           <ul>
             <StyledLi>
               <StyledNewDiv>NEW</StyledNewDiv>
-              <img
+              <StyledImg
                 srcSet={`${post0101x} 1x, ${post0102x} 2x`}
                 src={post0101x}
                 alt="post-img"

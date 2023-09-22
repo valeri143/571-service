@@ -7,6 +7,7 @@ import {
 import { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
+  StyledBlogUl,
   StyledButton,
   StyledH3,
   StyledNewDiv,
@@ -39,7 +40,7 @@ const BlogPage = () => {
             <StyledSpan>{t('blog.h3.1')}</StyledSpan>
             {t('blog.h3.2')}
           </StyledH3>
-          <ul>
+          <StyledBlogUl>
             <li>
               <StyledNewDiv>NEW</StyledNewDiv>
               <PostsItem
@@ -68,7 +69,7 @@ const BlogPage = () => {
                 text={t('blog.posts.2.1')}
               />
             </li>
-          </ul>
+          </StyledBlogUl>
           <StyledButton type="button">{t('buttonTextList.1')}</StyledButton>
         </StyledContainer>
       </section>

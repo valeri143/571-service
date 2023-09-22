@@ -35,6 +35,13 @@ import {
 
 const SectionCertifications = () => {
   const { t } = useTranslation();
+  const getSlidesPerView = () => {
+    if (window.innerWidth >= 768) {
+      return 3;
+    } else {
+      return 1.5;
+    }
+  };
   return (
     <section>
       <StyledContainer>
@@ -53,7 +60,7 @@ const SectionCertifications = () => {
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={10}
-            slidesPerView={1.5}
+            slidesPerView={getSlidesPerView()}
             navigation={{
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',

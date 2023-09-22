@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 import { CarTireServiceRepairHero } from 'components/CarTireServiceRepair/CarTireServiceRepairHero';
 import { CarTireServiceMountingDismantlingOfTiresAbout } from 'components/CarTireServiceRepair/CarTireServiceMountingDismantlingOfTiresAbout';
-import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
 
 const CarTireServiceRepairPrice = lazy(() =>
   import('components/CarTireServiceRepair/CarTireServiceRepairPrice')
@@ -19,9 +18,9 @@ const SectionContacts = lazy(() =>
 );
 
 const style = {
-  gap: '10px',
-  maxWidth: 'inherit',
-  paddingRight: 0,
+  gap: '5px',
+  maxWidth: 'max-content',
+  paddingRight: '5px',
   margin: 0,
   marginTop: '20px',
   justifyContent: 'normal',
@@ -32,7 +31,6 @@ const CarTireServiceMountingDismantlingOfTiresPage = () => {
     <>
       <CarTireServiceRepairHero h1={'footer.tireServiceList.0'} style={style} />
       <CarTireServiceMountingDismantlingOfTiresAbout />
-      <CarServiceRepairForm />
       <CarTireServiceRepairPrice />
       <SectionFeedbacks />
       <SectionCertifications />

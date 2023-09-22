@@ -121,6 +121,9 @@ export const StyledImg = styled.img`
   position: absolute;
   bottom: 395px;
   right: 0;
+  @media screen and (min-width: 768px) {
+    bottom: 228px;
+  }
 `;
 
 export const StyledBenefitsUl = styled.ul`
@@ -130,6 +133,10 @@ export const StyledBenefitsUl = styled.ul`
   justify-content: center;
   margin-top: 456px;
   align-items: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 export const StyledBenefitsDiv = styled.div`
   max-width: 320px;

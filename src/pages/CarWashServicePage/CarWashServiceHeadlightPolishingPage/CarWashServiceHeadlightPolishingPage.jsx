@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 import { CarWashServiceRepairHero } from 'components/CarWashServiceRepair/CarWashServiceRepairHero';
 import { CarWashServiceHeadlightPolishingAbout } from 'components/CarWashServiceRepair/CarWashServiceHeadlightPolishingAbout';
-import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
 
 const CarServiceRepairPrice = lazy(() =>
   import('components/CarServiceRepair/CarServiceRepairPrice')
@@ -20,8 +19,8 @@ const SectionContacts = lazy(() =>
 
 const style = {
   gap: '15px',
-  maxWidth: 'inherit',
-  paddingRight: 0,
+  maxWidth: 'max-content',
+  paddingRight: '10px',
   margin: 0,
   justifyContent: 'normal',
 };
@@ -36,7 +35,6 @@ const CarWashServiceHeadlightPolishingPage = () => {
         style={style}
       />
       <CarWashServiceHeadlightPolishingAbout />
-      <CarServiceRepairForm />
       <CarServiceRepairPrice
         h2={'headlightPolishing.h2'}
         list={'headlightPolishing.serviceList'}

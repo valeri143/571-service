@@ -89,6 +89,10 @@ export const StyledFooterLineDiv = styled.div`
   @media screen and (min-width: 390px) {
     width: 390px;
   }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    max-width: none;
+  }
 `;
 
 export const StyledConfidenceP = styled.p`

@@ -9,7 +9,7 @@ import {
 export const PostsItem = ({ post01x, post02x, date, title, text }) => {
   const navigate = useNavigate();
   return (
-    <StyledPostDiv onClick={() => navigate('modern-car-service')}>
+    <StyledPostDiv onClick={() => navigate('/blog/modern-car-service')}>
       <img
         srcSet={`${post01x} 1x, ${post02x} 2x`}
         src={post01x}

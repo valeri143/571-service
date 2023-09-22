@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 import { CarTireServiceRepairHero } from 'components/CarTireServiceRepair/CarTireServiceRepairHero';
 import { CarTireServiceTiresRepairAbout } from 'components/CarTireServiceRepair/CarTireServiceTiresRepairAbout';
-import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
 
 const CarTireServiceTiresRepairPrice = lazy(() =>
   import('components/CarTireServiceRepair/CarTireServiceTiresRepairPrice')
@@ -22,8 +21,8 @@ const style = {
   margin: 0,
   justifyContent: 'normal',
   gap: '10px',
-  paddingRight: 0,
-  maxWidth: 'inherit',
+  paddingRight: '10px',
+  maxWidth: 'max-content',
 };
 
 const CarTireServiceTiresRapairPage = () => {
@@ -31,7 +30,6 @@ const CarTireServiceTiresRapairPage = () => {
     <>
       <CarTireServiceRepairHero h1={'footer.tireServiceList.1'} style={style} />
       <CarTireServiceTiresRepairAbout />
-      <CarServiceRepairForm />
       <CarTireServiceTiresRepairPrice
         h2={'tireRepair.h2'}
         price={'tireRepair.priceList'}

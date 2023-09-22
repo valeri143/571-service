@@ -18,6 +18,13 @@ register();
 
 const SectionFeedbacks = () => {
   const { t } = useTranslation();
+  const getSlidesPerView = () => {
+    if (window.innerWidth >= 768) {
+      return 2;
+    } else {
+      return 1;
+    }
+  };
   return (
     <section>
       <StyledContainer>
@@ -31,7 +38,7 @@ const SectionFeedbacks = () => {
         </StyledH3>
         <StyledP> {t('feedbacks.p')}</StyledP>
         <swiper-container
-          slides-per-view="1"
+          slides-per-view={getSlidesPerView()}
           speed="500"
           loop="true"
           space-between="20px"

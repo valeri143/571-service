@@ -6,6 +6,11 @@ export const StyledContactsUl = styled.ul`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 `;
 
 export const StyledContactsDiv = styled.div`
@@ -20,6 +25,9 @@ export const StyledContactsDiv = styled.div`
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
   @media screen and (min-width: 390px) {
     width: 390px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 360px;
   }
 `;
 
@@ -50,4 +58,16 @@ export const StyledLink = styled.a`
   margin-left: auto;
   margin-right: auto;
   line-height: 1.5;
+`;
+
+export const IframeMob = styled.iframe`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+export const IframeTab = styled.iframe`
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 `;

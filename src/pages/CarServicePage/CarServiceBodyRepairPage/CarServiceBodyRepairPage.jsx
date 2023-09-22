@@ -1,7 +1,6 @@
 import { lazy } from 'react';
 import { CarServiceRepairHero } from 'components/CarServiceRepair/CarServiceRepairHero';
 import { CarServiceBodyRepairAbout } from 'components/CarServiceRepair/CarServiceBodyRepairAbout';
-import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
 
 const CarServiceEngineRepairPrice = lazy(() =>
   import('components/CarServiceRepair/CarServiceRepairPrice')
@@ -23,7 +22,6 @@ const CarServiceBodyRepairPage = () => {
     <>
       <CarServiceRepairHero h1={'footer.carServiceList.4'} p={'bodyRepair.p'} />
       <CarServiceBodyRepairAbout />
-      <CarServiceRepairForm />
       <CarServiceEngineRepairPrice
         h2={'bodyRepair.h2'}
         list={'bodyRepair.serviceList'}
