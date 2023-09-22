@@ -54,7 +54,7 @@ export const StyledContactsDiv = styled.div`
   gap: 20px;
 `;
 
-export const StyledH5 = styled.h5`
+export const StyledH5 = styled.h3`
   color: var(--light-color);
   font-weight: 500;
   line-height: 1.2;

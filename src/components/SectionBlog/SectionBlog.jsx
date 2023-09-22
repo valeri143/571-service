@@ -23,7 +23,6 @@ import arrowSwiper from '../../images/arrow-swiper.svg';
 
 import {
   StyledSwiperButton,
-  StyledSwiperDiv,
   StyledNavLink,
 } from 'components/SectionFeedbacks/SectionFeedbacks.styled';
 const SectionBlog = () => {
@@ -40,54 +39,52 @@ const SectionBlog = () => {
           <StyledSpan>{t('blog.h3.1')}</StyledSpan>
           {t('blog.h3.2')}
         </StyledH3>
-        <StyledSwiperDiv>
-          <Swiper
-            spaceBetween={20}
-            slidesPerView={1}
-            navigation={{
-              nextEl: '.swiper-button-next-el',
-            }}
-            loop={true}
-            speed="500"
-          >
-            <SwiperSlide>
-              <PostsItem
-                post01x={post0101x}
-                post02x={post0102x}
-                date="10.06.2023"
-                title={t('blog.posts.0.0')}
-                text={t('blog.posts.0.1')}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PostsItem
-                post01x={post0201x}
-                post02x={post0202x}
-                date="09.06.2023"
-                title={t('blog.posts.1.0')}
-                text={t('blog.posts.1.1')}
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <PostsItem
-                post01x={post0301x}
-                post02x={post0302x}
-                date="10.06.2023"
-                title={t('blog.posts.2.0')}
-                text={t('blog.posts.2.1')}
-              />
-            </SwiperSlide>
-          </Swiper>
-          <StyledSwiperButton type="button" className="swiper-button-next-el">
-            <img
-              src={arrowSwiper}
-              alt="arrow-button"
-              width={46}
-              height={46}
-              loading="lazy"
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation={{
+            nextEl: '.swiper-button-next-el',
+          }}
+          loop={true}
+          speed="500"
+        >
+          <SwiperSlide>
+            <PostsItem
+              post01x={post0101x}
+              post02x={post0102x}
+              date="10.06.2023"
+              title={t('blog.posts.0.0')}
+              text={t('blog.posts.0.1')}
             />
-          </StyledSwiperButton>
-        </StyledSwiperDiv>
+          </SwiperSlide>
+          <SwiperSlide>
+            <PostsItem
+              post01x={post0201x}
+              post02x={post0202x}
+              date="09.06.2023"
+              title={t('blog.posts.1.0')}
+              text={t('blog.posts.1.1')}
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <PostsItem
+              post01x={post0301x}
+              post02x={post0302x}
+              date="10.06.2023"
+              title={t('blog.posts.2.0')}
+              text={t('blog.posts.2.1')}
+            />
+          </SwiperSlide>
+        </Swiper>
+        <StyledSwiperButton type="button" className="swiper-button-next-el">
+          <img
+            src={arrowSwiper}
+            alt="arrow-button"
+            width={46}
+            height={46}
+            loading="lazy"
+          />
+        </StyledSwiperButton>
         <StyledNavLink to="/blog">{t('blog.buttonText')}</StyledNavLink>
       </StyledContainer>
     </section>

@@ -49,6 +49,7 @@ const SectionAbout = () => {
                 alt="about-car-service-img"
                 loading="lazy"
                 width={360}
+                height={368}
               />
               <StyledPositionImg src={logo} alt="logo" loading="lazy" />
               <StyledH4>{t('about.h4List.0')}</StyledH4>

@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const StyledSwiperDiv = styled.div`
-  position: relative;
-`;
-
 export const StyledSwiperButton = styled.button`
   background: none;
   border: none;
   position: absolute;
-  right: -20px;
-  top: 45%;
+  right: 0;
+  top: 58%;
   z-index: 10;
 `;
 
