@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import sprite from '../../images/sprite.svg';
 import logo from '../../images/logo.svg';
 import call from '../../images/call.svg';
@@ -21,6 +22,7 @@ import {
 } from './Header.styled';
 import { useTranslation } from 'react-i18next';
 export const Header = () => {
+  const location = useLocation();
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -31,7 +33,18 @@ export const Header = () => {
 
   return (
     <header>
-      <StyledDiv>
+      <StyledDiv
+        style={{
+          backgroundColor:
+            location.pathname === '/contacts' ||
+            location.pathname === '/feedbacks' ||
+            location.pathname === '/blog' ||
+            location.pathname === '/blog/modern-car-service' ||
+            location.pathname === '/vacancies'
+              ? 'rgba(71, 71, 71, 1)'
+              : 'rgba(71, 71, 71, 0.5)',
+        }}
+      >
         <div>
           <StyledImg
             src={logo}
@@ -59,7 +72,7 @@ export const Header = () => {
           <nav>
             <StyledMenuNavLinkUl>
               <li>
-                <StyledNavLink to="/services">
+                <StyledNavLink to="/#services">
                   {t('header.navLinksList.0')}
                 </StyledNavLink>
               </li>

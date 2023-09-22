@@ -92,7 +92,7 @@ const SectionFeedbacks = () => {
             />
           </StyledSwiperButton>
         </StyledSwiperDiv>
-        <StyledNavLink to="feedbacks">
+        <StyledNavLink to="/feedbacks">
           {t('feedbacks.buttonText')}
         </StyledNavLink>
       </StyledContainer>

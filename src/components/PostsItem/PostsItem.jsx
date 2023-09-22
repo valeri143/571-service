@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
   StyledPostDateP,
   StyledPostDiv,
@@ -6,8 +7,9 @@ import {
 } from './PostsItem.styled';
 
 export const PostsItem = ({ post01x, post02x, date, title, text }) => {
+  const navigate = useNavigate();
   return (
-    <StyledPostDiv>
+    <StyledPostDiv onClick={() => navigate('modern-car-service')}>
       <img
         srcSet={`${post01x} 1x, ${post02x} 2x`}
         src={post01x}

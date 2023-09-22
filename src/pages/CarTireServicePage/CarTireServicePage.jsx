@@ -12,6 +12,9 @@ const SectionCertifications = lazy(() =>
 );
 const SectionForm = lazy(() => import('components/SectionForm/SectionForm'));
 const SectionBlog = lazy(() => import('components/SectionBlog/SectionBlog'));
+const SectionContacts = lazy(() =>
+  import('components//SectionContacts/SectionContacts')
+);
 
 const CarTireServicePage = () => {
   return (
@@ -22,6 +25,7 @@ const CarTireServicePage = () => {
       <SectionCertifications />
       <SectionForm />
       <SectionBlog />
+      <SectionContacts />
     </>
   );
 };

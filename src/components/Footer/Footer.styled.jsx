@@ -80,12 +80,15 @@ export const StyledNavLinksListUl = styled.ul`
 export const StyledFooterLineDiv = styled.div`
   position: absolute;
   left: 0;
-  width: 100vw;
+  max-width: 390px;
   height: 1px;
   opacity: 0.5;
   background: #dadada;
   margin-top: 40px;
   margin-bottom: 30px;
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
 `;
 
 export const StyledConfidenceP = styled.p`

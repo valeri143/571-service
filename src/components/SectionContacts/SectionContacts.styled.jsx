@@ -9,7 +9,7 @@ export const StyledContactsUl = styled.ul`
 `;
 
 export const StyledContactsDiv = styled.div`
-  width: 98vw;
+  min-width: 320px;
   height: 170px;
   max-height: 234px;
   padding-top: 60px;
@@ -18,12 +18,16 @@ export const StyledContactsDiv = styled.div`
   border-radius: 8px 8px 0px 0px;
   background: var(--light-color);
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
 `;
 
 export const StyledContactsSvg = styled.div`
-  position: absolute;
-  top: -40px;
-  left: 38%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+  margin-bottom: 20px;
   width: 80px;
   height: 80px;
   background: linear-gradient(95deg, #fdc70d 0%, #fdab0d 100%);

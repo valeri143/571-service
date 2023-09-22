@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {
   StyledCircleDiv,
   StyledContainer,
@@ -25,7 +25,7 @@ import {
 
 const CarWashServiceAbout = () => {
   const { t } = useTranslation();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <section>
       <StyledContainer>
@@ -54,7 +54,11 @@ const CarWashServiceAbout = () => {
                 {t('footer.carWashServiceList.0')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('headlight-polishing')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
@@ -74,7 +78,11 @@ const CarWashServiceAbout = () => {
                 {t('footer.carWashServiceList.1')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('cleaning')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
@@ -94,7 +102,11 @@ const CarWashServiceAbout = () => {
                 {t('carService.h4List.1')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('extra-services')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>

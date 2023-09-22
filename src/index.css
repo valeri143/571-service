@@ -30,6 +30,13 @@ body {
 li{
   list-style: none;
 }
+ol{
+  padding-left: 20px;
+}
+ol>li{
+  list-style: auto;
+  margin-bottom: 8px;
+}
 a{
   text-decoration: none;
   font-family: inherit;

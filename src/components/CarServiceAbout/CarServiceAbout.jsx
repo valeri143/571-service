@@ -132,7 +132,11 @@ const CarServiceAbout = () => {
                 {t('footer.carServiceList.3')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('electric-repair')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
@@ -152,7 +156,11 @@ const CarServiceAbout = () => {
                 {t('footer.carServiceList.4')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('car-body-repair')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
@@ -172,7 +180,11 @@ const CarServiceAbout = () => {
                 {t('carService.h4List.1')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg width="30" height="30">
+                <svg
+                  width="30"
+                  height="30"
+                  onClick={() => navigate('extra-services')}
+                >
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>

@@ -18,6 +18,7 @@ export const StyledFeedbackBracketsSvg = styled.svg`
 `;
 
 export const StyledFeedbackH4 = styled.h4`
+  width: 301px;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;

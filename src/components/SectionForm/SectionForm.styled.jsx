@@ -214,7 +214,6 @@ export const StyledCheckboxLabel = styled.label`
   font-size: 12px;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: 43px;
 `;
 
 export const StyledFlexDiv = styled.div`

@@ -3,7 +3,6 @@ import { Suspense, lazy } from 'react';
 import { RotatingLines } from 'react-loader-spinner';
 import { Header } from './Header/Header';
 
-const SectionContacts = lazy(() => import('./SectionContacts/SectionContacts'));
 const Footer = lazy(() => import('./Footer/Footer'));
 
 const loaderStyle = {
@@ -32,7 +31,6 @@ export const Layout = ({ lang }) => {
       >
         <main>
           <Outlet />
-          <SectionContacts />
         </main>
         <Footer />
       </Suspense>

@@ -29,7 +29,7 @@ export const SectionServices = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   return (
-    <section>
+    <section id="services">
       <StyledContainer>
         <StyledBgSvg width="215" height="158">
           <use href={`${sprite}#icon-bg`}></use>

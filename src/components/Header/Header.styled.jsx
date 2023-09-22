@@ -88,7 +88,7 @@ export const animation = keyframes`
 
 export const StyledHamburgerMenu = styled.div`
   position: fixed;
-  top: 9.5%;
+  top: 9.1%;
   left: 0;
   width: 100vw;
   height: 510px;

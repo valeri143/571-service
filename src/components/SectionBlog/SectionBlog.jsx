@@ -88,7 +88,7 @@ const SectionBlog = () => {
             />
           </StyledSwiperButton>
         </StyledSwiperDiv>
-        <StyledNavLink to="blog">{t('blog.buttonText')}</StyledNavLink>
+        <StyledNavLink to="/blog">{t('blog.buttonText')}</StyledNavLink>
       </StyledContainer>
     </section>
   );
