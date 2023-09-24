@@ -72,7 +72,13 @@ export const SwiperContainer = styled.div`
     right: 30%;
   }
 `;
-
 export const StyledArrowImg = styled.img`
   max-width: 46px;
+  @media screen and (min-width: 1512px) {
+    display: none;
+  }
+`;
+
+export const StyledArrowNext = styled.img`
+  max-width: 56px;
 `;

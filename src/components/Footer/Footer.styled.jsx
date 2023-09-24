@@ -12,10 +12,25 @@ export const StyledFlexBoxDiv = styled.div`
   justify-content: space-between;
   row-gap: 30px;
   flex-basis: calc((100% - 20px) / 2);
+  @media screen and (min-width: 1512px) {
+    justify-content: flex-end;
+    row-gap: 0;
+    gap: 61px;
+  }
 `;
-
+export const StyledImg = styled.img`
+  @media screen and (min-width: 1512px) {
+    width: 92px;
+    height: 81px;
+  }
+`;
 export const StyledImgDiv = styled.div`
   margin-bottom: 20px;
+  @media screen and (min-width: 1512px) {
+    position: absolute;
+    top: 70px;
+    left: 156px;
+  }
 `;
 
 export const StyledPhoneP = styled.p`
@@ -75,6 +90,9 @@ export const StyledNavLinksListUl = styled.ul`
   gap: 10px;
   margin-top: 20px;
   width: 174px;
+  @media screen and (min-width: 1512px) {
+    width: 220px;
+  }
 `;
 
 export const StyledFooterLineDiv = styled.div`
@@ -93,6 +111,21 @@ export const StyledFooterLineDiv = styled.div`
     width: 768px;
     max-width: none;
   }
+  @media screen and (min-width: 1512px) {
+    width: 1200px;
+    margin: 0 auto;
+    position: static;
+    margin-top: 50px;
+  }
+`;
+
+export const StyledConfidenceDiv = styled.div`
+  @media screen and (min-width: 1512px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
 `;
 
 export const StyledConfidenceP = styled.p`
@@ -103,6 +136,9 @@ export const StyledConfidenceP = styled.p`
   margin-top: 70px;
   text-align: center;
   margin-bottom: 20px;
+  @media screen and (min-width: 1512px) {
+    margin: 0;
+  }
 `;
 
 export const StyledRightsP = styled.p`

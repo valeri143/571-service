@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { animation } from '../Hero/Hero';
 import {
   StyledContainer,
-  StyledH3,
   StyledSpan,
 } from 'components/SectionServices/SectionServices.styled';
 import sprite from '../../images/sprite.svg';
 import {
+  StyledH3,
   IframeMob,
   IframeTab,
   StyledContactsDiv,
@@ -13,25 +15,24 @@ import {
   StyledContactsSvg,
   StyledContactsUl,
   StyledLink,
+  StyledOrderLi,
+  IframeDesk,
 } from './SectionContacts.styled';
 const SectionContacts = () => {
   const { t } = useTranslation();
   return (
-    <section>
+    <motion.section
+      initial={window.innerWidth >= 1512 ? 'hidden' : 'visible'}
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+    >
       <h2 hidden>contacts</h2>
       <StyledContainer style={{ paddingBottom: 0 }}>
-        <StyledH3
-          style={{
-            marginLeft: 'auto',
-            width: 266,
-            marginRight: 'auto',
-            textAlign: 'center',
-          }}
-        >
+        <StyledH3>
           <StyledSpan>{t('contacts.h3.0')}</StyledSpan>
           {t('contacts.h3.1')}
         </StyledH3>
-        <StyledContactsUl>
+        <StyledContactsUl variants={animation} as={motion.ul}>
           <li>
             <StyledContactsDiv>
               <StyledContactsSvg>
@@ -44,7 +45,7 @@ const SectionContacts = () => {
               <StyledLink href="tel:044 698 98 98">044 698 98 98</StyledLink>
             </StyledContactsDiv>
           </li>
-          <li>
+          <StyledOrderLi>
             <StyledContactsDiv>
               <StyledContactsSvg>
                 <svg width="40" height="40">
@@ -56,7 +57,7 @@ const SectionContacts = () => {
                 info@571Service.com
               </StyledLink>
             </StyledContactsDiv>
-          </li>
+          </StyledOrderLi>
           <li>
             <StyledContactsDiv>
               <StyledContactsSvg>
@@ -96,8 +97,18 @@ const SectionContacts = () => {
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></IframeTab>
+        <IframeDesk
+          title="desktop-map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.49886502828!2d30.447006076253476!3d50.4131763900472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c94bccadbc9f%3A0x38ec924d0e91bf56!2z0LLRg9C70LjRhtGPINCh0LLRj9GC0L7RgdC70LDQstCwINCl0L7RgNC-0LHRgNC-0LPQviwgMjbQkCwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1695516707728!5m2!1suk!2sua"
+          width="1512"
+          height="518"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></IframeDesk>
       </StyledContainer>
-    </section>
+    </motion.section>
   );
 };
 

@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 import { Field } from 'formik';
 import bg1x from '../../images/mobile/backgrounds/form-background@1x-min.jpg';
 import bg2x from '../../images/mobile/backgrounds/form-background@2x-min.jpg';
+import bg1xD from '../../images/desktop/backgrounds/form-background@1x-min.jpg';
+import bg2xD from '../../images/desktop/backgrounds/form-background@2x-min.jpg';
 import check from '../../images/checkbox.svg';
 
 export const StyledBackGroundImage = styled.div`
@@ -15,12 +17,37 @@ export const StyledBackGroundImage = styled.div`
     (min-resolution: 2dppx) {
     background-image: url(${bg2x});
   }
+  @media screen and (min-width: 1512px) {
+    background: url(${bg1xD}),
+      linear-gradient(90deg, #242424 0%, rgba(36, 36, 36, 0) 100%),
+      var(--primary-color);
+    background-repeat: no-repeat;
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${bg2xD});
+      background-size: contain;
+    }
+  }
 `;
 
 export const StyledBgImg = styled.img`
   position: absolute;
   right: 0;
   top: -240px;
+  @media (min-width: 1512px) {
+    display: none;
+  }
+`;
+
+export const StyledBgDesktopImg = styled.img`
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: 350px;
+  @media (min-width: 1512px) {
+    display: block;
+  }
 `;
 
 export const StyledDiv = styled.div`
@@ -32,6 +59,10 @@ export const StyledDiv = styled.div`
   flex-direction: row-reverse;
   align-items: center;
   gap: 10px;
+  @media screen and (min-width: 1512px) {
+    right: 168px;
+    top: unset;
+  }
 `;
 
 export const StyledH2 = styled.h2`
@@ -53,6 +84,21 @@ export const StyledH3 = styled.h3`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 32px;
+  @media screen and (min-width: 1512px) {
+    font-size: 38px;
+    text-align: left;
+    width: 395px;
+    margin-right: 200px;
+  }
+`;
+
+export const StyledFlexFormDesktopDiv = styled.div`
+  @media screen and (min-width: 1512px) {
+    display: flex;
+    justify-content: flex-end;
+    gap: 51px;
+    align-items: flex-end;
+  }
 `;
 
 export const StyledFormDiv = styled.div`
@@ -89,6 +135,9 @@ export const StyledField = styled(Field)`
   }
   @media screen and (min-width: 350px) {
     width: 270px;
+  }
+  @media screen and (min-width: 1512px) {
+    width: 330px;
   }
 `;
 
@@ -151,6 +200,14 @@ export const StyledButton = styled.button`
   border-radius: 500px;
   @media screen and (min-width: 350px) {
     width: 330px;
+  }
+  @media screen and (min-width: 1512px) {
+    transition: all 250ms var(--animation-cubic);
+    &:hover,
+    &:focus {
+      background: linear-gradient(95deg, #fdab0d 0%, #fdc70d 100%);
+      box-shadow: 0px 24px 20px -20px #fdab0d;
+    }
   }
 `;
 
@@ -228,6 +285,9 @@ export const StyledFlexDiv = styled.div`
   gap: 10px;
   @media screen and (min-width: 768px) {
     margin-top: 30px;
+  }
+  @media screen and (min-width: 1512px) {
+    margin-bottom: 30px;
   }
 `;
 

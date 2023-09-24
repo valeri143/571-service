@@ -37,6 +37,21 @@ export const StyledContainer = styled.div`
   }
 `;
 
+export const StyledH1 = styled.h1`
+  width: 300px;
+  color: var(--light-color);
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  margin-top: 60px;
+  @media screen and (min-width: 1512px) {
+    max-width: 545px;
+    font-size: 40px;
+  }
+`;
+
 export const StyledP = styled.p`
   font-size: 16px;
   line-height: 1.5;
@@ -86,7 +101,7 @@ export const StyledFormikContactsDiv = styled.div`
   border-radius: 8px;
   background: var(--primary-color);
   position: absolute;
-  z-index: 6;
+  z-index: 2;
   bottom: -80px;
   padding-left: 15px;
   padding-right: 15px;

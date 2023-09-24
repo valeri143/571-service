@@ -2,13 +2,17 @@ import styled from 'styled-components';
 
 export const StyledFeedbackDiv = styled.div`
   max-width: 360px;
-  height: 305px;
+  min-height: 270px;
   padding: 16px;
   position: relative;
   border-radius: 8px;
   background: var(--light-color);
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
   margin-bottom: 30px;
+  @media screen and (min-width: 1512px) {
+    max-width: 387px;
+    padding: 30px;
+  }
 `;
 
 export const StyledFeedbackBracketsSvg = styled.svg`
@@ -23,6 +27,9 @@ export const StyledFeedbackH4 = styled.h4`
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 10px;
+  @media screen and (min-width: 1512px) {
+    font-size: 24px;
+  }
 `;
 
 export const StyledFeedbackP = styled.p`
@@ -31,6 +38,10 @@ export const StyledFeedbackP = styled.p`
   font-style: italic;
   line-height: 1.5;
   margin-bottom: 20px;
+  @media screen and (min-width: 1512px) {
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
 `;
 
 export const StyledFeedbackFlexDiv = styled.div`

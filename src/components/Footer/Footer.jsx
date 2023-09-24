@@ -16,6 +16,8 @@ import {
   StyledRightsP,
   StyledSpan,
   StyledTimeDiv,
+  StyledImg,
+  StyledConfidenceDiv,
 } from './Footer.styled';
 import logo from '../../images/logo.svg';
 
@@ -27,7 +29,7 @@ const Footer = () => {
         <StyledFlexBoxDiv>
           <div>
             <StyledImgDiv>
-              <img
+              <StyledImg
                 src={logo}
                 alt="logo"
                 loading="lazy"
@@ -128,8 +130,10 @@ const Footer = () => {
           </div>
         </StyledFlexBoxDiv>
         <StyledFooterLineDiv></StyledFooterLineDiv>
-        <StyledConfidenceP>{t('footer.confidance')}</StyledConfidenceP>
-        <StyledRightsP>{t('footer.rights')}</StyledRightsP>
+        <StyledConfidenceDiv>
+          <StyledConfidenceP>{t('footer.confidance')}</StyledConfidenceP>
+          <StyledRightsP>{t('footer.rights')}</StyledRightsP>
+        </StyledConfidenceDiv>
       </StyledContainer>
     </StyledFooter>
   );

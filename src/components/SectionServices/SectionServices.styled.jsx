@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const StyledContainer = styled.div`
   padding: 80px 15px 80px 15px;
@@ -24,12 +23,24 @@ export const StyledBgSvg = styled.svg`
   position: absolute;
   top: 24px;
   right: 7px;
+  @media screen and (min-width: 1512px) {
+    width: 574px;
+    height: 423px;
+    top: 90px;
+  }
 `;
 
 export const StyledDiv = styled.div`
   display: flex;
   gap: 10px;
   margin-bottom: 10px;
+  @media screen and (min-width: 1512px) {
+    justify-content: end;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const StyledCircleDiv = styled.div`
@@ -37,6 +48,10 @@ export const StyledCircleDiv = styled.div`
   height: 16px;
   border-radius: 50%;
   background: linear-gradient(95deg, #fdc70d 0%, #fdab0d 100%);
+  @media screen and (min-width: 1512px) {
+    width: 28px;
+    height: 28px;
+  }
 `;
 
 export const StyledH2 = styled.h2`
@@ -54,6 +69,10 @@ export const StyledH3 = styled.h3`
   position: relative;
   z-index: 2;
   margin-bottom: 20px;
+  @media screen and (min-width: 1512px) {
+    font-size: 38px;
+    max-width: 788px;
+  }
 `;
 
 export const StyledSpan = styled.span`
@@ -62,18 +81,34 @@ export const StyledSpan = styled.span`
   font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
+  @media screen and (min-width: 1512px) {
+    font-size: 38px;
+  }
 `;
 
 export const StyledP = styled.p`
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 30px;
+  @media screen and (min-width: 1512px) {
+    font-size: 18px;
+    margin-bottom: 50px;
+    max-width: 718px;
+  }
 `;
 
 export const StyledSvg = styled.svg`
   position: absolute;
   top: 20px;
   right: 20px;
+  @media screen and (min-width: 1512px) {
+    transform-origin: top right;
+    transition: scale 250ms var(--animation-cubic);
+    &:hover,
+    &:focus {
+      scale: 1.35;
+    }
+  }
 `;
 
 export const StyledH4 = styled.h4`
@@ -82,12 +117,18 @@ export const StyledH4 = styled.h4`
   font-weight: 500;
   line-height: 1.2;
   margin-left: 16px;
+  @media screen and (min-width: 1512px) {
+    font-size: 24px;
+  }
 `;
 export const StyledH402 = styled.h4`
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   margin-left: 16px;
+  @media screen and (min-width: 1512px) {
+    font-size: 24px;
+  }
 `;
 
 export const StyledServicesDiv = styled.div`
@@ -103,6 +144,15 @@ export const StyledServicesDiv = styled.div`
   box-shadow: 10px 10px 15px 0px rgba(71, 71, 71, 0.2);
   padding-bottom: 16px;
   cursor: pointer;
+  @media screen and (min-width: 1512px) {
+    max-width: 387px;
+    max-height: 402px;
+    transition: box-shadow 250ms var(--animation-cubic);
+    &:hover,
+    &:focus {
+      box-shadow: 20px 20px 30px 0px rgba(71, 71, 71, 0.4);
+    }
+  }
 `;
 
 export const StyledServicesDiv02 = styled.div`
@@ -117,6 +167,16 @@ export const StyledServicesDiv02 = styled.div`
   box-shadow: 10px 10px 15px 0px rgba(71, 71, 71, 0.2);
   padding-bottom: 26px;
   cursor: pointer;
+  @media screen and (min-width: 1512px) {
+    width: 387px;
+    height: 402px;
+    justify-content: end;
+    transition: box-shadow 250ms var(--animation-cubic);
+    &:hover,
+    &:focus {
+      box-shadow: 10px 10px 30px 0px rgba(71, 71, 71, 0.4);
+    }
+  }
 `;
 
 export const StyledServicesUl = styled.ul`
@@ -130,9 +190,14 @@ export const StyledServicesUl = styled.ul`
     flex-wrap: wrap;
     gap: 15px;
   }
+  @media screen and (min-width: 1512px) {
+    gap: 20px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const StyledNavLink = styled.p`
   color: var(--light-color);
   font-size: 14px;
   font-weight: 400;
@@ -147,7 +212,8 @@ export const StyledNavLink = styled(NavLink)`
   cursor: pointer;
 `;
 
-export const StyledNavLink02 = styled(NavLink)`
+export const StyledNavLink02 = styled.p`
+  color: var(--primary-color);
   display: inline-flex;
   padding: 5px 10px;
   justify-content: center;

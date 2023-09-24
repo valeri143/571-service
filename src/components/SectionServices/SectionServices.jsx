@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { animation } from '../Hero/Hero';
 import { useTranslation } from 'react-i18next';
 import {
   StyledBgSvg,
@@ -25,11 +27,22 @@ import carWash2x from '../../images/mobile/services/car-wash@2x-min.jpg';
 import carService1x from '../../images/mobile/services/car-service@1x-min.png';
 import carService2x from '../../images/mobile/services/car-service@2x-min.png';
 import carTire from '../../images/mobile/services/car-tire-min.jpg';
+import carWash1xD from '../../images/desktop/services/car-wash-detailing-station@1x-min.jpg';
+import carWash2xD from '../../images/desktop/services/car-wash-detailing-station@2x-min.jpg';
+import carService1xD from '../../images/desktop/services/car-service-detailing-station@1x-min.png';
+import carService2xD from '../../images/desktop/services/car-service-detailing-station@2x-min.png';
+import carTire1xD from '../../images/desktop/services/car-tire-detailing-station@1x-min.jpg';
+import carTire2xD from '../../images/desktop/services/car-tire-detailing-station@2x-min.jpg';
 export const SectionServices = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   return (
-    <section id="services">
+    <motion.section
+      id="services"
+      initial={window.innerWidth >= 1512 ? 'hidden' : 'visible'}
+      whileInView="visible"
+      viewport={{ amount: 0.7, once: true }}
+    >
       <StyledContainer>
         <StyledBgSvg width="215" height="158">
           <use href={`${sprite}#icon-bg`}></use>
@@ -43,17 +56,23 @@ export const SectionServices = () => {
           {t('services.h3.1')}
         </StyledH3>
         <StyledP>{t('services.p')}</StyledP>
-        <StyledServicesUl>
+        <StyledServicesUl variants={animation} as={motion.ul}>
           <li>
             <StyledServicesDiv>
-              <img
-                srcSet={`${carWash1x} 1x, ${carWash2x} 2x`}
-                src={carWash1x}
-                alt="car-wash-img"
-                loading="lazy"
-                width={360}
-                height={222}
-              />
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${carWash1xD} 1x, ${carWash2xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <img
+                  srcSet={`${carWash1x} 1x, ${carWash2x} 2x`}
+                  src={carWash1x}
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  alt="car-wash-img"
+                  loading="lazy"
+                />
+              </picture>
               <StyledSvg
                 width="30"
                 height="30"
@@ -80,14 +99,20 @@ export const SectionServices = () => {
           </li>
           <li>
             <StyledServicesDiv02>
-              <img
-                srcSet={`${carService1x} 1x, ${carService2x} 2x`}
-                src={carService1x}
-                alt="car-service-img"
-                loading="lazy"
-                width={360}
-                height={212}
-              />
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${carService1xD} 1x, ${carService2xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <img
+                  srcSet={`${carService1x} 1x, ${carService2x} 2x`}
+                  src={carService1x}
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  alt="car-service-img"
+                  loading="lazy"
+                />
+              </picture>
               <StyledSvg
                 width="30"
                 height="30"
@@ -122,13 +147,19 @@ export const SectionServices = () => {
           </li>
           <li>
             <StyledServicesDiv>
-              <img
-                src={carTire}
-                alt="tire-service-img"
-                loading="lazy"
-                width={360}
-                height={222}
-              />
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${carTire1xD} 1x, ${carTire2xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <img
+                  src={carTire}
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  alt="tire-service-img"
+                  loading="lazy"
+                />
+              </picture>
               <StyledSvg
                 width="30"
                 height="30"
@@ -163,6 +194,6 @@ export const SectionServices = () => {
           </li>
         </StyledServicesUl>
       </StyledContainer>
-    </section>
+    </motion.section>
   );
 };

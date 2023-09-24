@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -24,26 +25,73 @@ import {
   StyledH3,
   StyledP,
   StyledSpan,
-} from 'components/SectionServices/SectionServices.styled';
+} from 'components/SectionAbout/SectionAbout.styled';
 import {
   StyledImgBox,
   StyledContainer,
   StyledContentContainer,
   SwiperContainer,
   StyledArrowImg,
+  StyledArrowNext,
 } from './SectionCertifications.styled';
+
+export const animationRight = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+export const animationButton = {
+  hidden: {
+    x: 100,
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+      delay: 1,
+    },
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeInOut',
+      delay: 1,
+    },
+  },
+};
 
 const SectionCertifications = () => {
   const { t } = useTranslation();
   const getSlidesPerView = () => {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 768 && window.innerWidth < 1512) {
       return 3;
+    } else if (window.innerWidth >= 1512) {
+      return 5;
     } else {
       return 1.5;
     }
   };
   return (
-    <section>
+    <motion.section
+      initial={window.innerWidth >= 1512 ? 'hidden' : 'visible'}
+      whileInView="visible"
+      viewport={{ amount: 0.7, once: true }}
+    >
       <StyledContainer>
         <StyledContentContainer>
           <StyledDiv>
@@ -56,7 +104,7 @@ const SectionCertifications = () => {
           </StyledH3>
           <StyledP>{t('certifications.p')}</StyledP>
         </StyledContentContainer>
-        <SwiperContainer>
+        <SwiperContainer variants={animationRight} as={motion.div}>
           <Swiper
             modules={[Navigation, Pagination]}
             spaceBetween={10}
@@ -67,7 +115,7 @@ const SectionCertifications = () => {
             }}
             pagination={{ clickable: false }}
             loop={true}
-            centeredSlides={true}
+            centeredSlides={window.innerWidth >= 1512 ? false : true}
           >
             <SwiperSlide>
               <StyledImgBox>
@@ -117,8 +165,44 @@ const SectionCertifications = () => {
                 />
               </StyledImgBox>
             </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0101x} 1x, ${certififcate0102x} 2x`}
+                  src={certififcate0101x}
+                  alt="certificate01"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0201x} 1x, ${certififcate0202x} 2x`}
+                  src={certififcate0201x}
+                  alt="certificate02"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
+            <SwiperSlide>
+              <StyledImgBox>
+                <img
+                  srcSet={`${certififcate0301x} 1x, ${certififcate0302x} 2x`}
+                  src={certififcate0301x}
+                  alt="certificate03"
+                  width={218}
+                  height={309}
+                  loading="lazy"
+                />
+              </StyledImgBox>
+            </SwiperSlide>
           </Swiper>
-          <button className="swiper-button-prev">
+          <button type="button" className="swiper-button-prev">
             <StyledArrowImg
               src={arrowSwiperPrev}
               alt="Previous"
@@ -127,18 +211,37 @@ const SectionCertifications = () => {
               loading="lazy"
             />
           </button>
-          <button className="swiper-button-next">
+          <button type="button" className="swiper-button-next">
             <StyledArrowImg
+              src={arrowSwiper}
+              alt="Previous"
+              width={46}
+              height={46}
+              loading="lazy"
+            />
+          </button>
+          <motion.button
+            variants={animationButton}
+            type="button"
+            className="swiper-button-next"
+            style={{
+              bottom: '355px',
+              right: '136px',
+              zIndex: '10',
+              display: window.innerWidth >= 1512 ? 'block' : 'none',
+            }}
+          >
+            <StyledArrowNext
               src={arrowSwiper}
               alt="Next"
               width={46}
               height={46}
               loading="lazy"
             />
-          </button>
+          </motion.button>
         </SwiperContainer>
       </StyledContainer>
-    </section>
+    </motion.section>
   );
 };
 

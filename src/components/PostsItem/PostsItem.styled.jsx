@@ -8,6 +8,14 @@ export const StyledPostDiv = styled.div`
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
   padding-bottom: 16px;
   margin-bottom: 30px;
+  cursor: pointer;
+  @media screen and (min-width: 1512px) {
+    transition: box-shadow 250ms var(--animation-cubic);
+    &:hover,
+    &:focus {
+      box-shadow: 20px 20px 30px 0px rgba(129, 129, 129, 0.4);
+    }
+  }
 `;
 
 export const StyledPostDateP = styled.p`

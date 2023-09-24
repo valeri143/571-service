@@ -1,14 +1,16 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
 import {
   StyledCircleDiv,
-  StyledContainer,
+  StyledDesktopBgImg,
   StyledDiv,
   StyledH2,
   StyledH3,
   StyledP,
   StyledSpan,
-} from 'components/SectionServices/SectionServices.styled';
+} from 'components/SectionAbout/SectionAbout.styled';
+import bgD from '../../images/desktop/bg-circle-desktop.png';
 import sprite from '../../images/sprite.svg';
 import service0101x from '../../images/mobile/car-wash/car-wash01@1x-min.jpg';
 import service0102x from '../../images/mobile/car-wash/car-wash01@2x-min.jpg';
@@ -29,6 +31,7 @@ const CarWashServiceAbout = () => {
   return (
     <section>
       <StyledContainer>
+        <StyledDesktopBgImg src={bgD} alt="background-circle" loading="lazy" />
         <StyledDiv>
           <StyledCircleDiv></StyledCircleDiv>
           <StyledH2>{t('carService.h2')}</StyledH2>
