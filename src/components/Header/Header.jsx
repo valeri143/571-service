@@ -221,12 +221,12 @@ export const Header = () => {
               </StyledLangButton>
             </li>
           </StyledLangUL>
-          <StyledButtonDiv>
+          <StyledButtonDiv onClick={toggleMenu}>
             <StyledCircleDiv></StyledCircleDiv>
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-tools`}></use>
             </StyledSvg>
-            <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
+            <StyledButtonP href="#form">{t('header.buttonText')}</StyledButtonP>
           </StyledButtonDiv>
           <StyledTelDiv>
             <img src={call} alt="call" width={18} height={18} loading="lazy" />
