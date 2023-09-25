@@ -46,7 +46,9 @@ export const CarWashServiceHero = () => {
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-car-wash`}></use>
             </StyledSvg>
-            <StyledButtonP>{t('carWash.buttonText')}</StyledButtonP>
+            <StyledButtonP href="#form">
+              {t('carWash.buttonText')}
+            </StyledButtonP>
           </StyledButtonDiv>
           <StyledBenefitsUl style={{ marginTop: '40px' }}>
             <li>

@@ -46,7 +46,9 @@ export const CarTireServiceHero = () => {
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-tire`}></use>
             </StyledSvg>
-            <StyledButtonP>{t('carTire.buttonText')}</StyledButtonP>
+            <StyledButtonP href="#form">
+              {t('carTire.buttonText')}
+            </StyledButtonP>
           </StyledButtonDiv>
           <StyledBenefitsUl style={{ marginTop: '40px' }}>
             <li>

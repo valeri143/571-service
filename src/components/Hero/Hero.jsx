@@ -76,7 +76,9 @@ export const Hero = () => {
               <StyledSvg width="18" height="18">
                 <use href={`${sprite}#icon-tools`}></use>
               </StyledSvg>
-              <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
+              <StyledButtonP href="#form">
+                {t('header.buttonText')}
+              </StyledButtonP>
             </StyledButtonDiv>
           </StyledAnimationDiv>
           <div>

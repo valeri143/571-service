@@ -246,7 +246,7 @@ export const StyledSvg = styled.svg`
   left: 21px;
 `;
 
-export const StyledButtonP = styled.p`
+export const StyledButtonP = styled.a`
   line-height: 1.5;
   color: var(--background-color);
   font-weight: 500;
