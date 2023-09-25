@@ -26,7 +26,9 @@ export const CarServiceRepairHero = ({ h1, p, style, Bg, maxWidth }) => {
                 <StyledSvg width="18" height="18">
                   <use href={`${sprite}#icon-tools`}></use>
                 </StyledSvg>
-                <StyledButtonP>{t('carService.buttonText')}</StyledButtonP>
+                <StyledButtonP href="#form">
+                  {t('carService.buttonText')}
+                </StyledButtonP>
               </StyledButtonDiv>
             </>
           ) : (

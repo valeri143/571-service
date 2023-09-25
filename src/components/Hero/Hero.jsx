@@ -145,7 +145,7 @@ export const Hero = () => {
               <StyledBenefitsDiv>
                 <StyledNumP>+15</StyledNumP>
                 <StyledLineDiv></StyledLineDiv>
-                <StyledBenefitsP>{t('hero.benefits.2')}</StyledBenefitsP>
+                <StyledBenefitsP >{t('hero.benefits.2')}</StyledBenefitsP>
               </StyledBenefitsDiv>
             </li>
           </StyledBenefitsUl>
