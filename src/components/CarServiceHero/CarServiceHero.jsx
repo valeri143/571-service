@@ -21,6 +21,7 @@ import {
 import { StyledH1 } from 'components/CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
 import { StyledBackGroundImage } from './CarServiceHero.styled';
+import { scrollToForm } from 'helpers/scrollToForm';
 
 export const CarServiceHero = () => {
   const { t } = useTranslation();
@@ -42,14 +43,13 @@ export const CarServiceHero = () => {
               justifyContent: 'normal',
               gap: '40px',
             }}
+            onClick={scrollToForm}
           >
             <StyledCircleDiv></StyledCircleDiv>
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-tools`}></use>
             </StyledSvg>
-            <StyledButtonP href="#form">
-              {t('carService.buttonText')}
-            </StyledButtonP>
+            <StyledButtonP>{t('carService.buttonText')}</StyledButtonP>
           </StyledButtonDiv>
           <StyledBenefitsUl style={{ marginTop: '40px' }}>
             <li>

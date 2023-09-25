@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { scrollToForm } from 'helpers/scrollToForm';
 import {
   StyledBackGroundImage,
   StyledAnimationDiv01,
@@ -56,6 +57,7 @@ export const animation = {
 };
 export const Hero = () => {
   const { t } = useTranslation();
+
   return (
     <section>
       <StyledBackGroundImage>
@@ -71,14 +73,12 @@ export const Hero = () => {
               <StyledSpan>{t('hero.h1.2')}</StyledSpan> {t('hero.h1.3')}
             </StyledDH1>
             <StyledP>{t('hero.p')}</StyledP>
-            <StyledButtonDiv style={{ margin: 0 }}>
+            <StyledButtonDiv style={{ margin: 0 }} onClick={scrollToForm}>
               <StyledCircleDiv></StyledCircleDiv>
               <StyledSvg width="18" height="18">
                 <use href={`${sprite}#icon-tools`}></use>
               </StyledSvg>
-              <StyledButtonP href="#form">
-                {t('header.buttonText')}
-              </StyledButtonP>
+              <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
             </StyledButtonDiv>
           </StyledAnimationDiv>
           <div>
@@ -145,7 +145,7 @@ export const Hero = () => {
               <StyledBenefitsDiv>
                 <StyledNumP>+15</StyledNumP>
                 <StyledLineDiv></StyledLineDiv>
-                <StyledBenefitsP >{t('hero.benefits.2')}</StyledBenefitsP>
+                <StyledBenefitsP>{t('hero.benefits.2')}</StyledBenefitsP>
               </StyledBenefitsDiv>
             </li>
           </StyledBenefitsUl>

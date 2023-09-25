@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { scrollToForm } from 'helpers/scrollToForm';
 import sprite from '../../images/sprite.svg';
 import logo from '../../images/logo.svg';
 import call from '../../images/call.svg';
@@ -221,12 +222,17 @@ export const Header = () => {
               </StyledLangButton>
             </li>
           </StyledLangUL>
-          <StyledButtonDiv onClick={toggleMenu}>
+          <StyledButtonDiv
+            onClick={() => {
+              toggleMenu();
+              scrollToForm();
+            }}
+          >
             <StyledCircleDiv></StyledCircleDiv>
             <StyledSvg width="18" height="18">
               <use href={`${sprite}#icon-tools`}></use>
             </StyledSvg>
-            <StyledButtonP href="#form">{t('header.buttonText')}</StyledButtonP>
+            <StyledButtonP>{t('header.buttonText')}</StyledButtonP>
           </StyledButtonDiv>
           <StyledTelDiv>
             <img src={call} alt="call" width={18} height={18} loading="lazy" />

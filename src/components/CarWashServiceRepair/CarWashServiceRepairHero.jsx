@@ -8,6 +8,7 @@ import {
   StyledSvg,
 } from 'components/Header/Header.styled';
 import sprite from '../../images/sprite.svg';
+import { scrollToForm } from 'helpers/scrollToForm';
 
 export const CarWashServiceRepairHero = ({ h1, p, buttonText, style, Bg }) => {
   const { t } = useTranslation();
@@ -19,16 +20,16 @@ export const CarWashServiceRepairHero = ({ h1, p, buttonText, style, Bg }) => {
           {p ? (
             <>
               <StyledP>{t(`${p}`)}</StyledP>
-              <StyledButtonDiv style={style}>
+              <StyledButtonDiv onClick={scrollToForm} style={style}>
                 <StyledCircleDiv></StyledCircleDiv>
                 <StyledSvg width="18" height="18">
                   <use href={`${sprite}#icon-car-wash`}></use>
                 </StyledSvg>
-                <StyledButtonP href="#form">{t(`${buttonText}`)}</StyledButtonP>
+                <StyledButtonP>{t(`${buttonText}`)}</StyledButtonP>
               </StyledButtonDiv>
             </>
           ) : (
-            <StyledButtonDiv style={style}>
+            <StyledButtonDiv style={style} onClick={scrollToForm}>
               <StyledCircleDiv></StyledCircleDiv>
               <StyledSvg width="18" height="18">
                 <use href={`${sprite}#icon-car-wash`}></use>
