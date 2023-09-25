@@ -1,15 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { lazy } from 'react';
-import styled from 'styled-components';
 import {
   StyledP,
   StyledDiv,
   StyledSvg,
   StyledFlexDesktopDiv,
-  StyledMarginDivExtra,
   StyledPInUl,
   StyledPaddingContainer,
   StyledGridUl,
+  StyledMarginDiv,
 } from '../CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
 import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
@@ -17,15 +16,6 @@ import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepa
 const CarServiceRepairPrice = lazy(() =>
   import('components/CarServiceRepair/CarServiceRepairPrice')
 );
-export const StyledTransformCleaning = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-130%);
-  }
-`;
 export const CarWashServiceExtraAbout = () => {
   const { t } = useTranslation();
   return (
@@ -33,7 +23,7 @@ export const CarWashServiceExtraAbout = () => {
       <StyledPaddingContainer>
         <StyledFlexDesktopDiv>
           <CarServiceRepairForm />
-          <StyledMarginDivExtra>
+          <StyledMarginDiv>
             <StyledP>{t('extra.p')}</StyledP>
             <StyledGridUl>
               <li>
@@ -81,12 +71,11 @@ export const CarWashServiceExtraAbout = () => {
             <StyledP>{t('extra.paragraph.0')}</StyledP>
             <StyledP>{t('extra.paragraph.1')}</StyledP>
             <StyledP>{t('extra.paragraph.2')}</StyledP>
-          </StyledMarginDivExtra>
+          </StyledMarginDiv>
           <CarServiceRepairPrice
             h2={'extra.h2'}
             list={'extra.serviceList'}
             price={'extra.priceList'}
-            Transform={StyledTransformCleaning}
           />
         </StyledFlexDesktopDiv>
       </StyledPaddingContainer>

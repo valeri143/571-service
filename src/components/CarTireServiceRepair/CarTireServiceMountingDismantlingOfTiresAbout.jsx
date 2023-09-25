@@ -6,8 +6,8 @@ import {
   StyledSvg,
   StyledFlexDesktopDiv,
   StyledGridUl,
-  StyledMarginDivBody,
   StyledPaddingContainer,
+  StyledMarginDiv,
 } from '../CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
 import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
@@ -24,7 +24,7 @@ export const CarTireServiceMountingDismantlingOfTiresAbout = () => {
       <StyledPaddingContainer>
         <StyledFlexDesktopDiv>
           <CarServiceRepairForm />
-          <StyledMarginDivBody>
+          <StyledMarginDiv>
             <StyledP>{t('mountingDismantlingOfTires.pAbout.0')}</StyledP>
             <StyledP>{t('mountingDismantlingOfTires.pAbout.1')}</StyledP>
             <StyledSpanTire>
@@ -76,7 +76,7 @@ export const CarTireServiceMountingDismantlingOfTiresAbout = () => {
             </StyledGridUl>
             <StyledP>{t('mountingDismantlingOfTires.paragraph.0')}</StyledP>
             <StyledP>{t('mountingDismantlingOfTires.paragraph.1')}</StyledP>
-          </StyledMarginDivBody>
+          </StyledMarginDiv>
           <CarTireServiceRepairPrice />
         </StyledFlexDesktopDiv>
       </StyledPaddingContainer>

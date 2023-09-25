@@ -146,7 +146,11 @@ export const Header = () => {
           </StyledLangDiv>
         </StyledFlexHeaderDiv>
 
-        <StyledMenuButton onClick={toggleMenu} type="button">
+        <StyledMenuButton
+          onClick={toggleMenu}
+          type="button"
+          aria-label="Открыть меню"
+        >
           {!isMenuOpen && (
             <svg width="40" height="23">
               <use href={`${sprite}#icon-header-menu`}></use>

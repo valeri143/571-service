@@ -1,5 +1,4 @@
 import { lazy } from 'react';
-import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import {
   StyledP,
@@ -12,16 +11,6 @@ const CarTireServiceTiresRepairPrice = lazy(() =>
   import('components/CarTireServiceRepair/CarTireServiceTiresRepairPrice')
 );
 
-export const StyledTransform = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-20%);
-  }
-`;
-
 export const CarTireServiceChassisMaintenanceAbout = () => {
   const { t } = useTranslation();
   return (
@@ -30,7 +19,7 @@ export const CarTireServiceChassisMaintenanceAbout = () => {
       <StyledPaddingContainer>
         <StyledFlexDesktopDiv>
           <CarServiceRepairForm />
-          <StyledMarginDiv style={{ marginLeft: '15px' }}>
+          <StyledMarginDiv>
             <StyledP>{t('chassisMaintenance.p.0')}</StyledP>
             <StyledP>{t('chassisMaintenance.p.1')}</StyledP>
             <StyledP>{t('chassisMaintenance.p.2')}</StyledP>
@@ -40,7 +29,6 @@ export const CarTireServiceChassisMaintenanceAbout = () => {
             h2={'chassisMaintenance.h2'}
             price={'chassisMaintenance.priceList'}
             list={'chassisMaintenance.serviceList'}
-            Transform={StyledTransform}
           />
         </StyledFlexDesktopDiv>
       </StyledPaddingContainer>

@@ -35,10 +35,6 @@ export const StyledTransformDiv = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: -120px;
   }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-65%);
-  }
 `;
 
 export const StyledOl = styled.ol`

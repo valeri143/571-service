@@ -10,15 +10,16 @@ import {
   StyledTable,
   StyledTr,
 } from '../CarServiceRepair/CarServiceRepair.styled';
+import { StyledTransformDiv } from './CarTireServiceRepair.styled';
 
-const CarTireServiceTiresRepairPrice = ({ h2, list, price, Transform }) => {
+const CarTireServiceTiresRepairPrice = ({ h2, list, price }) => {
   const { t } = useTranslation();
   const serviceList = t(`${list}`, { returnObjects: true });
   const priceList = t(`${price}`, { returnObjects: true });
   const priceFrom = t('engineRepair.priceTitles.2');
 
   return (
-    <Transform>
+    <StyledTransformDiv>
       <StyledH2 style={{ marginLeft: 5 }}>{t(h2)}</StyledH2>
       <StyledTable>
         <thead>
@@ -71,7 +72,7 @@ const CarTireServiceTiresRepairPrice = ({ h2, list, price, Transform }) => {
           ))}
         </tbody>
       </StyledTable>
-    </Transform>
+    </StyledTransformDiv>
   );
 };
 

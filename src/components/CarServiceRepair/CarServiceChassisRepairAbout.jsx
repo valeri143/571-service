@@ -1,6 +1,5 @@
 import { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
-import styled from 'styled-components';
 import {
   StyledP,
   StyledSpan,
@@ -8,8 +7,8 @@ import {
   StyledSvg,
   StyledFlexDesktopDiv,
   StyledGridUl,
-  StyledMarginDivChassis,
-  StyledPaddingContainer,
+  StyledMarginDiv,
+  StyledPaddingContainerMore,
 } from './CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
 import { CarServiceRepairForm } from './CarServiceRepairForm';
@@ -17,24 +16,14 @@ const CarServiceRepairPrice = lazy(() =>
   import('components/CarServiceRepair/CarServiceRepairPrice')
 );
 
-const StyledTransformCleaning = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-45%);
-  }
-`;
-
 export const CarServiceChassisRepairAbout = () => {
   const { t } = useTranslation();
   return (
     <section>
-      <StyledPaddingContainer>
+      <StyledPaddingContainerMore>
         <StyledFlexDesktopDiv>
           <CarServiceRepairForm />
-          <StyledMarginDivChassis>
+          <StyledMarginDiv>
             <StyledP>
               {t('chassisRepair.p.0')} <br />
               <StyledSpan>{t('chassisRepair.p.1')}</StyledSpan>
@@ -96,15 +85,14 @@ export const CarServiceChassisRepairAbout = () => {
             <StyledP>{t('chassisRepair.paragraph.4')}</StyledP>
             <StyledP>{t('chassisRepair.paragraph.5')}</StyledP>
             <StyledP>{t('chassisRepair.paragraph.6')}</StyledP>
-          </StyledMarginDivChassis>
+          </StyledMarginDiv>
           <CarServiceRepairPrice
             h2={'chassisRepair.h2'}
             list={'chassisRepair.serviceList'}
             price={'chassisRepair.priceList'}
-            Transform={StyledTransformCleaning}
           />
         </StyledFlexDesktopDiv>
-      </StyledPaddingContainer>
+      </StyledPaddingContainerMore>
     </section>
   );
 };

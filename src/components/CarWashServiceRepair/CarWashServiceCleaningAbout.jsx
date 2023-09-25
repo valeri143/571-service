@@ -1,15 +1,14 @@
 import { lazy } from 'react';
-import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import {
   StyledP,
   StyledSpan,
   StyledDiv,
   StyledSvg,
-  StyledUl,
   StyledFlexDesktopDiv,
-  StyledMarginDivCleaning,
   StyledPInUl,
+  StyledMarginDiv,
+  StyledGridUl,
   StyledPaddingContainer,
 } from '../CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
@@ -19,16 +18,6 @@ const CarServiceRepairPrice = lazy(() =>
   import('components/CarServiceRepair/CarServiceRepairPrice')
 );
 
-export const StyledTransformCleaning = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-70%);
-  }
-`;
-
 export const CarWashServiceCleaningAbout = () => {
   const { t } = useTranslation();
   return (
@@ -36,12 +25,12 @@ export const CarWashServiceCleaningAbout = () => {
       <StyledPaddingContainer>
         <StyledFlexDesktopDiv>
           <CarServiceRepairForm />
-          <StyledMarginDivCleaning>
+          <StyledMarginDiv>
             <StyledP>
               {t('cleaning.pAbout.0')} <br />
               <StyledSpan>{t('cleaning.pAbout.1')}</StyledSpan>
             </StyledP>
-            <StyledUl>
+            <StyledGridUl>
               <li>
                 <StyledDiv>
                   <StyledSvg width="30" height="30">
@@ -106,15 +95,14 @@ export const CarWashServiceCleaningAbout = () => {
                   <StyledPInUl>{t('cleaning.list.7')}</StyledPInUl>
                 </StyledDiv>
               </li>
-            </StyledUl>
+            </StyledGridUl>
             <StyledP>{t('cleaning.paragraph.0')}</StyledP>
             <StyledP>{t('cleaning.paragraph.1')}</StyledP>
-          </StyledMarginDivCleaning>
+          </StyledMarginDiv>
           <CarServiceRepairPrice
             h2={'cleaning.h2'}
             list={'cleaning.serviceList'}
             price={'cleaning.priceList'}
-            Transform={StyledTransformCleaning}
           />
         </StyledFlexDesktopDiv>
       </StyledPaddingContainer>

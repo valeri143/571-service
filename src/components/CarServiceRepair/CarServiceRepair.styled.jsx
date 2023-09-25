@@ -32,7 +32,7 @@ export const StyledContainer = styled.div`
   }
   @media screen and (min-width: 1512px) {
     width: 1512px;
-    padding: 10px 156px 0px 156px;
+    padding: 10px 0px 80px 156px;
   }
 `;
 
@@ -52,7 +52,27 @@ export const StyledPaddingContainer = styled.div`
   }
   @media screen and (min-width: 1512px) {
     width: 1512px;
-    padding: 10px 156px 0px 156px;
+    padding: 10px 0px 80px 156px;
+  }
+`;
+
+export const StyledPaddingContainerMore = styled.div`
+  padding: 0px 15px 80px 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media screen and (min-width: 1512px) {
+    width: 1512px;
+    padding: 10px 0px 80px 60px;
   }
 `;
 
@@ -94,6 +114,12 @@ export const StyledPInUl = styled.p`
   }
   @media screen and (min-width: 1512px) {
     font-size: 18px;
+  }
+`;
+
+export const StyledDivTable = styled.div`
+  @media screen and (min-width: 768px) {
+    margin-top: -120px;
   }
 `;
 
@@ -157,26 +183,6 @@ export const StyledH3 = styled.h3`
   }
 `;
 
-export const StyledTransformDiv = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-350%);
-  }
-`;
-
-export const StyledTransformCleaning = styled.div`
-  @media screen and (min-width: 768px) {
-    margin-top: -120px;
-  }
-  @media screen and (min-width: 1512px) {
-    margin-top: 0;
-    transform: translateY(-80%);
-  }
-`;
-
 export const StyledGradientDiv = styled.div`
   display: none;
   @media screen and (min-width: 1512px) {
@@ -206,9 +212,9 @@ export const StyledFormikDiv = styled.div`
     max-height: 390px;
   }
   @media screen and (min-width: 1512px) {
-    max-width: 500px;
+    max-width: none;
+    width: 500px;
     max-height: 430px;
-    transform: translateX(171.5%);
     position: sticky;
     top: 0;
     z-index: 666;
@@ -330,91 +336,15 @@ export const StyledFlexDesktopDiv = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
   @media screen and (min-width: 1512px) {
-    display: block;
-  }
-`;
-
-export const StyledFlexDesktopDivHeight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  @media screen and (min-width: 1512px) {
-    display: block;
-    height: 900px;
-  }
-`;
-
-export const StyledFlexDesktopDivHeadlight = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
     gap: 20px;
-  }
-  @media screen and (min-width: 1512px) {
-    display: block;
-    height: 800px;
   }
 `;
 
 export const StyledMarginDiv = styled.div`
   order: -1;
   margin-bottom: 80px;
-  @media screen and (min-width: 1512px) {
-    transform: translateY(-130%);
-  }
-`;
-
-export const StyledMarginDivCleaning = styled.div`
-  order: -1;
-  margin-bottom: 80px;
-  @media screen and (min-width: 768px) and (max-width: 1512px) {
-    margin-left: 10px;
-  }
-  @media screen and (min-width: 1512px) {
-    transform: translateY(-60%);
-  }
-`;
-
-export const StyledMarginDivExtra = styled.div`
-  order: -1;
-  margin-bottom: 80px;
-  @media screen and (min-width: 768px) and (max-width: 1512px) {
-    margin-left: 10px;
-  }
-  @media screen and (min-width: 1512px) {
-    transform: translateY(-80%);
-  }
-`;
-
-export const StyledMarginDivChassis = styled.div`
-  order: -1;
-  margin-bottom: 80px;
-  @media screen and (min-width: 768px) and (max-width: 1512px) {
-    margin-left: 10px;
-  }
-  @media screen and (min-width: 1512px) {
-    transform: translateY(-50%);
-  }
-`;
-
-export const StyledMarginDivBody = styled.div`
-  order: -1;
-  margin-bottom: 80px;
-  @media screen and (min-width: 768px) and (max-width: 1512px) {
-    margin-left: 10px;
-  }
-  @media screen and (min-width: 1512px) {
-    transform: translateY(-70%);
-  }
 `;

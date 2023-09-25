@@ -4,19 +4,20 @@ import {
   PriceHeader,
   ServiceCell,
   ServiceHeader,
+  StyledDivTable,
   StyledH2,
   StyledPriceSpan,
   StyledTable,
   StyledTr,
 } from './CarServiceRepair.styled';
 
-const CarServiceRepairPrice = ({ h2, list, price, Transform }) => {
+const CarServiceRepairPrice = ({ h2, list, price }) => {
   const { t } = useTranslation();
   const priceFrom = t('engineRepair.priceTitles.2');
   const serviceList = t(`${list}`, { returnObjects: true });
   const priceList = t(`${price}`, { returnObjects: true });
   return (
-    <Transform>
+    <StyledDivTable>
       <StyledH2>{t(h2)}</StyledH2>
       <StyledTable>
         <thead>
@@ -61,7 +62,7 @@ const CarServiceRepairPrice = ({ h2, list, price, Transform }) => {
           )}
         </tbody>
       </StyledTable>
-    </Transform>
+    </StyledDivTable>
   );
 };
 
