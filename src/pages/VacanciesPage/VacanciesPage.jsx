@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Formik, ErrorMessage, Form } from 'formik';
+import { Formik, ErrorMessage } from 'formik';
 import { formatPhoneNumber } from 'helpers/phoneUaInput';
 import { Error } from 'components/Error';
 import { StyledContainer } from 'components/Hero/Hero.styled';
@@ -9,18 +9,13 @@ import {
   StyledDiv,
   StyledH2,
   StyledP,
-} from 'components/SectionServices/SectionServices.styled';
+} from 'components/SectionAbout/SectionAbout.styled';
 import { lazy } from 'react';
-import {
-  StyledH3,
-  StyledSpan,
-  StyledUl,
-} from '../FeedbacksPage/FeedbacksPage.styled';
+import { StyledSpan } from '../FeedbacksPage/FeedbacksPage.styled';
 import sprite from '../../images/sprite.svg';
 import call from '../../images/call.svg';
 import {
   StyledFeedbackBracketsSvg,
-  StyledFeedbackDiv,
   StyledFeedbackFlexBoxDiv,
   StyledFeedbackFlexDiv,
   StyledFeedbackH4,
@@ -32,11 +27,15 @@ import {
   StyledLink,
   StyledSalaryP,
   StyledVacanciesP,
+  StyledH3,
+  StyledUl,
+  StyledFeedbackDiv,
+  StyledFormikDiv,
+  StyledForm,
+  StyledFormDiv,
 } from './VacanciesPage.styled';
 import { schema } from 'components/CarServiceRepair/CarServiceRepairForm';
-import { StyledFormikDiv } from 'components/CarServiceRepair/CarServiceRepair.styled';
 import {
-  StyledFormDiv,
   StyledLabel,
   StyledField,
   StyledSubmitDiv,
@@ -428,7 +427,7 @@ const VacanciesPage = () => {
               onSubmit={handleSubmit}
             >
               {({ setFieldValue }) => (
-                <Form>
+                <StyledForm>
                   <StyledFormDiv>
                     <StyledLabel htmlFor="name">
                       {t('form.labels.0')}{' '}
@@ -487,7 +486,7 @@ const VacanciesPage = () => {
                     </StyledCheckboxLabel>
                     {!formSubmitted && (
                       <StyledButton type="submit">
-                        {t('header.buttonText')}
+                        {t('vacancies.buttonText')}
                       </StyledButton>
                     )}
                     {formSubmitted && (
@@ -501,7 +500,7 @@ const VacanciesPage = () => {
                       </StyledSubmittedButton>
                     )}
                   </StyledSubmitDiv>
-                </Form>
+                </StyledForm>
               )}
             </Formik>
           </StyledFormikDiv>

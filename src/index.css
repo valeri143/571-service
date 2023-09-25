@@ -120,6 +120,17 @@ section{
   color: var(--accent-color);
   opacity: 1;
 }
+/* .your-element{
+  position: absolute;
+  right: 0;
+  transition:  position 0.3s ease;
+} */
+.sticky{
+  /* position: -webkit-sticky; 
+  position: sticky; */
+  /* position: fixed;
+  right: 0; */
+}
 
 
 

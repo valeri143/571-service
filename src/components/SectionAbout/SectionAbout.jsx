@@ -66,6 +66,7 @@ const SectionAbout = () => {
                   alt="about-car-service-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
+                  height={368}
                 />
               </StyledImg>
               <StyledPositionImg src={logo} alt="logo" loading="lazy" />
@@ -87,6 +88,7 @@ const SectionAbout = () => {
                   alt="about-car-service-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
+                  height={368}
                 />
               </StyledImg>
               <StyledH402>{t('about.h4List.1')}</StyledH402>

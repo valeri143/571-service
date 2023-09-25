@@ -9,9 +9,16 @@ import {
   StyledFeedbackP,
 } from './FeedbacksItem.styled';
 
-export const FeedbacksItem = ({ h4, paragraph, name, starsRating, rating }) => {
+export const FeedbacksItem = ({
+  h4,
+  paragraph,
+  name,
+  starsRating,
+  rating,
+  style,
+}) => {
   return (
-    <StyledFeedbackDiv>
+    <StyledFeedbackDiv style={style}>
       <StyledFeedbackH4>{h4}</StyledFeedbackH4>
       <StyledFeedbackBracketsSvg width="23" height="21">
         <use href={`${sprite}#icon-brackets`}></use>

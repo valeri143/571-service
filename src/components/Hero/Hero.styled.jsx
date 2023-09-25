@@ -38,7 +38,6 @@ export const StyledContainer = styled.div`
   padding: 50px 15px 80px 15px;
   margin: 0 auto;
   box-sizing: border-box;
-  outline: solid tomato;
   position: relative;
   text-align: left;
   @media screen and (min-width: 390px) {
@@ -318,7 +317,7 @@ export const StyledBenefitsDiv01 = styled.div`
     max-width: 387px;
     height: 130px;
     padding-left: 25px;
-    padding-right: 0px;
+    padding-right: 10px;
     gap: 12px;
   }
 `;

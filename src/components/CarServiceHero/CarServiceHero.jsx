@@ -6,21 +6,21 @@ import {
   StyledBenefitsP,
   StyledBenefitsUl,
   StyledContainer,
-  StyledH1,
   StyledLineDiv,
   StyledNumP,
   StyledNumP01,
   StyledP,
   StyledSpan,
 } from 'components/Hero/Hero.styled';
-import { StyledBackGroundImage } from './CarServiceHero.styled';
 import {
   StyledButtonDiv,
   StyledButtonP,
   StyledCircleDiv,
   StyledSvg,
 } from 'components/Header/Header.styled';
+import { StyledH1 } from 'components/CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
+import { StyledBackGroundImage } from './CarServiceHero.styled';
 
 export const CarServiceHero = () => {
   const { t } = useTranslation();
@@ -29,12 +29,19 @@ export const CarServiceHero = () => {
       <StyledBackGroundImage>
         <StyledContainer>
           <StyledH1 style={{ width: 'auto' }}>
-            <StyledSpan>{t('carService.h1.0')}</StyledSpan>{' '}
+            <StyledSpan>
+              {t('carService.h1.0')} <br />{' '}
+            </StyledSpan>{' '}
             {t('carService.h1.1')}
           </StyledH1>
           <StyledP>{t('carService.p')}</StyledP>
           <StyledButtonDiv
-            style={{ margin: 0, justifyContent: 'normal', gap: '40px' }}
+            style={{
+              marginLeft: 0,
+              marginRight: 0,
+              justifyContent: 'normal',
+              gap: '40px',
+            }}
           >
             <StyledCircleDiv></StyledCircleDiv>
             <StyledSvg width="18" height="18">

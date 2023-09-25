@@ -12,16 +12,23 @@ import {
 } from 'components/SectionAbout/SectionAbout.styled';
 import bgD from '../../images/desktop/bg-circle-desktop.png';
 import sprite from '../../images/sprite.svg';
-import service0101x from '../../images/mobile/car-wash/car-wash01@1x-min.jpg';
-import service0102x from '../../images/mobile/car-wash/car-wash01@2x-min.jpg';
+import service0101x from '../../images/desktop/links/headlight@1x-min.jpg';
+import service0102x from '../../images/desktop/links/headlight@2x-min.jpg';
 import service0201x from '../../images/mobile/car-wash/car-wash02@1x-min.jpg';
 import service0202x from '../../images/mobile/car-wash/car-wash02@2x-min.jpg';
+import service0201xD from '../../images/desktop/links/wash@1x-min.jpg';
+import service0202xD from '../../images/desktop/links/wash@2x-min.jpg';
 import service0301x from '../../images/mobile/car-wash/car-wash03@1x-min.jpg';
 import service0302x from '../../images/mobile/car-wash/car-wash03@2x-min.jpg';
+import service0301xD from '../../images/desktop/links/extra-wash@1x-min.jpg';
+import service0302xD from '../../images/desktop/links/extra-wash@2x-min.jpg';
 import {
+  StyledAnimationImg,
   StyledCarServiceButton,
   StyledCarServiceDiv,
   StyledCarServiceH4,
+  StyledCarServiceH4Less,
+  StyledCarServiceH4More,
   StyledCarServiceUl,
 } from '../CarServiceAbout/CarServiceAbout.styled';
 
@@ -45,17 +52,17 @@ const CarWashServiceAbout = () => {
         <StyledCarServiceUl>
           <li>
             <StyledCarServiceDiv>
-              <img
+              <StyledAnimationImg
                 srcSet={`${service0101x} 1x, ${service0102x} 2x`}
                 src={service0101x}
                 alt="car-wash-img"
                 loading="lazy"
-                width={360}
+                width={387}
                 height={250}
               />
-              <StyledCarServiceH4>
-                {t('footer.carWashServiceList.0')}
-              </StyledCarServiceH4>
+              <StyledCarServiceH4Less>
+                {t('services.servicesUlText.0')}
+              </StyledCarServiceH4Less>
               <StyledCarServiceButton>
                 <svg
                   width="30"
@@ -69,14 +76,21 @@ const CarWashServiceAbout = () => {
           </li>
           <li>
             <StyledCarServiceDiv>
-              <img
-                srcSet={`${service0201x} 1x, ${service0202x} 2x`}
-                src={service0201x}
-                alt="car-wash-img"
-                loading="lazy"
-                width={360}
-                height={250}
-              />
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${service0201xD} 1x, ${service0202xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <StyledAnimationImg
+                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
+                  src={service0201x}
+                  alt="car-wash-img"
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  loading="lazy"
+                  height={250}
+                />
+              </picture>
               <StyledCarServiceH4>
                 {t('footer.carWashServiceList.1')}
               </StyledCarServiceH4>
@@ -93,17 +107,24 @@ const CarWashServiceAbout = () => {
           </li>
           <li>
             <StyledCarServiceDiv>
-              <img
-                srcSet={`${service0301x} 1x, ${service0302x} 2x`}
-                src={service0301x}
-                alt="car-wash-img"
-                loading="lazy"
-                width={360}
-                height={250}
-              />
-              <StyledCarServiceH4>
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <StyledAnimationImg
+                  srcSet={`${service0301x} 1x, ${service0302x} 2x`}
+                  src={service0301x}
+                  alt="car-wash-img"
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  loading="lazy"
+                  height={250}
+                />
+              </picture>
+              <StyledCarServiceH4More>
                 {t('carService.h4List.1')}
-              </StyledCarServiceH4>
+              </StyledCarServiceH4More>
               <StyledCarServiceButton>
                 <svg
                   width="30"

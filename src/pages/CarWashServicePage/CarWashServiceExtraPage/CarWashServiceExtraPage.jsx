@@ -1,10 +1,10 @@
 import { lazy } from 'react';
+import styled from 'styled-components';
+import bg1x from 'images/desktop/backgrounds/services/extra-wsh-bg@1x-min.jpg';
+import bg2x from 'images/desktop/backgrounds/services/extra-wsh-bg@2x-min.jpg';
 import { CarWashServiceRepairHero } from 'components/CarWashServiceRepair/CarWashServiceRepairHero';
 import { CarWashServiceExtraAbout } from 'components/CarWashServiceRepair/CarWashServiceExtraAbout';
 
-const CarServiceRepairPrice = lazy(() =>
-  import('components/CarServiceRepair/CarServiceRepairPrice')
-);
 const SectionFeedbacks = lazy(() =>
   import('components/SectionFeedbacks/SectionFeedbacks')
 );
@@ -24,6 +24,28 @@ const style = {
   marginTop: '40px',
 };
 
+const StyledBackGroundImage = styled.div`
+  background-image: url(${bg1x});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 470px;
+  position: relative;
+  top: -60px;
+  left: 0;
+  right: 0;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${bg2x});
+  }
+  @media screen and (min-width: 1512px) {
+    top: -80px;
+    left: 0;
+    right: 0;
+  }
+`;
+
 const CarWashServiceExtraPage = () => {
   return (
     <>
@@ -31,13 +53,9 @@ const CarWashServiceExtraPage = () => {
         h1={'carService.h4List.1'}
         buttonText={'header.buttonText'}
         style={style}
+        Bg={StyledBackGroundImage}
       />
       <CarWashServiceExtraAbout />
-      <CarServiceRepairPrice
-        h2={'extra.h2'}
-        list={'extra.serviceList'}
-        price={'extra.priceList'}
-      />
       <SectionFeedbacks />
       <SectionCertifications />
       <SectionForm />

@@ -63,7 +63,7 @@ export const StyledP = styled.p`
   @media screen and (min-width: 1512px) {
     font-size: 18px;
     margin-bottom: 50px;
-    max-width: 794px;
+    max-width: 788px;
     margin-left: auto;
     margin-right: auto;
   }

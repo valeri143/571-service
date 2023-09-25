@@ -20,12 +20,13 @@ import {
 } from 'components/Header/Header.styled';
 import sprite from '../../images/sprite.svg';
 import { StyledH1 } from 'components/CarServiceRepair/CarServiceRepair.styled';
+import { StyledBackGroundImage } from './CarWashServiceHero.styled';
 
-export const CarWashServiceHero = ({ Bg }) => {
+export const CarWashServiceHero = () => {
   const { t } = useTranslation();
   return (
     <section>
-      <Bg>
+      <StyledBackGroundImage>
         <StyledContainer>
           <StyledH1 style={{ width: 'auto' }}>
             <StyledSpan>{t('carWash.h1.0')}</StyledSpan> {t('carWash.h1.1')}
@@ -37,7 +38,7 @@ export const CarWashServiceHero = ({ Bg }) => {
               marginRight: 0,
               justifyContent: 'normal',
               gap: '20px',
-              paddingRight: '10px',
+              paddingRight: '20px',
               maxWidth: 'max-content',
             }}
           >
@@ -71,7 +72,7 @@ export const CarWashServiceHero = ({ Bg }) => {
             </li>
           </StyledBenefitsUl>
         </StyledContainer>
-      </Bg>
+      </StyledBackGroundImage>
     </section>
   );
 };

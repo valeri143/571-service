@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import {
-  StyledContainer,
   StyledH2,
   StyledTable,
   StyledTr,
@@ -10,16 +9,17 @@ import {
   StyledTh,
   StyledTrHeaders,
   ServiceCell,
+  StyledTransformDiv,
 } from './CarTireServiceRepair.styled';
 
 const CarTireServiceRepairPrice = () => {
   const { t } = useTranslation();
 
   return (
-    <section>
-      <StyledContainer style={{ paddingBottom: 0 }}>
-        <StyledH2>{t('mountingDismantlingOfTires.h2')}</StyledH2>
-      </StyledContainer>
+    <StyledTransformDiv>
+      <StyledH2 style={{ marginLeft: 0 }}>
+        {t('mountingDismantlingOfTires.h2')}
+      </StyledH2>
       <StyledTable>
         <thead>
           <StyledTrHeaders>
@@ -98,7 +98,7 @@ const CarTireServiceRepairPrice = () => {
           </StyledTr>
         </tbody>
       </StyledTable>
-    </section>
+    </StyledTransformDiv>
   );
 };
 

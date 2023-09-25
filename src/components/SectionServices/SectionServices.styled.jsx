@@ -4,7 +4,6 @@ export const StyledContainer = styled.div`
   padding: 80px 15px 80px 15px;
   margin: 0 auto;
   box-sizing: border-box;
-  outline: solid tomato;
   position: relative;
   text-align: left;
   @media screen and (min-width: 390px) {
@@ -145,8 +144,8 @@ export const StyledServicesDiv = styled.div`
   padding-bottom: 16px;
   cursor: pointer;
   @media screen and (min-width: 1512px) {
-    max-width: 387px;
-    max-height: 402px;
+    min-width: 387px;
+    min-height: 402px;
     transition: box-shadow 250ms var(--animation-cubic);
     &:hover,
     &:focus {
@@ -168,8 +167,8 @@ export const StyledServicesDiv02 = styled.div`
   padding-bottom: 26px;
   cursor: pointer;
   @media screen and (min-width: 1512px) {
-    width: 387px;
-    height: 402px;
+    min-width: 387px;
+    min-height: 390px;
     justify-content: end;
     transition: box-shadow 250ms var(--animation-cubic);
     &:hover,
@@ -193,7 +192,7 @@ export const StyledServicesUl = styled.ul`
   @media screen and (min-width: 1512px) {
     gap: 20px;
     flex-wrap: nowrap;
-    justify-content: center;
+    justify-content: space-between;
   }
 `;
 

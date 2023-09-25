@@ -4,7 +4,6 @@ export const StyledContainer = styled.div`
   padding: 50px 0px 80px 0px;
   margin: 0 auto;
   box-sizing: border-box;
-  outline: solid tomato;
   position: relative;
   text-align: left;
   @media screen and (min-width: 390px) {

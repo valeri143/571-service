@@ -4,9 +4,8 @@ import { Formik, ErrorMessage, Form } from 'formik';
 import * as yup from 'yup';
 import { formatPhoneNumber } from 'helpers/phoneUaInput';
 import { Error } from 'components/Error';
-import { StyledFormikDiv } from './CarServiceRepair.styled';
+import { StyledFormikDiv, StyledH3 } from './CarServiceRepair.styled';
 import {
-  StyledH3,
   StyledFormDiv,
   StyledLabel,
   StyledField,
@@ -31,7 +30,6 @@ export const schema = yup.object().shape({
     .required("Please enter the phone's number"),
   checkbox: yup.boolean().required('Please check the checkbox to continue'),
 });
-
 export const CarServiceRepairForm = () => {
   const [t] = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);

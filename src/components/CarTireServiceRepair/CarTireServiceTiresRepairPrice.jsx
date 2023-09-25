@@ -5,24 +5,21 @@ import {
   PriceHeader,
   ServiceCell,
   ServiceHeader,
-  StyledContainer,
   StyledH2,
   StyledPriceSpan,
   StyledTable,
   StyledTr,
 } from '../CarServiceRepair/CarServiceRepair.styled';
 
-const CarTireServiceTiresRepairPrice = ({ h2, list, price }) => {
+const CarTireServiceTiresRepairPrice = ({ h2, list, price, Transform }) => {
   const { t } = useTranslation();
   const serviceList = t(`${list}`, { returnObjects: true });
   const priceList = t(`${price}`, { returnObjects: true });
   const priceFrom = t('engineRepair.priceTitles.2');
 
   return (
-    <section>
-      <StyledContainer style={{ paddingBottom: 0 }}>
-        <StyledH2>{t(h2)}</StyledH2>
-      </StyledContainer>
+    <Transform>
+      <StyledH2 style={{ marginLeft: 5 }}>{t(h2)}</StyledH2>
       <StyledTable>
         <thead>
           <tr>
@@ -40,7 +37,10 @@ const CarTireServiceTiresRepairPrice = ({ h2, list, price }) => {
                   item === 'Позашляховики, мікроавтобуси, кросовери' ||
                   item === 'Легкові автомобілі' ? (
                     <StyledPriceSpan
-                      style={{ paddingLeft: 15, display: 'table-cell' }}
+                      style={{
+                        paddingLeft: 15,
+                        display: 'table-cell',
+                      }}
                     >
                       {item}
                     </StyledPriceSpan>
@@ -71,7 +71,7 @@ const CarTireServiceTiresRepairPrice = ({ h2, list, price }) => {
           ))}
         </tbody>
       </StyledTable>
-    </section>
+    </Transform>
   );
 };
 

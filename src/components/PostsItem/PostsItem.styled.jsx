@@ -10,6 +10,8 @@ export const StyledPostDiv = styled.div`
   margin-bottom: 30px;
   cursor: pointer;
   @media screen and (min-width: 1512px) {
+    width: 387px;
+    height: 425px;
     transition: box-shadow 250ms var(--animation-cubic);
     &:hover,
     &:focus {
@@ -41,4 +43,16 @@ export const StyledPostText = styled.p`
   line-height: 1.5;
   opacity: 0.5;
   margin-left: 16px;
+`;
+
+export const StyledNewPost = styled.div`
+  display: none;
+  @media screen and (min-width: 1512px) {
+    display: block;
+  }
+`;
+export const StyledNewPostMobile = styled.div`
+  @media screen and (min-width: 1512px) {
+    display: none;
+  }
 `;

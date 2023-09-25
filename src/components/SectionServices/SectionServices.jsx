@@ -71,6 +71,7 @@ export const SectionServices = () => {
                   sizes="(max-width: 1512px) 100vw, 360px"
                   alt="car-wash-img"
                   loading="lazy"
+                  height={222}
                 />
               </picture>
               <StyledSvg
@@ -111,6 +112,7 @@ export const SectionServices = () => {
                   sizes="(max-width: 1512px) 100vw, 360px"
                   alt="car-service-img"
                   loading="lazy"
+                  height={212}
                 />
               </picture>
               <StyledSvg
@@ -158,6 +160,7 @@ export const SectionServices = () => {
                   sizes="(max-width: 1512px) 100vw, 360px"
                   alt="tire-service-img"
                   loading="lazy"
+                  height={222}
                 />
               </picture>
               <StyledSvg

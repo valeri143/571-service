@@ -1,10 +1,10 @@
 import { lazy } from 'react';
+import styled from 'styled-components';
+import bg1x from 'images/desktop/backgrounds/services/tire-bg@1x-min.jpg';
+import bg2x from 'images/desktop/backgrounds/services/tire-bg@2x-min.jpg';
 import { CarTireServiceRepairHero } from 'components/CarTireServiceRepair/CarTireServiceRepairHero';
 import { CarTireServiceMountingDismantlingOfTiresAbout } from 'components/CarTireServiceRepair/CarTireServiceMountingDismantlingOfTiresAbout';
 
-const CarTireServiceRepairPrice = lazy(() =>
-  import('components/CarTireServiceRepair/CarTireServiceRepairPrice')
-);
 const SectionFeedbacks = lazy(() =>
   import('components/SectionFeedbacks/SectionFeedbacks')
 );
@@ -20,18 +20,44 @@ const SectionContacts = lazy(() =>
 const style = {
   gap: '5px',
   maxWidth: 'max-content',
-  paddingRight: '5px',
-  margin: 0,
+  paddingRight: '9px',
+  marginLeft: 0,
+  marginRight: 0,
   marginTop: '20px',
   justifyContent: 'normal',
 };
 
+const StyledBackGroundImage = styled.div`
+  background-image: url(${bg1x});
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 470px;
+  position: relative;
+  top: -60px;
+  left: 0;
+  right: 0;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${bg2x});
+  }
+  @media screen and (min-width: 1512px) {
+    top: -80px;
+    left: 0;
+    right: 0;
+  }
+`;
+
 const CarTireServiceMountingDismantlingOfTiresPage = () => {
   return (
     <>
-      <CarTireServiceRepairHero h1={'footer.tireServiceList.0'} style={style} />
+      <CarTireServiceRepairHero
+        h1={'footer.tireServiceList.0'}
+        style={style}
+        Bg={StyledBackGroundImage}
+      />
       <CarTireServiceMountingDismantlingOfTiresAbout />
-      <CarTireServiceRepairPrice />
       <SectionFeedbacks />
       <SectionCertifications />
       <SectionForm />

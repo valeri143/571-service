@@ -1,10 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {
-  StyledContainer,
-  StyledH1,
-  StyledP,
-} from 'components/Hero/Hero.styled';
-import { StyledBackGroundImage } from '../CarServiceRepair/CarServiceRepair.styled';
+import { StyledContainer, StyledP } from 'components/Hero/Hero.styled';
 import {
   StyledButtonDiv,
   StyledButtonP,
@@ -12,14 +7,15 @@ import {
   StyledSvg,
 } from 'components/Header/Header.styled';
 import sprite from '../../images/sprite.svg';
+import { StyledH1 } from 'components/CarServiceRepair/CarServiceRepair.styled';
 
-export const CarTireServiceRepairHero = ({ h1, p, style }) => {
+export const CarTireServiceRepairHero = ({ h1, p, style, Bg, maxWidth }) => {
   const { t } = useTranslation();
   return (
     <section>
-      <StyledBackGroundImage>
+      <Bg>
         <StyledContainer>
-          <StyledH1 style={{ width: 'auto' }}>{t(`${h1}`)}</StyledH1>
+          <StyledH1 style={{ width: 'auto', maxWidth }}>{t(`${h1}`)}</StyledH1>
           {p ? (
             <>
               <StyledP>{t(`${p}`)}</StyledP>
@@ -41,7 +37,7 @@ export const CarTireServiceRepairHero = ({ h1, p, style }) => {
             </StyledButtonDiv>
           )}
         </StyledContainer>
-      </StyledBackGroundImage>
+      </Bg>
     </section>
   );
 };

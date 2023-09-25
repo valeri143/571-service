@@ -5,6 +5,7 @@ export const StyledTrHeaders = styled.tr`
 `;
 
 export const StyledTh = styled.th`
+  text-align: center;
   color: #222;
   font-weight: 400;
   line-height: 1.7;
@@ -28,4 +29,28 @@ export const ServiceCell = styled.td`
   font-size: 16px;
   font-weight: 300;
   line-height: 1.1;
+`;
+
+export const StyledTransformDiv = styled.div`
+  @media screen and (min-width: 768px) {
+    margin-top: -120px;
+  }
+  @media screen and (min-width: 1512px) {
+    margin-top: 0;
+    transform: translateY(-65%);
+  }
+`;
+
+export const StyledOl = styled.ol`
+  @media screen and (min-width: 768px) and (max-width: 1511px) {
+    max-width: 350px;
+  }
+`;
+
+export const StyledSpanTire = styled.span`
+  font-weight: 700;
+  @media screen and (min-width: 768px) and (max-width: 1511px) {
+    display: block;
+    max-width: 300px;
+  }
 `;

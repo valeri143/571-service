@@ -1,37 +1,46 @@
+import { lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   StyledP,
-  StyledContainer,
-  StyledSpan,
   StyledDiv,
   StyledSvg,
-  StyledUl,
-  StyledMarginDiv,
   StyledFlexDesktopDiv,
+  StyledGridUl,
+  StyledMarginDivBody,
+  StyledPaddingContainer,
 } from '../CarServiceRepair/CarServiceRepair.styled';
 import sprite from '../../images/sprite.svg';
 import { CarServiceRepairForm } from 'components/CarServiceRepair/CarServiceRepairForm';
+import { StyledOl, StyledSpanTire } from './CarTireServiceRepair.styled';
+const CarTireServiceRepairPrice = lazy(() =>
+  import('components/CarTireServiceRepair/CarTireServiceRepairPrice')
+);
 
 export const CarTireServiceMountingDismantlingOfTiresAbout = () => {
   const { t } = useTranslation();
   return (
     <section>
       <h2 hidden>MountingDismantlingOfTires</h2>
-      <StyledContainer>
+      <StyledPaddingContainer>
         <StyledFlexDesktopDiv>
-          <StyledMarginDiv>
+          <CarServiceRepairForm />
+          <StyledMarginDivBody>
             <StyledP>{t('mountingDismantlingOfTires.pAbout.0')}</StyledP>
             <StyledP>{t('mountingDismantlingOfTires.pAbout.1')}</StyledP>
-            <StyledSpan>{t('mountingDismantlingOfTires.pAbout.2')}</StyledSpan>
-            <ol>
+            <StyledSpanTire>
+              {t('mountingDismantlingOfTires.pAbout.2')}
+            </StyledSpanTire>
+            <StyledOl>
               <li>{t('mountingDismantlingOfTires.pAbout.3')}</li>
               <li>{t('mountingDismantlingOfTires.pAbout.4')}</li>
               <li>{t('mountingDismantlingOfTires.pAbout.5')}</li>
               <li>{t('mountingDismantlingOfTires.pAbout.6')}</li>
               <li>{t('mountingDismantlingOfTires.pAbout.7')}</li>
-            </ol>
-            <StyledSpan>{t('mountingDismantlingOfTires.pAbout.8')}</StyledSpan>
-            <StyledUl>
+            </StyledOl>
+            <StyledSpanTire>
+              {t('mountingDismantlingOfTires.pAbout.8')}
+            </StyledSpanTire>
+            <StyledGridUl>
               <li>
                 <StyledDiv>
                   <StyledSvg width="30" height="30">
@@ -64,13 +73,13 @@ export const CarTireServiceMountingDismantlingOfTiresAbout = () => {
                   <StyledP>{t('mountingDismantlingOfTires.list.3')}</StyledP>
                 </StyledDiv>
               </li>
-            </StyledUl>
+            </StyledGridUl>
             <StyledP>{t('mountingDismantlingOfTires.paragraph.0')}</StyledP>
             <StyledP>{t('mountingDismantlingOfTires.paragraph.1')}</StyledP>
-          </StyledMarginDiv>
-          <CarServiceRepairForm />
+          </StyledMarginDivBody>
+          <CarTireServiceRepairPrice />
         </StyledFlexDesktopDiv>
-      </StyledContainer>
+      </StyledPaddingContainer>
     </section>
   );
 };

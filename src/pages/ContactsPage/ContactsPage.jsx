@@ -6,7 +6,9 @@ import { Error } from 'components/Error';
 import { StyledContainer } from 'components/Hero/Hero.styled';
 import {
   StyledBgSvg,
+  StyledContactsMarginDiv,
   StyledDiv,
+  StyledFlexContactsDesktopDiv,
   StyledH1,
   StyledLightSpan,
   StyledLink,
@@ -15,9 +17,9 @@ import {
   StyledSpan,
   StyledSvgDiv,
   StyledUl,
+  StyledH3,
 } from './ContactsPage.styled';
 import {
-  StyledH3,
   StyledFormDiv,
   StyledLabel,
   StyledField,
@@ -34,12 +36,9 @@ import {
 } from 'components/SectionForm/SectionForm.styled';
 import sprite from '../../images/sprite.svg';
 import { schema } from 'components/CarServiceRepair/CarServiceRepairForm';
+import { StyledFormikContactsDiv } from 'components/CarServiceRepair/CarServiceRepair.styled';
 import {
-  StyledFlexDesktopDiv,
-  StyledFormikContactsDiv,
-  StyledMarginDiv,
-} from 'components/CarServiceRepair/CarServiceRepair.styled';
-import {
+  IframeDesk,
   IframeMob,
   IframeTab,
 } from 'components/SectionContacts/SectionContacts.styled';
@@ -56,8 +55,8 @@ const ContactsPage = () => {
     <>
       <section>
         <StyledContainer>
-          <StyledFlexDesktopDiv>
-            <StyledMarginDiv>
+          <StyledFlexContactsDesktopDiv>
+            <StyledContactsMarginDiv>
               <StyledBgSvg width="210" height="155">
                 <use href={`${sprite}#icon-bg`}></use>
               </StyledBgSvg>
@@ -130,7 +129,7 @@ const ContactsPage = () => {
                   </StyledDiv>
                 </li>
               </StyledUl>
-            </StyledMarginDiv>
+            </StyledContactsMarginDiv>
             <StyledFormikContactsDiv>
               <StyledH3>{t('form.h3')}</StyledH3>
               <Formik
@@ -224,7 +223,7 @@ const ContactsPage = () => {
                 )}
               </Formik>
             </StyledFormikContactsDiv>
-          </StyledFlexDesktopDiv>
+          </StyledFlexContactsDesktopDiv>
         </StyledContainer>
       </section>
       <section>
@@ -249,6 +248,16 @@ const ContactsPage = () => {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></IframeTab>
+          <IframeDesk
+            title="desktop-map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.49886502828!2d30.447006076253476!3d50.4131763900472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c94bccadbc9f%3A0x38ec924d0e91bf56!2z0LLRg9C70LjRhtGPINCh0LLRj9GC0L7RgdC70LDQstCwINCl0L7RgNC-0LHRgNC-0LPQviwgMjbQkCwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1695516707728!5m2!1suk!2sua"
+            width="1512"
+            height="518"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></IframeDesk>
         </StyledContainer>
       </section>
     </>
