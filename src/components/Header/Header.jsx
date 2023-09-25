@@ -168,27 +168,27 @@ export const Header = () => {
           <nav>
             <StyledMenuNavLinkUl>
               <li>
-                <StyledNavLink to="/#services">
+                <StyledNavLink to="/#services" onClick={toggleMenu}>
                   {t('header.navLinksList.0')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/feedbacks">
+                <StyledNavLink to="/feedbacks" onClick={toggleMenu}>
                   {t('header.navLinksList.1')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/blog">
+                <StyledNavLink to="/blog" onClick={toggleMenu}>
                   {t('header.navLinksList.2')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/vacancies">
+                <StyledNavLink to="/vacancies" onClick={toggleMenu}>
                   {t('header.navLinksList.3')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/contacts">
+                <StyledNavLink to="/contacts" onClick={toggleMenu}>
                   {t('header.navLinksList.4')}
                 </StyledNavLink>
               </li>
