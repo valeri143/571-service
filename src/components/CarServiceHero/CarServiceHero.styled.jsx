@@ -8,7 +8,6 @@ export const StyledBackGroundImage = styled.div`
   background-image: url(${bg1x});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   height: 909px;
   position: relative;
   top: -60px;

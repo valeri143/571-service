@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledContainer = styled.div`
+  overflow: hidden;
   padding: 50px 0px 80px 0px;
   margin: 0 auto;
   box-sizing: border-box;

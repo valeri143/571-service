@@ -10,7 +10,6 @@ export const StyledBackGroundImage = styled.div`
   background-image: url(${bg1x});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   height: 645px;
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -22,11 +21,11 @@ export const StyledBackGroundImage = styled.div`
       linear-gradient(90deg, #242424 0%, rgba(36, 36, 36, 0) 100%),
       var(--primary-color);
     background-repeat: no-repeat;
+    background-size: contain;
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(${bg2xD});
-      background-size: contain;
     }
   }
 `;

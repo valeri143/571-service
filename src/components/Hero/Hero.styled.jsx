@@ -9,7 +9,6 @@ export const StyledBackGroundImage = styled.div`
   background-image: url(${bg1x});
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   height: 1301px;
   position: relative;
   top: -60px;
@@ -35,6 +34,7 @@ export const StyledBackGroundImage = styled.div`
 `;
 
 export const StyledContainer = styled.div`
+  overflow: hidden;
   padding: 50px 15px 80px 15px;
   margin: 0 auto;
   box-sizing: border-box;
