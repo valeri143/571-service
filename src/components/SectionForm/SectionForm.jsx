@@ -65,6 +65,7 @@ const SectionForm = () => {
       initial={window.innerWidth >= 1512 ? 'hidden' : 'visible'}
       whileInView="visible"
       viewport={{ amount: 0.7, once: true }}
+      id="form"
     >
       <StyledBackGroundImage>
         <StyledContainer>

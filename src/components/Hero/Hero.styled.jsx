@@ -34,7 +34,6 @@ export const StyledBackGroundImage = styled.div`
 `;
 
 export const StyledContainer = styled.div`
-  overflow: hidden;
   padding: 50px 15px 80px 15px;
   margin: 0 auto;
   box-sizing: border-box;
