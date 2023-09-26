@@ -244,7 +244,12 @@ export const Header = () => {
         <StyledServiceMenu>
           <StyledServiceMenuUl>
             <li>
-              <StyledServiceMenuDiv onClick={() => navigate('/car-service')}>
+              <StyledServiceMenuDiv
+                onClick={() => {
+                  toggleServiceMenu();
+                  navigate('/car-service');
+                }}
+              >
                 <StyledServiceMenuP>
                   {t('footer.navLinksTitles.0')}
                 </StyledServiceMenuP>
@@ -260,7 +265,10 @@ export const Header = () => {
             </li>
             <li>
               <StyledServiceMenuDiv
-                onClick={() => navigate('/car-wash-service')}
+                onClick={() => {
+                  toggleServiceMenu();
+                  navigate('/car-wash-service');
+                }}
               >
                 <StyledServiceMenuP>
                   {t('hero.animationText.0')}
@@ -277,7 +285,10 @@ export const Header = () => {
             </li>
             <li>
               <StyledServiceMenuDiv
-                onClick={() => navigate('/car-tire-service')}
+                onClick={() => {
+                  toggleServiceMenu();
+                  navigate('/car-tire-service');
+                }}
               >
                 <StyledServiceMenuP>
                   {t('hero.animationText.1')}

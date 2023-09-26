@@ -13,5 +13,5 @@ export const scrollToForm = () => {
     if (form) {
       form.scrollIntoView({ behavior: 'smooth' });
     }
-  }, 100); // Установите нужное вам значение задержки (в миллисекундах)
+  }, 300); 
 };

@@ -269,7 +269,12 @@ export const StyledServiceMenu = styled.div`
   padding-top: 22px;
   padding-bottom: 22px;
   border-radius: 0px 0px 8px 8px;
-  background: var(--grey-color);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 199, 13, 1) 0%,
+    rgba(241, 241, 241, 1) 48%
+  );
+  // background: linear-gradient(0deg, #fdc70d 0%, var(--grey-color) 100%);
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
   animation: ${animation} 500ms var(--animation-cubic);
   animation-fill-mode: forwards;
