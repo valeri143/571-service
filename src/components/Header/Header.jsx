@@ -28,8 +28,12 @@ import {
   StyledNavLink,
   StyledServiceMenu,
   StyledServiceMenuDiv,
+  StyledServiceMenuDivMobile,
+  StyledServiceMenuMobile,
   StyledServiceMenuP,
+  StyledServiceMenuPMobile,
   StyledServiceMenuUl,
+  StyledServiceMenuUlMobile,
   StyledSvg,
   StyledTel,
   StyledTelDiv,
@@ -42,6 +46,7 @@ export const Header = () => {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSeviceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -51,8 +56,16 @@ export const Header = () => {
   const toggleServiceMenu = () => {
     setIsServiceMenuOpen(!isSeviceMenuOpen);
   };
+
+  const toggleServiceMenuMobile = () => {
+    setIsServiceMenuMobileOpen(!isSeviceMenuMobileOpen);
+  };
   const closeServiceMenu = () => {
     setIsServiceMenuOpen(false);
+  };
+
+  const closeServiceMenuMobile = () => {
+    setIsServiceMenuMobileOpen(false);
   };
 
   return (
@@ -154,7 +167,10 @@ export const Header = () => {
         </StyledFlexHeaderDiv>
 
         <StyledMenuButton
-          onClick={toggleMenu}
+          onClick={() => {
+            closeServiceMenuMobile();
+            toggleMenu();
+          }}
           type="button"
           aria-label="Открыть меню"
         >
@@ -175,27 +191,51 @@ export const Header = () => {
           <nav>
             <StyledMenuNavLinkUl>
               <li>
-                <StyledNavLink to="/#services" onClick={toggleMenu}>
+                <StyledNavLink onClick={toggleServiceMenuMobile}>
                   {t('header.navLinksList.0')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/feedbacks" onClick={toggleMenu}>
+                <StyledNavLink
+                  to="/feedbacks"
+                  onClick={() => {
+                    closeServiceMenuMobile();
+                    toggleMenu();
+                  }}
+                >
                   {t('header.navLinksList.1')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/blog" onClick={toggleMenu}>
+                <StyledNavLink
+                  to="/blog"
+                  onClick={() => {
+                    closeServiceMenuMobile();
+                    toggleMenu();
+                  }}
+                >
                   {t('header.navLinksList.2')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/vacancies" onClick={toggleMenu}>
+                <StyledNavLink
+                  to="/vacancies"
+                  onClick={() => {
+                    closeServiceMenuMobile();
+                    toggleMenu();
+                  }}
+                >
                   {t('header.navLinksList.3')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/contacts" onClick={toggleMenu}>
+                <StyledNavLink
+                  to="/contacts"
+                  onClick={() => {
+                    closeServiceMenuMobile();
+                    toggleMenu();
+                  }}
+                >
                   {t('header.navLinksList.4')}
                 </StyledNavLink>
               </li>
@@ -311,6 +351,75 @@ export const Header = () => {
             </li>
           </StyledServiceMenuUl>
         </StyledServiceMenu>
+      )}
+      {isSeviceMenuMobileOpen && (
+        <StyledServiceMenuMobile>
+          <StyledServiceMenuUlMobile>
+            <li>
+              <StyledServiceMenuDivMobile
+                onClick={() => {
+                  toggleServiceMenuMobile();
+                  toggleMenu();
+                  navigate('/car-service');
+                }}
+              >
+                <StyledServiceMenuPMobile>
+                  {t('footer.navLinksTitles.0')}
+                </StyledServiceMenuPMobile>
+                <img
+                  srcSet={`${service0101x} 1x, ${service0102x} 2x`}
+                  src={service0101x}
+                  alt="car-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDivMobile>
+            </li>
+            <li>
+              <StyledServiceMenuDivMobile
+                onClick={() => {
+                  toggleServiceMenuMobile();
+                  toggleMenu();
+                  navigate('/car-wash-service');
+                }}
+              >
+                <StyledServiceMenuPMobile>
+                  {t('hero.animationText.0')}
+                </StyledServiceMenuPMobile>
+                <img
+                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
+                  src={service0201x}
+                  alt="car-wash-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDivMobile>
+            </li>
+            <li>
+              <StyledServiceMenuDivMobile
+                onClick={() => {
+                  toggleServiceMenuMobile();
+                  toggleMenu();
+                  navigate('/car-tire-service');
+                }}
+              >
+                <StyledServiceMenuPMobile>
+                  {t('hero.animationText.1')}
+                </StyledServiceMenuPMobile>
+                <img
+                  srcSet={`${service0301x} 1x, ${service0302x} 2x`}
+                  src={service0301x}
+                  alt="car-tire-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDivMobile>
+            </li>
+          </StyledServiceMenuUlMobile>
+        </StyledServiceMenuMobile>
       )}
     </StyledHeader>
   );

@@ -274,7 +274,6 @@ export const StyledServiceMenu = styled.div`
     rgba(253, 199, 13, 1) 0%,
     rgba(241, 241, 241, 1) 48%
   );
-  // background: linear-gradient(0deg, #fdc70d 0%, var(--grey-color) 100%);
   box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
   animation: ${animation} 500ms var(--animation-cubic);
   animation-fill-mode: forwards;
@@ -321,4 +320,61 @@ export const StyledServiceMenuP = styled.p`
     color: var(--accent-color);
     font-weight: 400;
   }
+`;
+
+// SERVICE MENU MOBILE
+
+export const StyledServiceMenuMobile = styled.div`
+  position: absolute;
+  z-index: 80;
+  top: 130px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 290px;
+  min-height: 80px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border-radius: 0px 0px 8px 8px;
+  background: linear-gradient(
+    0deg,
+    rgba(253, 199, 13, 1) 0%,
+    rgba(241, 241, 241, 1) 48%
+  );
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.5);
+  animation: ${animation} 500ms var(--animation-cubic);
+  animation-fill-mode: forwards;
+  @media (min-width: 1512px) {
+    display: none;
+  }
+`;
+
+export const StyledServiceMenuUlMobile = styled.ul`
+  display: flex;
+  gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const StyledServiceMenuDivMobile = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  padding-top: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+  transition: border-radius 350ms var(--animation-cubic), background 350ms var(--animation-cubic), box-shadow 350ms var(--animation-cubic);
+  &:hover, &:focus {
+    border-radius: 8px;
+background: var(--light-color);
+box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+  },
+`;
+
+export const StyledServiceMenuPMobile = styled.p`
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.2;
+  transition: color 350ms var(--animation-cubic),
+    font-weight 550ms var(--animation-cubic);
 `;
