@@ -106,7 +106,7 @@ const ContactsPage = () => {
                         050 936 34 00
                       </StyledLink>
                       <StyledLink href="tel:044 698 98 98">
-                        044 698 98 98
+                        063 527 15 19
                       </StyledLink>
                     </StyledLinkDiv>
                   </StyledDiv>
@@ -120,10 +120,10 @@ const ContactsPage = () => {
                     </StyledSvgDiv>
                     <div>
                       <StyledP>
-                        <StyledLightSpan>Пн- Пт</StyledLightSpan>с 9:00-22:00
+                        <StyledLightSpan>Пн- Пт</StyledLightSpan>с 09:00-18:00
                       </StyledP>
                       <StyledP>
-                        <StyledLightSpan>Сб-Вс</StyledLightSpan>с 9:00-22:00
+                        <StyledLightSpan>Сб-Вс</StyledLightSpan>с 09:00-16:00
                       </StyledP>
                     </div>
                   </StyledDiv>
@@ -229,7 +229,7 @@ const ContactsPage = () => {
       <section>
         <StyledContainer style={{ padding: 0 }}>
           <IframeMob
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.67007571702607!2d30.451795823869563!3d50.411617908724374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c94a039c21a5%3A0xffd8c54cdbcac902!2z0JDQstGC0L7RgdC40LzQtdGC0YDQuNGPLCDQstGD0LvQuNGG0Y8g0KHQstGP0YLQvtGB0LvQsNCy0LAg0KXQvtGA0L7QsdGA0L7Qs9C-LCAyNiDQsCwg0JrQuNC10LIsIDAzMTUx!5e0!3m2!1suk!2sua!4v1695242069005!5m2!1suk!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0024756477546!2d30.631496676256194!3d50.45967858669968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4daabb5c2eced%3A0x7d7bbb92bdff9e34!2z0LLRg9C70LjRhtGPINCT0LXRgtGM0LzQsNC90LAg0J_QsNCy0LvQsCDQn9C-0LvRg9Cx0L7RgtC60LAsIDUy0JEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1695732665981!5m2!1sru!2sua"
             width="390"
             height="518"
             style={{ border: 0 }}
@@ -239,22 +239,22 @@ const ContactsPage = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></IframeMob>
           <IframeTab
-            title="table-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d635.644582079523!2d30.451261469624175!3d50.41169565286562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c94a039c21a5%3A0xffd8c54cdbcac902!2z0JDQstGC0L7RgdC40LzQtdGC0YDQuNGPLCDQstGD0LvQuNGG0Y8g0KHQstGP0YLQvtGB0LvQsNCy0LAg0KXQvtGA0L7QsdGA0L7Qs9C-LCAyNiDQsCwg0JrQuNC10LIsIDAzMTUx!5e0!3m2!1suk!2sua!4v1695418086590!5m2!1suk!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0024756477546!2d30.631496676256194!3d50.45967858669968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4daabb5c2eced%3A0x7d7bbb92bdff9e34!2z0LLRg9C70LjRhtGPINCT0LXRgtGM0LzQsNC90LAg0J_QsNCy0LvQsCDQn9C-0LvRg9Cx0L7RgtC60LAsIDUy0JEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1695732665981!5m2!1sru!2sua"
             width="768"
             height="518"
             style={{ border: 0 }}
             allowFullScreen=""
+            title="table-map"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></IframeTab>
           <IframeDesk
-            title="desktop-map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.49886502828!2d30.447006076253476!3d50.4131763900472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c94bccadbc9f%3A0x38ec924d0e91bf56!2z0LLRg9C70LjRhtGPINCh0LLRj9GC0L7RgdC70LDQstCwINCl0L7RgNC-0LHRgNC-0LPQviwgMjbQkCwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1695516707728!5m2!1suk!2sua"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.0024756477546!2d30.631496676256194!3d50.45967858669968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4daabb5c2eced%3A0x7d7bbb92bdff9e34!2z0LLRg9C70LjRhtGPINCT0LXRgtGM0LzQsNC90LAg0J_QsNCy0LvQsCDQn9C-0LvRg9Cx0L7RgtC60LAsIDUy0JEsINCa0LjRl9CyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1695732665981!5m2!1sru!2sua"
             width="1512"
             height="518"
             style={{ border: 0 }}
             allowFullScreen=""
+            title="desktop-map"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></IframeDesk>

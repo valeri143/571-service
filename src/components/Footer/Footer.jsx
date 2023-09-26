@@ -40,7 +40,7 @@ const Footer = () => {
             <StyledContactsDiv>
               <StyledNumberDiv>
                 <StyledPhoneP>050 936 34 00</StyledPhoneP>
-                <StyledPhoneP>044 698 98 98</StyledPhoneP>
+                <StyledPhoneP>063 527 15 19</StyledPhoneP>
               </StyledNumberDiv>
               <div>
                 <StyledP>E-mail:</StyledP>
@@ -52,13 +52,13 @@ const Footer = () => {
                   <li>
                     <StyledTimeDiv>
                       <StyledP>Пн- Пт </StyledP>
-                      <StyledSpan>с 9:00-22:00</StyledSpan>
+                      <StyledSpan>с 09:00-18:00</StyledSpan>
                     </StyledTimeDiv>
                   </li>
                   <li>
                     <StyledTimeDiv>
                       <StyledP>Сб-Вс </StyledP>
-                      <StyledSpan>с 9:00-22:00</StyledSpan>
+                      <StyledSpan>с 09:00-16:00</StyledSpan>
                     </StyledTimeDiv>
                   </li>
                 </ul>

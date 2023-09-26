@@ -51,6 +51,9 @@ export const Header = () => {
   const toggleServiceMenu = () => {
     setIsServiceMenuOpen(!isSeviceMenuOpen);
   };
+  const closeServiceMenu = () => {
+    setIsServiceMenuOpen(false);
+  };
 
   return (
     <StyledHeader
@@ -73,7 +76,10 @@ export const Header = () => {
             loading="lazy"
             width={43}
             height={38}
-            onClick={() => navigate('/')}
+            onClick={() => {
+              navigate('/');
+              closeServiceMenu();
+            }}
           />
         </div>
         <StyledFlexHeaderDiv>
@@ -85,22 +91,22 @@ export const Header = () => {
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/feedbacks">
+                <StyledNavLink to="/feedbacks" onClick={closeServiceMenu}>
                   {t('header.navLinksList.1')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/blog">
+                <StyledNavLink to="/blog" onClick={closeServiceMenu}>
                   {t('header.navLinksList.2')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/vacancies">
+                <StyledNavLink to="/vacancies" onClick={closeServiceMenu}>
                   {t('header.navLinksList.3')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/contacts">
+                <StyledNavLink to="/contacts" onClick={closeServiceMenu}>
                   {t('header.navLinksList.4')}
                 </StyledNavLink>
               </li>
