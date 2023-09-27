@@ -41,7 +41,6 @@ import {
   StyledCarServiceButton,
   StyledCarServiceDiv,
   StyledCarServiceH4,
-  StyledCarServiceH4Less,
   StyledCarServiceH4More,
   StyledCarServiceUl,
   StyledDesktopP,
@@ -117,9 +116,9 @@ const CarServiceAbout = () => {
                   height={250}
                 />
               </picture>
-              <StyledCarServiceH4Less>
-                {t('footer.carServiceList.1')}
-              </StyledCarServiceH4Less>
+              <StyledCarServiceH4>
+                {t('hero.animationText.0')}
+              </StyledCarServiceH4>
               <StyledCarServiceButton>
                 <svg
                   width="30"
@@ -180,7 +179,7 @@ const CarServiceAbout = () => {
                 />
               </picture>
               <StyledCarServiceH4More>
-                {t('footer.carServiceList.3')}
+                {t('header.servicesMenu.2')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
                 <svg
@@ -242,7 +241,7 @@ const CarServiceAbout = () => {
                 />
               </picture>
               <StyledCarServiceH4More>
-                {t('carService.h4List.1')}
+                {t('header.servicesMenu.1')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
                 <svg

@@ -185,7 +185,7 @@ export const StyledAnimationUl = styled.ul`
 
 export const StyledAnimationDiv01 = styled.div`
   position: absolute;
-  left: 56px;
+  left: 10px;
   display: inline-flex;
   transform: rotate(-4.023deg);
   padding: 11px 16px;
@@ -195,10 +195,14 @@ export const StyledAnimationDiv01 = styled.div`
   border-radius: 500px;
   border: 1px solid var(--accent-color);
   background: rgba(255, 255, 255, 0.1);
+  @media screen and (min-width: 768px) {
+    left: unset;
+    right: 140px;
+    bottom: 130px;
+  }
   @media screen and (min-width: 1512px) {
     transform: rotate(35deg);
-    left: unset;
-    right: 10px;
+    right: -40px;
     bottom: 130px;
     animation: ${fadeInUp} 1.5s 1.5s var(--cubic) forwards;
   }
@@ -216,10 +220,14 @@ export const StyledAnimationDiv02 = styled.div`
   border-radius: 500px;
   border: 1px solid var(--accent-color);
   background: rgba(255, 255, 255, 0.1);
+  @media screen and (min-width: 768px) {
+    top: unset;
+    bottom: 80px;
+    right: 0;
+  }
   @media screen and (min-width: 1512px) {
     transform: rotate(22deg);
     bottom: 150px;
-    top: unset;
     right: 13%;
     transform: rotate(-15deg);
     animation: ${fadeInUpR} 1.5s 1.5s var(--cubic) forwards;
@@ -238,9 +246,13 @@ export const StyledAnimationDiv03 = styled.div`
   border-radius: 500px;
   border: 1px solid var(--accent-color);
   background: rgba(255, 255, 255, 0.1);
-  @media screen and (min-width: 1512px) {
+  @media screen and (min-width: 768px) {
     left: unset;
-    right: 8%;
+    right: 12%;
+    top: -80px;
+  }
+  @media screen and (min-width: 1512px) {
+    right: 12%;
     top: -120px;
     transform: rotate(18deg);
     animation: ${fadeInUpAndRotate} 1.5s 1.5s var(--cubic) forwards;

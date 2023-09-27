@@ -330,10 +330,8 @@ export const StyledServiceMenuMobile = styled.div`
   top: 130px;
   right: 50%;
   transform: translateX(50%);
-  width: 290px;
   min-height: 80px;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  padding: 10px 5px 5px 5px;
   border-radius: 0px 0px 8px 8px;
   background: linear-gradient(
     0deg,
@@ -375,6 +373,7 @@ export const StyledServiceMenuPMobile = styled.p`
   font-size: 11px;
   font-weight: 500;
   line-height: 1.2;
+  text-align: center;
   transition: color 350ms var(--animation-cubic),
     font-weight 550ms var(--animation-cubic);
 `;

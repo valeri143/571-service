@@ -333,6 +333,26 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
+                  navigate('/car-wash-service');
+                }}
+              >
+                <StyledServiceMenuP>
+                  {t('header.servicesMenu')}
+                </StyledServiceMenuP>
+                <img
+                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
+                  src={service0201x}
+                  alt="car-wash-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDiv>
+            </li>
+            <li>
+              <StyledServiceMenuDiv
+                onClick={() => {
+                  toggleServiceMenu();
                   navigate('/car-tire-service');
                 }}
               >
@@ -386,6 +406,26 @@ export const Header = () => {
               >
                 <StyledServiceMenuPMobile>
                   {t('hero.animationText.0')}
+                </StyledServiceMenuPMobile>
+                <img
+                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
+                  src={service0201x}
+                  alt="car-wash-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDivMobile>
+            </li>
+            <li>
+              <StyledServiceMenuDivMobile
+                onClick={() => {
+                  toggleServiceMenu();
+                  navigate('/car-wash-service');
+                }}
+              >
+                <StyledServiceMenuPMobile>
+                  {t('header.servicesMenu')}
                 </StyledServiceMenuPMobile>
                 <img
                   srcSet={`${service0201x} 1x, ${service0202x} 2x`}

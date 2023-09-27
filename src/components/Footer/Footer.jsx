@@ -81,33 +81,33 @@ const Footer = () => {
                 <StyledItemP>{t('footer.carServiceList.3')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carServiceList.4')}</StyledItemP>
+                <StyledItemP>{t('hero.animationText.0')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carServiceList.5')}</StyledItemP>
+                <StyledItemP>{t('header.servicesMenu.3')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>
           <div>
-            <StyledH5>{t('footer.navLinksTitles.1')}</StyledH5>
+            <StyledH5>{t('footer.newCarWashServiceList.0')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.0')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.1')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.1')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.2')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.2')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.3')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.3')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.4')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.4')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.5')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.carWashServiceList.5')}</StyledItemP>
+                <StyledItemP>{t('footer.newCarWashServiceList.6')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>
@@ -124,7 +124,7 @@ const Footer = () => {
                 <StyledItemP>{t('footer.tireServiceList.2')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.tireServiceList.3')}</StyledItemP>
+                <StyledItemP>{t('header.servicesMenu.4')}</StyledItemP>
               </li>
             </StyledNavLinksListUl>
           </div>

@@ -58,7 +58,7 @@ export const SectionServices = () => {
         <StyledP>{t('services.p')}</StyledP>
         <StyledServicesUl variants={animation} as={motion.ul}>
           <li>
-            <StyledServicesDiv>
+            <StyledServicesDiv onClick={() => navigate('car-wash-service')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -74,11 +74,7 @@ export const SectionServices = () => {
                   height={222}
                 />
               </picture>
-              <StyledSvg
-                width="30"
-                height="30"
-                onClick={() => navigate('car-wash-service')}
-              >
+              <StyledSvg width="30" height="30">
                 <use href={`${sprite}#icon-arrow-yellow`}></use>
               </StyledSvg>
               <StyledH4>{t('services.servicesUlText.0')}</StyledH4>
@@ -99,7 +95,7 @@ export const SectionServices = () => {
             </StyledServicesDiv>
           </li>
           <li>
-            <StyledServicesDiv02>
+            <StyledServicesDiv02 onClick={() => navigate('car-service')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -115,11 +111,7 @@ export const SectionServices = () => {
                   height={212}
                 />
               </picture>
-              <StyledSvg
-                width="30"
-                height="30"
-                onClick={() => navigate('car-service')}
-              >
+              <StyledSvg width="30" height="30">
                 <use href={`${sprite}#icon-arrow-black`}></use>
               </StyledSvg>
               <StyledH402>{t('services.servicesUlText.1')}</StyledH402>
@@ -148,7 +140,7 @@ export const SectionServices = () => {
             </StyledServicesDiv02>
           </li>
           <li>
-            <StyledServicesDiv>
+            <StyledServicesDiv onClick={() => navigate('car-tire-service')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -163,11 +155,7 @@ export const SectionServices = () => {
                   height={222}
                 />
               </picture>
-              <StyledSvg
-                width="30"
-                height="30"
-                onClick={() => navigate('car-tire-service')}
-              >
+              <StyledSvg width="30" height="30">
                 <use href={`${sprite}#icon-arrow-yellow`}></use>
               </StyledSvg>
               <StyledH4>{t('services.servicesUlText.2')}</StyledH4>
