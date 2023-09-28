@@ -52,7 +52,9 @@ const CarTireServiceAbout = () => {
         <StyledP>{t('carTire.pList')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv
+              onClick={() => navigate('mounting-dismantling-of-tires')}
+            >
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -72,18 +74,14 @@ const CarTireServiceAbout = () => {
                 {t('footer.tireServiceList.0')}
               </StyledCarServiceH4MoreTire>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('mounting-dismantling-of-tires')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('tires-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -103,18 +101,16 @@ const CarTireServiceAbout = () => {
                 {t('footer.tireServiceList.1')}
               </StyledCarServiceH4MoreTire>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('tires-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv
+              onClick={() => navigate('chassis-maintenance')}
+            >
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -134,11 +130,7 @@ const CarTireServiceAbout = () => {
                 {t('footer.tireServiceList.2')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('chassis-maintenance')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>

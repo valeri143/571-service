@@ -69,7 +69,7 @@ const CarServiceAbout = () => {
         <StyledP>{t('carService.pList.1')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('engine-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -89,18 +89,14 @@ const CarServiceAbout = () => {
                 {t('footer.carServiceList.0')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('engine-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('gearbox-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -120,18 +116,14 @@ const CarServiceAbout = () => {
                 {t('hero.animationText.0')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('gearbox-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('chassis-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -151,18 +143,14 @@ const CarServiceAbout = () => {
                 {t('carService.h4List.0')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('chassis-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('electric-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -182,18 +170,14 @@ const CarServiceAbout = () => {
                 {t('header.servicesMenu.2')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('electric-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('car-body-repair')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -213,18 +197,14 @@ const CarServiceAbout = () => {
                 {t('footer.carServiceList.4')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('car-body-repair')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('extra-services')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -244,11 +224,7 @@ const CarServiceAbout = () => {
                 {t('header.servicesMenu.1')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('extra-services')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>

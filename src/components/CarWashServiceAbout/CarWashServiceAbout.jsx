@@ -51,7 +51,9 @@ const CarWashServiceAbout = () => {
         <StyledP>{t('carWash.pList')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv
+              onClick={() => navigate('headlight-polishing')}
+            >
               <StyledAnimationImg
                 srcSet={`${service0101x} 1x, ${service0102x} 2x`}
                 src={service0101x}
@@ -64,18 +66,14 @@ const CarWashServiceAbout = () => {
                 {t('services.servicesUlText.0')}
               </StyledCarServiceH4Less>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('headlight-polishing')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('cleaning')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -95,18 +93,14 @@ const CarWashServiceAbout = () => {
                 {t('footer.carWashServiceList.1')}
               </StyledCarServiceH4>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('cleaning')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv>
+            <StyledCarServiceDiv onClick={() => navigate('extra-services')}>
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -126,11 +120,7 @@ const CarWashServiceAbout = () => {
                 {t('carService.h4List.1')}
               </StyledCarServiceH4More>
               <StyledCarServiceButton>
-                <svg
-                  width="30"
-                  height="30"
-                  onClick={() => navigate('extra-services')}
-                >
+                <svg width="30" height="30">
                   <use href={`${sprite}#icon-arrow-yellow`}></use>
                 </svg>
               </StyledCarServiceButton>

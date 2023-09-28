@@ -22,6 +22,7 @@ export const StyledCarServiceDiv = styled.div`
   background: var(--light-color);
   box-shadow: 0px 0px 60px 0px rgba(129, 129, 129, 0.15);
   @media screen and (min-width: 1512px) {
+    cursor: pointer;
     overflow: hidden;
     max-width: none;
     width: 387px;
