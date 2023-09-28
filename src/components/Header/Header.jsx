@@ -337,7 +337,7 @@ export const Header = () => {
                 }}
               >
                 <StyledServiceMenuP>
-                  {t('header.servicesMenu')}
+                  {t('header.servicesMenu.0')}
                 </StyledServiceMenuP>
                 <img
                   srcSet={`${service0201x} 1x, ${service0202x} 2x`}
@@ -425,7 +425,7 @@ export const Header = () => {
                 }}
               >
                 <StyledServiceMenuPMobile>
-                  {t('header.servicesMenu')}
+                  {t('header.servicesMenu.0')}
                 </StyledServiceMenuPMobile>
                 <img
                   srcSet={`${service0201x} 1x, ${service0202x} 2x`}
