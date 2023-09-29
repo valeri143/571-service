@@ -42,7 +42,7 @@ const CarServiceElectricRepairPage = () => {
   return (
     <>
       <CarServiceRepairHero
-        h1={'footer.carServiceList.3'}
+        h1={'header.servicesMenu.2'}
         p={'electricRepair.p'}
         maxWidth={843}
         Bg={StyledBackGroundImage}

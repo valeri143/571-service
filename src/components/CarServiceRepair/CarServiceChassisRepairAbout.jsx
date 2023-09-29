@@ -20,8 +20,8 @@ export const CarServiceChassisRepairAbout = () => {
   const { t } = useTranslation();
   return (
     <section>
-      <StyledPaddingContainerMore>
-        <StyledFlexDesktopDiv>
+      <StyledPaddingContainerMore style={{ paddingLeft: '5px' }}>
+        <StyledFlexDesktopDiv style={{ gap: 0 }}>
           <CarServiceRepairForm />
           <StyledMarginDiv>
             <StyledP>

@@ -69,31 +69,33 @@ const CarServiceAbout = () => {
         <StyledP>{t('carService.pList.1')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('engine-repair')}>
-              <picture>
-                <source
-                  media="(min-width: 1512px)"
-                  srcSet={`${service0101xD} 1x, ${service0102xD} 2x`}
-                  sizes="(min-width: 1512px) 100vw, 387px"
-                />
-                <StyledAnimationImg
-                  srcSet={`${service0101x} 1x, ${service0102x} 2x`}
-                  src={service0101x}
-                  alt="engine-repair-img"
-                  sizes="(max-width: 1512px) 100vw, 360px"
-                  loading="lazy"
-                  height={250}
-                />
-              </picture>
-              <StyledCarServiceH4>
-                {t('footer.carServiceList.0')}
-              </StyledCarServiceH4>
-              <StyledCarServiceButton>
-                <svg width="30" height="30">
-                  <use href={`${sprite}#icon-arrow-yellow`}></use>
-                </svg>
-              </StyledCarServiceButton>
-            </StyledCarServiceDiv>
+            <a href="car-service/engine-repair">
+              <StyledCarServiceDiv>
+                <picture>
+                  <source
+                    media="(min-width: 1512px)"
+                    srcSet={`${service0101xD} 1x, ${service0102xD} 2x`}
+                    sizes="(min-width: 1512px) 100vw, 387px"
+                  />
+                  <StyledAnimationImg
+                    srcSet={`${service0101x} 1x, ${service0102x} 2x`}
+                    src={service0101x}
+                    alt="engine-repair-img"
+                    sizes="(max-width: 1512px) 100vw, 360px"
+                    loading="lazy"
+                    height={250}
+                  />
+                </picture>
+                <StyledCarServiceH4>
+                  {t('footer.carServiceList.0')}
+                </StyledCarServiceH4>
+                <StyledCarServiceButton>
+                  <svg width="30" height="30">
+                    <use href={`${sprite}#icon-arrow-yellow`}></use>
+                  </svg>
+                </StyledCarServiceButton>
+              </StyledCarServiceDiv>
+            </a>
           </li>
           <li>
             <StyledCarServiceDiv onClick={() => navigate('gearbox-repair')}>
@@ -123,31 +125,33 @@ const CarServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('chassis-repair')}>
-              <picture>
-                <source
-                  media="(min-width: 1512px)"
-                  srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
-                  sizes="(min-width: 1512px) 100vw, 387px"
-                />
-                <StyledAnimationImg
-                  srcSet={`${service0301x} 1x, ${service0302x} 2x`}
-                  src={service0301x}
-                  alt="repair-maintenance-img"
-                  sizes="(max-width: 1512px) 100vw, 360px"
-                  loading="lazy"
-                  height={250}
-                />
-              </picture>
-              <StyledCarServiceH4More>
-                {t('carService.h4List.0')}
-              </StyledCarServiceH4More>
-              <StyledCarServiceButton>
-                <svg width="30" height="30">
-                  <use href={`${sprite}#icon-arrow-yellow`}></use>
-                </svg>
-              </StyledCarServiceButton>
-            </StyledCarServiceDiv>
+            <a href="car-service/chassis-repair">
+              <StyledCarServiceDiv>
+                <picture>
+                  <source
+                    media="(min-width: 1512px)"
+                    srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
+                    sizes="(min-width: 1512px) 100vw, 387px"
+                  />
+                  <StyledAnimationImg
+                    srcSet={`${service0301x} 1x, ${service0302x} 2x`}
+                    src={service0301x}
+                    alt="repair-maintenance-img"
+                    sizes="(max-width: 1512px) 100vw, 360px"
+                    loading="lazy"
+                    height={250}
+                  />
+                </picture>
+                <StyledCarServiceH4More>
+                  {t('carService.h4List.0')}
+                </StyledCarServiceH4More>
+                <StyledCarServiceButton>
+                  <svg width="30" height="30">
+                    <use href={`${sprite}#icon-arrow-yellow`}></use>
+                  </svg>
+                </StyledCarServiceButton>
+              </StyledCarServiceDiv>
+            </a>
           </li>
           <li>
             <StyledCarServiceDiv onClick={() => navigate('electric-repair')}>
