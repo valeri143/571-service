@@ -13,6 +13,11 @@ const CarWashServicePage = lazy(() =>
 const CarTireServicePage = lazy(() =>
   import('../pages/CarTireServicePage/CarTireServicePage')
 );
+const CarServiceWheelAlignmentRepairPage = lazy(() =>
+  import(
+    '../pages/CarServicePage/CarServiceWheelAlignmentRepairPage/CarServiceWheelAlignmentRepairPage'
+  )
+);
 const CarServiceEngineRepairPage = lazy(() =>
   import(
     '../pages/CarServicePage/CarServiceEngineRepairPage/CarServiceEngineRepairPage'
@@ -96,6 +101,10 @@ export const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/car-service" element={<CarServicePage />} />
+        <Route
+          path="/car-service/wheel-alignment"
+          element={<CarServiceWheelAlignmentRepairPage />}
+        />
         <Route
           path="/car-service/engine-repair"
           element={<CarServiceEngineRepairPage />}

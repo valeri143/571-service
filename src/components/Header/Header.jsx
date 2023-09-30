@@ -10,6 +10,10 @@ import service0201x from '../../images/desktop/header/car-wash-service-link@1x-m
 import service0202x from '../../images/desktop/header/car-wash-service-link@2x-min.png';
 import service0301x from '../../images/desktop/header/car-tire-service-link@1x-min.png';
 import service0302x from '../../images/desktop/header/car-tire-service-link@2x-min.png';
+import service0401x from '../../images/desktop/header/wheel-alignment@1x-min.png';
+import service0402x from '../../images/desktop/header/wheel-alignment@2x-min.png';
+import service0501x from '../../images/desktop/header/body-repair@1x-min.png';
+import service0502x from '../../images/desktop/header/body-repair@2x-min.png';
 import {
   StyledButtonDiv,
   StyledButtonP,
@@ -313,16 +317,16 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-wash-service');
+                  navigate('/car-service/wheel-alignment');
                 }}
               >
                 <StyledServiceMenuP>
                   {t('hero.animationText.0')}
                 </StyledServiceMenuP>
                 <img
-                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
-                  src={service0201x}
-                  alt="car-wash-service-link"
+                  srcSet={`${service0401x} 1x, ${service0402x} 2x`}
+                  src={service0401x}
+                  alt="wheel-alignment-service-link"
                   loading="lazy"
                   width={175}
                   height={97}
@@ -363,6 +367,26 @@ export const Header = () => {
                   srcSet={`${service0301x} 1x, ${service0302x} 2x`}
                   src={service0301x}
                   alt="car-tire-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDiv>
+            </li>
+            <li>
+              <StyledServiceMenuDiv
+                onClick={() => {
+                  toggleServiceMenu();
+                  navigate('/car-service/car-body-repair');
+                }}
+              >
+                <StyledServiceMenuP>
+                  {t('services.carServiceItem.2')}
+                </StyledServiceMenuP>
+                <img
+                  srcSet={`${service0501x} 1x, ${service0502x} 2x`}
+                  src={service0501x}
+                  alt="car-body-repair-service-link"
                   loading="lazy"
                   width={175}
                   height={97}
@@ -401,16 +425,16 @@ export const Header = () => {
                 onClick={() => {
                   toggleServiceMenuMobile();
                   toggleMenu();
-                  navigate('/car-wash-service');
+                  navigate('/car-service/wheel-alignment');
                 }}
               >
                 <StyledServiceMenuPMobile>
                   {t('hero.animationText.0')}
                 </StyledServiceMenuPMobile>
                 <img
-                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
-                  src={service0201x}
-                  alt="car-wash-service-link"
+                  srcSet={`${service0401x} 1x, ${service0402x} 2x`}
+                  src={service0401x}
+                  alt="car-wheel-alignment-service-link"
                   loading="lazy"
                   width={175}
                   height={97}
@@ -452,6 +476,27 @@ export const Header = () => {
                   srcSet={`${service0301x} 1x, ${service0302x} 2x`}
                   src={service0301x}
                   alt="car-tire-service-link"
+                  loading="lazy"
+                  width={175}
+                  height={97}
+                />
+              </StyledServiceMenuDivMobile>
+            </li>
+            <li>
+              <StyledServiceMenuDivMobile
+                onClick={() => {
+                  toggleServiceMenuMobile();
+                  toggleMenu();
+                  navigate('/car-service/car-body-repair');
+                }}
+              >
+                <StyledServiceMenuPMobile>
+                  {t('services.carServiceItem.2')}
+                </StyledServiceMenuPMobile>
+                <img
+                  srcSet={`${service0501x} 1x, ${service0502x} 2x`}
+                  src={service0501x}
+                  alt="car-body-repair-service-link"
                   loading="lazy"
                   width={175}
                   height={97}

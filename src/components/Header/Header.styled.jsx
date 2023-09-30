@@ -331,7 +331,7 @@ export const StyledServiceMenuMobile = styled.div`
   right: 50%;
   transform: translateX(50%);
   min-height: 80px;
-  padding: 10px 5px 5px 5px;
+  padding: 10px 0px 5px 0px;
   border-radius: 0px 0px 8px 8px;
   background: linear-gradient(
     0deg,
@@ -348,7 +348,7 @@ export const StyledServiceMenuMobile = styled.div`
 
 export const StyledServiceMenuUlMobile = styled.ul`
   display: flex;
-  gap: 5px;
+  gap: 3px;
   justify-content: space-around;
   align-items: center;
 `;
