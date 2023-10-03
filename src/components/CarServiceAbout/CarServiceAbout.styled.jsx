@@ -13,7 +13,8 @@ export const StyledCarServiceUl = styled.ul`
   }
 `;
 
-export const StyledCarServiceDiv = styled.div`
+export const StyledCarServiceDiv = styled.a`
+  display: block;
   position: relative;
   max-width: 360px;
   max-height: 326px;

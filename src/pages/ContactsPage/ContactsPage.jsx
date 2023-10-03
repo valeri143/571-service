@@ -89,8 +89,8 @@ const ContactsPage = () => {
                         <use href={`${sprite}#icon-email`}></use>
                       </svg>
                     </StyledSvgDiv>
-                    <StyledLink href="mailto:info@571Service.com">
-                      info@571Service.com
+                    <StyledLink href="mailto:sto@571.com.ua">
+                      sto@571.com.ua
                     </StyledLink>
                   </StyledDiv>
                 </li>

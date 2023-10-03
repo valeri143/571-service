@@ -41,7 +41,7 @@ const CarServiceExtraRepairPage = () => {
   return (
     <>
       <CarServiceRepairHero
-        h1={'carService.h4List.1'}
+        h1={'header.servicesMenu.1'}
         p={'extraRepair.p'}
         Bg={StyledBackGroundImage}
       />

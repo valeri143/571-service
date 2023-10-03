@@ -72,7 +72,7 @@ export const StyledPaddingContainerMore = styled.div`
   }
   @media screen and (min-width: 1512px) {
     width: 1512px;
-    padding: 10px 0px 80px 60px;
+    padding: 10px 0px 80px 80px;
   }
 `;
 

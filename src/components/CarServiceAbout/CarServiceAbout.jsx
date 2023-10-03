@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
 import {
   StyledCircleDiv,
@@ -50,7 +49,6 @@ import {
 
 const CarServiceAbout = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   return (
     <section>
       <StyledContainer>
@@ -69,36 +67,34 @@ const CarServiceAbout = () => {
         <StyledP>{t('carService.pList.1')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <a href="car-service/engine-repair">
-              <StyledCarServiceDiv>
-                <picture>
-                  <source
-                    media="(min-width: 1512px)"
-                    srcSet={`${service0101xD} 1x, ${service0102xD} 2x`}
-                    sizes="(min-width: 1512px) 100vw, 387px"
-                  />
-                  <StyledAnimationImg
-                    srcSet={`${service0101x} 1x, ${service0102x} 2x`}
-                    src={service0101x}
-                    alt="engine-repair-img"
-                    sizes="(max-width: 1512px) 100vw, 360px"
-                    loading="lazy"
-                    height={250}
-                  />
-                </picture>
-                <StyledCarServiceH4>
-                  {t('footer.carServiceList.0')}
-                </StyledCarServiceH4>
-                <StyledCarServiceButton>
-                  <svg width="30" height="30">
-                    <use href={`${sprite}#icon-arrow-yellow`}></use>
-                  </svg>
-                </StyledCarServiceButton>
-              </StyledCarServiceDiv>
-            </a>
+            <StyledCarServiceDiv href="car-service/engine-repair">
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${service0101xD} 1x, ${service0102xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <StyledAnimationImg
+                  srcSet={`${service0101x} 1x, ${service0102x} 2x`}
+                  src={service0101x}
+                  alt="engine-repair-img"
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  loading="lazy"
+                  height={250}
+                />
+              </picture>
+              <StyledCarServiceH4>
+                {t('footer.carServiceList.0')}
+              </StyledCarServiceH4>
+              <StyledCarServiceButton>
+                <svg width="30" height="30">
+                  <use href={`${sprite}#icon-arrow-yellow`}></use>
+                </svg>
+              </StyledCarServiceButton>
+            </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('gearbox-repair')}>
+            <StyledCarServiceDiv href="car-service/wheel-alignment">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -125,36 +121,34 @@ const CarServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <a href="car-service/chassis-repair">
-              <StyledCarServiceDiv>
-                <picture>
-                  <source
-                    media="(min-width: 1512px)"
-                    srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
-                    sizes="(min-width: 1512px) 100vw, 387px"
-                  />
-                  <StyledAnimationImg
-                    srcSet={`${service0301x} 1x, ${service0302x} 2x`}
-                    src={service0301x}
-                    alt="repair-maintenance-img"
-                    sizes="(max-width: 1512px) 100vw, 360px"
-                    loading="lazy"
-                    height={250}
-                  />
-                </picture>
-                <StyledCarServiceH4More>
-                  {t('carService.h4List.0')}
-                </StyledCarServiceH4More>
-                <StyledCarServiceButton>
-                  <svg width="30" height="30">
-                    <use href={`${sprite}#icon-arrow-yellow`}></use>
-                  </svg>
-                </StyledCarServiceButton>
-              </StyledCarServiceDiv>
-            </a>
+            <StyledCarServiceDiv href="car-service/chassis-repair">
+              <picture>
+                <source
+                  media="(min-width: 1512px)"
+                  srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
+                  sizes="(min-width: 1512px) 100vw, 387px"
+                />
+                <StyledAnimationImg
+                  srcSet={`${service0301x} 1x, ${service0302x} 2x`}
+                  src={service0301x}
+                  alt="repair-maintenance-img"
+                  sizes="(max-width: 1512px) 100vw, 360px"
+                  loading="lazy"
+                  height={250}
+                />
+              </picture>
+              <StyledCarServiceH4More>
+                {t('carService.h4List.0')}
+              </StyledCarServiceH4More>
+              <StyledCarServiceButton>
+                <svg width="30" height="30">
+                  <use href={`${sprite}#icon-arrow-yellow`}></use>
+                </svg>
+              </StyledCarServiceButton>
+            </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('electric-repair')}>
+            <StyledCarServiceDiv href="car-service/electric-repair">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -181,7 +175,7 @@ const CarServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('car-body-repair')}>
+            <StyledCarServiceDiv href="car-service/car-body-repair">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -208,7 +202,7 @@ const CarServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('extra-services')}>
+            <StyledCarServiceDiv href="car-service/extra-services">
               <picture>
                 <source
                   media="(min-width: 1512px)"

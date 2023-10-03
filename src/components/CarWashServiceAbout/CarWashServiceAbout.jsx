@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
 import {
   StyledCircleDiv,
@@ -34,7 +33,6 @@ import {
 
 const CarWashServiceAbout = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
   return (
     <section>
       <StyledContainer>
@@ -51,9 +49,7 @@ const CarWashServiceAbout = () => {
         <StyledP>{t('carWash.pList')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv
-              onClick={() => navigate('headlight-polishing')}
-            >
+            <StyledCarServiceDiv href="car-wash-service/headlight-polishing">
               <StyledAnimationImg
                 srcSet={`${service0101x} 1x, ${service0102x} 2x`}
                 src={service0101x}
@@ -73,7 +69,7 @@ const CarWashServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('cleaning')}>
+            <StyledCarServiceDiv href="car-wash-service/cleaning">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -100,7 +96,7 @@ const CarWashServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('extra-services')}>
+            <StyledCarServiceDiv href="car-wash-service/extra-services">
               <picture>
                 <source
                   media="(min-width: 1512px)"

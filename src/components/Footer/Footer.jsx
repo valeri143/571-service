@@ -44,7 +44,7 @@ const Footer = () => {
               </StyledNumberDiv>
               <div>
                 <StyledP>E-mail:</StyledP>
-                <StyledSpan>info@571Service.com</StyledSpan>
+                <StyledSpan>sto@571.com.ua</StyledSpan>
               </div>
               <div>
                 <StyledP>{t('footer.time')}</StyledP>

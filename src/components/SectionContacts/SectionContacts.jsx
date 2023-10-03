@@ -53,8 +53,8 @@ const SectionContacts = () => {
                 </svg>
               </StyledContactsSvg>
               <StyledContactsP>{t('contacts.actions.1')}</StyledContactsP>
-              <StyledLink href="mailto:info@571Service.com">
-                info@571Service.com
+              <StyledLink href="mailto:sto@571.com.ua">
+                sto@571.com.ua
               </StyledLink>
             </StyledContactsDiv>
           </StyledOrderLi>

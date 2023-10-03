@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import {
   StyledCircleDiv,
   StyledDesktopBgImg,
@@ -35,7 +34,6 @@ import {
 
 const CarTireServiceAbout = () => {
   const { t } = useTranslation();
-  const navigate = useNavigate();
 
   return (
     <section>
@@ -52,9 +50,7 @@ const CarTireServiceAbout = () => {
         <StyledP>{t('carTire.pList')}</StyledP>
         <StyledCarServiceUl>
           <li>
-            <StyledCarServiceDiv
-              onClick={() => navigate('mounting-dismantling-of-tires')}
-            >
+            <StyledCarServiceDiv href="car-tire-service/mounting-dismantling-of-tires">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -81,7 +77,7 @@ const CarTireServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv onClick={() => navigate('tires-repair')}>
+            <StyledCarServiceDiv href="car-tire-service/tires-repair">
               <picture>
                 <source
                   media="(min-width: 1512px)"
@@ -108,9 +104,7 @@ const CarTireServiceAbout = () => {
             </StyledCarServiceDiv>
           </li>
           <li>
-            <StyledCarServiceDiv
-              onClick={() => navigate('chassis-maintenance')}
-            >
+            <StyledCarServiceDiv href="car-tire-service/chassis-maintenance">
               <picture>
                 <source
                   media="(min-width: 1512px)"
