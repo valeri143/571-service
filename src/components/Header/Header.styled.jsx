@@ -194,7 +194,8 @@ export const StyledNavLink = styled(NavLink)`
   }
 `;
 
-export const StyledButtonDiv = styled.div`
+export const StyledButtonDiv = styled.a`
+  display: block;
   max-width: 300px;
   height: 60px;
   margin-bottom: 30px;
