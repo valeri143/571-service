@@ -4,5 +4,5 @@ export const scrollToForm = () => {
     if (form) {
         form.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
-  }, 500); 
+  }, 300); 
 };
