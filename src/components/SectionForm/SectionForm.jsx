@@ -50,7 +50,7 @@ const schema = yup.object().shape({
   checkbox: yup.boolean().required('Please check the checkbox to continue'),
 });
 
-const SectionForm = () => {
+const SectionForm = ({ rref }) => {
   const [t] = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const handleSubmit = ({ name, number }, { resetForm }) => {
@@ -89,7 +89,7 @@ const SectionForm = () => {
                 onSubmit={handleSubmit}
               >
                 {({ setFieldValue }) => (
-                  <Form id="form">
+                  <Form id="form" ref={rref}>
                     <StyledFormDiv>
                       <StyledLabel htmlFor="name">
                         {t('form.labels.0')}{' '}
