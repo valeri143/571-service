@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-// import { scrollToForm } from 'helpers/scrollToForm';
+import { scrollToForm } from 'helpers/scrollToForm';
 import {
   StyledBackGroundImage,
   StyledAnimationDiv01,
@@ -57,17 +57,6 @@ export const animation = {
 };
 export const Hero = () => {
   const { t } = useTranslation();
-  const scrollToForm = () => {
-    const form = document.getElementById('form');
-    console.log(form);
-    if (form) {
-      form.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest',
-      });
-    }
-  };
 
   return (
     <section>

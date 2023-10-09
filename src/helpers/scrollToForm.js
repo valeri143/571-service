@@ -12,5 +12,5 @@ export const scrollToForm = () => {
     if (form) {
       form.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
-  }, 300); 
+  }, 1000); 
 };
