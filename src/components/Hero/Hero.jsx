@@ -57,9 +57,9 @@ export const animation = {
 };
 export const Hero = () => {
   const { t } = useTranslation();
-  const form = document.getElementById('form');
-  console.log(form);
   const scrollToForm = () => {
+    const form = document.getElementById('form');
+    console.log(form);
     if (form) {
       form.scrollIntoView({
         behavior: 'smooth',
