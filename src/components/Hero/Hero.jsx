@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-// import { scrollToForm } from 'helpers/scrollToForm';
+import { scrollToForm } from 'helpers/scrollToForm';
 import {
   StyledBackGroundImage,
   StyledAnimationDiv01,
@@ -73,7 +73,7 @@ export const Hero = () => {
               <StyledSpan>{t('hero.h1.2')}</StyledSpan> {t('hero.h1.3')}
             </StyledDH1>
             <StyledP>{t('hero.p')}</StyledP>
-            <StyledButtonDiv style={{ margin: 0 }} href="#form">
+            <StyledButtonDiv style={{ margin: 0 }} onClick={scrollToForm}>
               <StyledCircleDiv></StyledCircleDiv>
               <StyledSvg width="18" height="18">
                 <use href={`${sprite}#icon-tools`}></use>

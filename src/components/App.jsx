@@ -2,8 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 import { Layout } from './Layout';
 import { NotFound } from 'pages/NotFound/NotFound';
+import Home from 'pages/Home/Home';
 
-const Home = lazy(() => import('../pages/Home/Home'));
+// const Home = lazy(() => import('../pages/Home/Home'));
 const CarServicePage = lazy(() =>
   import('../pages/CarServicePage/CarServicePage')
 );
