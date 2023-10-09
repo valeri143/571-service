@@ -1,6 +1,7 @@
-import { lazy, useRef } from 'react';
+import { lazy } from 'react';
 import { Hero } from 'components/Hero/Hero';
 import { SectionServices } from 'components/SectionServices/SectionServices';
+import SectionForm from 'components/SectionForm/SectionForm';
 
 const SectionAbout = lazy(() => import('components/SectionAbout/SectionAbout'));
 const SectionFeedbacks = lazy(() =>
@@ -9,33 +10,33 @@ const SectionFeedbacks = lazy(() =>
 const SectionCertifications = lazy(() =>
   import('components/SectionCertifications/SectionCertifications')
 );
-const SectionForm = lazy(() => import('components/SectionForm/SectionForm'));
+// const SectionForm = lazy(() => import('components/SectionForm/SectionForm'));
 const SectionBlog = lazy(() => import('components/SectionBlog/SectionBlog'));
 const SectionContacts = lazy(() =>
   import('components//SectionContacts/SectionContacts')
 );
 
 const Home = () => {
-  const formRef = useRef(null);
+  // const formRef = useRef(null);
 
-  const scrollToForm = () => {
-    if (formRef.current) {
-      formRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-        inline: 'nearest',
-      });
-    }
-  };
+  // const scrollToForm = () => {
+  //   if (formRef.current) {
+  //     formRef.current.scrollIntoView({
+  //       behavior: 'smooth',
+  //       block: 'center',
+  //       inline: 'nearest',
+  //     });
+  //   }
+  // };
 
   return (
     <>
-      <Hero onClick={scrollToForm} />
+      <Hero />
       <SectionServices />
       <SectionAbout />
       <SectionFeedbacks />
       <SectionCertifications />
-      <SectionForm rref={formRef} />
+      <SectionForm />
       <SectionBlog />
       <SectionContacts />
     </>
