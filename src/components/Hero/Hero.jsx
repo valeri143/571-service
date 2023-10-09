@@ -58,16 +58,15 @@ export const animation = {
 export const Hero = () => {
   const { t } = useTranslation();
   const form = document.getElementById('form');
+  console.log(form);
   const scrollToForm = () => {
-    setTimeout(() => {
-      if (form) {
-        form.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center',
-          inline: 'nearest',
-        });
-      }
-    }, 300);
+    if (form) {
+      form.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest',
+      });
+    }
   };
 
   return (
