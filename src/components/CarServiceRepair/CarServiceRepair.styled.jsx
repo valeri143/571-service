@@ -154,7 +154,6 @@ export const StyledGridUl = styled.ul`
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: max-content;
-    align-items: center;
   }
 `;
 
