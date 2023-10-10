@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { StyledContainer } from 'components/SectionServices/SectionServices.styled';
 import {
   StyledConfidenceP,
@@ -24,6 +25,7 @@ import logo from '../../images/logo.svg';
 
 const Footer = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   return (
     <StyledFooter>
       <StyledContainer style={{ paddingBottom: 41 }}>
@@ -36,6 +38,9 @@ const Footer = () => {
                 loading="lazy"
                 width={43}
                 height={38}
+                onClick={() => {
+                  navigate('/');
+                }}
               />
             </StyledImgDiv>
             <StyledContactsDiv>

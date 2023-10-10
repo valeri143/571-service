@@ -152,6 +152,9 @@ export const StyledCarServiceButton = styled.button`
 `;
 
 export const StyledAnimationImg = styled.img`
+  height: 250px;
+  background: var(--light-color);
+  border-radius: 8px;
   @media screen and (min-width: 1512px) {
     width: 100%;
     transition: scale 250ms ease-in-out;

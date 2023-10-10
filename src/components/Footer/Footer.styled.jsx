@@ -23,6 +23,7 @@ export const StyledImg = styled.img`
   @media screen and (min-width: 1512px) {
     width: 92px;
     height: 81px;
+    cursor: pointer;
   }
 `;
 export const StyledImgDiv = styled.div`

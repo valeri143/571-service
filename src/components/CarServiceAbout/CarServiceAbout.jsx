@@ -9,32 +9,17 @@ import {
   StyledP,
   StyledSpan,
 } from 'components/SectionAbout/SectionAbout.styled';
-import bgD from '../../images/desktop/bg-circle-desktop.png';
-import sprite from '../../images/sprite.svg';
-import service0101x from '../../images/car-sevices/car-service-about01@1x-min.jpg';
-import service0102x from '../../images/car-sevices/car-service-about01@2x-min.jpg';
-import service0101xD from '../../images/desktop/links/engine@1x-min.jpg';
-import service0102xD from '../../images/desktop/links/engine@2x-min.jpg';
-import service0201x from '../../images/car-sevices/car-service-about02@1x-min.jpg';
-import service0202x from '../../images/car-sevices/car-service-about02@2x-min.jpg';
-import service0201xD from '../../images/desktop/links/gearbox@1x-min.jpg';
-import service0202xD from '../../images/desktop/links/gearbox@2x-min.jpg';
-import service0301x from '../../images/car-sevices/car-service-about03@1x-min.jpg';
-import service0302x from '../../images/car-sevices/car-service-about03@2x-min.jpg';
-import service0301xD from '../../images/desktop/links/chassis@1x-min.jpg';
-import service0302xD from '../../images/desktop/links/chassis@2x-min.jpg';
-import service0401x from '../../images/car-sevices/car-service-about04@1x-min.jpg';
-import service0402x from '../../images/car-sevices/car-service-about04@2x-min.jpg';
-import service0401xD from '../../images/desktop/links/electric@1x-min.jpg';
-import service0402xD from '../../images/desktop/links/electric@2x-min.jpg';
-import service0501x from '../../images/car-sevices/car-service-about05@1x-min.jpg';
-import service0502x from '../../images/car-sevices/car-service-about05@2x-min.jpg';
-import service0501xD from '../../images/desktop/links/body@1x-min.jpg';
-import service0502xD from '../../images/desktop/links/body@2x-min.jpg';
-import service0601x from '../../images/car-sevices/car-service-about06@1x-min.jpg';
-import service0602x from '../../images/car-sevices/car-service-about06@2x-min.jpg';
-import service0601xD from '../../images/desktop/links/extra@1x-min.jpg';
-import service0602xD from '../../images/desktop/links/extra@2x-min.jpg';
+import bgD from 'images/desktop/bg-circle-desktop.png';
+import sprite from 'images/sprite.svg';
+import service0101x from 'images/car-sevices/car-service-about01@1x-min.jpg';
+import service0102x from 'images/car-sevices/car-service-about01@2x-min.jpg';
+import service0101xD from 'images/desktop/links/engine@1x-min.jpg';
+import service0102xD from 'images/desktop/links/engine@2x-min.jpg';
+import services02 from 'images/car-sevices/wheel-alignment-min.jpg';
+import services03 from 'images/car-sevices/chassis-min.png';
+import services04 from 'images/car-sevices/electric-min.jpg';
+import services05 from 'images/car-sevices/body-min.png';
+import services06 from 'images/car-sevices/dent-min.jpg';
 import {
   StyledAnimationImg,
   StyledCarServiceButton,
@@ -98,12 +83,11 @@ const CarServiceAbout = () => {
               <picture>
                 <source
                   media="(min-width: 1512px)"
-                  srcSet={`${service0201xD} 1x, ${service0202xD} 2x`}
+                  src={services02}
                   sizes="(min-width: 1512px) 100vw, 387px"
                 />
                 <StyledAnimationImg
-                  srcSet={`${service0201x} 1x, ${service0202x} 2x`}
-                  src={service0201x}
+                  src={services02}
                   alt="checkpoint-repair-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
@@ -125,12 +109,11 @@ const CarServiceAbout = () => {
               <picture>
                 <source
                   media="(min-width: 1512px)"
-                  srcSet={`${service0301xD} 1x, ${service0302xD} 2x`}
+                  src={services03}
                   sizes="(min-width: 1512px) 100vw, 387px"
                 />
                 <StyledAnimationImg
-                  srcSet={`${service0301x} 1x, ${service0302x} 2x`}
-                  src={service0301x}
+                  src={services03}
                   alt="repair-maintenance-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
@@ -152,12 +135,11 @@ const CarServiceAbout = () => {
               <picture>
                 <source
                   media="(min-width: 1512px)"
-                  srcSet={`${service0401xD} 1x, ${service0402xD} 2x`}
+                  src={services04}
                   sizes="(min-width: 1512px) 100vw, 387px"
                 />
                 <StyledAnimationImg
-                  srcSet={`${service0401x} 1x, ${service0402x} 2x`}
-                  src={service0401x}
+                  src={services04}
                   alt="repair-maintenance-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
@@ -179,12 +161,11 @@ const CarServiceAbout = () => {
               <picture>
                 <source
                   media="(min-width: 1512px)"
-                  srcSet={`${service0501xD} 1x, ${service0502xD} 2x`}
+                  src={services05}
                   sizes="(min-width: 1512px) 100vw, 387px"
                 />
                 <StyledAnimationImg
-                  srcSet={`${service0501x} 1x, ${service0502x} 2x`}
-                  src={service0501x}
+                  src={services05}
                   alt="repair-maintenance-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
@@ -206,12 +187,11 @@ const CarServiceAbout = () => {
               <picture>
                 <source
                   media="(min-width: 1512px)"
-                  srcSet={`${service0601xD} 1x, ${service0602xD} 2x`}
+                  src={services06}
                   sizes="(min-width: 1512px) 100vw, 387px"
                 />
                 <StyledAnimationImg
-                  srcSet={`${service0601x} 1x, ${service0602x} 2x`}
-                  src={service0601x}
+                  src={services06}
                   alt="repair-maintenance-img"
                   sizes="(max-width: 1512px) 100vw, 360px"
                   loading="lazy"
