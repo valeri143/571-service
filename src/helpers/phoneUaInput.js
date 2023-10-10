@@ -1,6 +1,6 @@
   export const formatPhoneNumber = (input) => {
-    const numbersOnly = input.replace(/\D/g, '');
-    const formattedNumber = '+380 ' + numbersOnly.trim();
+    // const numbersOnly = input.replace(/\D/g, '');
+    // const formattedNumber = '+380 ' + numbersOnly.trim();
 
     if (input.split(' ')[0] === '+380') {
       const numbersOnly = input.split(' ').slice(1).join('').replace(/\D/g, '');
@@ -38,8 +38,7 @@
 
         return formattedPhoneNumber;
       }
-      return;
     }
 
-    return formattedNumber
+    // return formattedNumber
   };

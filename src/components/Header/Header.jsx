@@ -61,6 +61,10 @@ export const Header = () => {
     setIsServiceMenuOpen(!isSeviceMenuOpen);
   };
 
+  const toggleServiceMenuOpen = () => {
+    setIsServiceMenuOpen(true);
+  };
+
   const toggleServiceMenuMobile = () => {
     setIsServiceMenuMobileOpen(!isSeviceMenuMobileOpen);
   };
@@ -103,7 +107,10 @@ export const Header = () => {
           <nav>
             <StyledMenuNavLinkUl>
               <li>
-                <StyledNavLink onClick={toggleServiceMenu}>
+                <StyledNavLink
+                  onClick={toggleServiceMenu}
+                  onMouseEnter={toggleServiceMenuOpen}
+                >
                   {t('header.navLinksList.0')}
                 </StyledNavLink>
               </li>
