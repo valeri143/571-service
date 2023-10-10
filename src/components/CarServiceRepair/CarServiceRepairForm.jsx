@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Formik, ErrorMessage, Form } from 'formik';
 import * as yup from 'yup';
-import { formatPhoneNumber } from 'helpers/phoneUaInput';
+import { phoneInputHandler } from 'helpers/phoneUaInput';
 import { Error } from 'components/Error';
 import { StyledFormikDiv, StyledH3 } from './CarServiceRepair.styled';
 import {
@@ -74,17 +74,9 @@ export const CarServiceRepairForm = () => {
                 name="number"
                 id="number"
                 type="tel"
-                placeholder="+380 XXX XX XX XX"
+                placeholder="+38 XXX ХXX XX XX"
                 autoComplete="off"
-                onChange={e => {
-                  const formattedNumber = formatPhoneNumber(e.target.value);
-                  setFieldValue('number', formattedNumber);
-                }}
-                onFocus={e => {
-                  if (!e.target.value) {
-                    setFieldValue('number', '+380 ');
-                  }
-                }}
+                onClick={phoneInputHandler}
               />
               <ErrorMessage name="number" component={Error} />
             </StyledFormDiv>

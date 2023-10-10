@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Formik, ErrorMessage, Form } from 'formik';
 import { motion } from 'framer-motion';
 import * as yup from 'yup';
-import { formatPhoneNumber } from 'helpers/phoneUaInput';
+import { phoneInputHandler } from 'helpers/phoneUaInput';
 import { Error } from 'components/Error';
 import {
   StyledCircleDiv,
@@ -119,19 +119,9 @@ const SectionForm = () => {
                         name="number"
                         id="number"
                         type="tel"
-                        placeholder="+380 XXX XX XX XX"
+                        placeholder="+38 XXX ХXX XX XX"
                         autoComplete="off"
-                        onChange={e => {
-                          const formattedNumber = formatPhoneNumber(
-                            e.target.value
-                          );
-                          setFieldValue('number', formattedNumber);
-                        }}
-                        onFocus={e => {
-                          if (!e.target.value) {
-                            setFieldValue('number', '+380 ');
-                          }
-                        }}
+                        onClick={phoneInputHandler}
                       />
                       <ErrorMessage name="number" component={Error} />
                     </StyledFormDiv>
@@ -147,7 +137,7 @@ const SectionForm = () => {
                         {t('form.checkboxText')}
                       </StyledCheckboxLabel>
                       {!formSubmitted && (
-                        <StyledButton type="submit">
+                        <StyledButton type="submit" id="button">
                           {t('header.buttonText')}
                         </StyledButton>
                       )}

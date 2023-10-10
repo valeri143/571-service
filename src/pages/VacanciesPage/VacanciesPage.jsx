@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Formik, ErrorMessage } from 'formik';
-import { formatPhoneNumber } from 'helpers/phoneUaInput';
+import { phoneInputHandler } from 'helpers/phoneUaInput';
 import { Error } from 'components/Error';
 import { StyledContainer } from 'components/Hero/Hero.styled';
 import {
@@ -457,19 +457,9 @@ const VacanciesPage = () => {
                       name="number"
                       id="number"
                       type="tel"
-                      placeholder="+380 XXX XX XX XX"
+                      placeholder="+38 XXX ХXX XX XX"
                       autoComplete="off"
-                      onChange={e => {
-                        const formattedNumber = formatPhoneNumber(
-                          e.target.value
-                        );
-                        setFieldValue('number', formattedNumber);
-                      }}
-                      onFocus={e => {
-                        if (!e.target.value) {
-                          setFieldValue('number', '+380 ');
-                        }
-                      }}
+                      onClick={phoneInputHandler}
                     />
                     <ErrorMessage name="number" component={Error} />
                   </StyledFormDiv>
