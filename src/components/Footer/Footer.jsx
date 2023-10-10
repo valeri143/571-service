@@ -7,17 +7,18 @@ import {
   StyledFooter,
   StyledFooterLineDiv,
   StyledImgDiv,
-  StyledItemP,
+  StyledItemNavLink,
   StyledH5,
   StyledNavLinksListUl,
   StyledNumberDiv,
   StyledP,
-  StyledPhoneP,
+  StyledPhoneLink,
   StyledRightsP,
-  StyledSpan,
+  StyledLink,
   StyledTimeDiv,
   StyledImg,
   StyledConfidenceDiv,
+  StyledItemP,
 } from './Footer.styled';
 import logo from '../../images/logo.svg';
 
@@ -39,12 +40,18 @@ const Footer = () => {
             </StyledImgDiv>
             <StyledContactsDiv>
               <StyledNumberDiv>
-                <StyledPhoneP>050 936 34 00</StyledPhoneP>
-                <StyledPhoneP>063 527 15 19</StyledPhoneP>
+                <StyledPhoneLink href="tel:050 936 34 00">
+                  050 936 34 00
+                </StyledPhoneLink>
+                <StyledPhoneLink href="tel:063 527 15 19">
+                  063 527 15 19
+                </StyledPhoneLink>
               </StyledNumberDiv>
               <div>
                 <StyledP>E-mail:</StyledP>
-                <StyledSpan>sto@571.com.ua</StyledSpan>
+                <StyledLink href="mailto:sto@571.com.ua">
+                  sto@571.com.ua
+                </StyledLink>
               </div>
               <div>
                 <StyledP>{t('footer.time')}</StyledP>
@@ -52,13 +59,13 @@ const Footer = () => {
                   <li>
                     <StyledTimeDiv>
                       <StyledP>Пн- Пт </StyledP>
-                      <StyledSpan>с 09:00-18:00</StyledSpan>
+                      <StyledLink>с 09:00-18:00</StyledLink>
                     </StyledTimeDiv>
                   </li>
                   <li>
                     <StyledTimeDiv>
                       <StyledP>Сб-Вс </StyledP>
-                      <StyledSpan>с 09:00-16:00</StyledSpan>
+                      <StyledLink>с 09:00-16:00</StyledLink>
                     </StyledTimeDiv>
                   </li>
                 </ul>
@@ -69,19 +76,29 @@ const Footer = () => {
             <StyledH5>{t('footer.navLinksTitles.0')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemP>{t('footer.carServiceList.0')}</StyledItemP>
+                <StyledItemNavLink to="car-service/engine-repair">
+                  {t('footer.carServiceList.0')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('footer.carServiceList.1')}</StyledItemP>
+                <StyledItemNavLink to="car-service/gearbox-repair">
+                  {t('footer.carServiceList.1')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('footer.carServiceList.2')}</StyledItemP>
+                <StyledItemNavLink to="car-service/chassis-repair">
+                  {t('footer.carServiceList.2')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('footer.carServiceList.3')}</StyledItemP>
+                <StyledItemNavLink to="car-service/electric-repair">
+                  {t('footer.carServiceList.3')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('hero.animationText.0')}</StyledItemP>
+                <StyledItemNavLink to="car-service/wheel-alignment">
+                  {t('hero.animationText.0')}
+                </StyledItemNavLink>
               </li>
               <li>
                 <StyledItemP>{t('header.servicesMenu.3')}</StyledItemP>
@@ -95,7 +112,9 @@ const Footer = () => {
                 <StyledItemP>{t('footer.newCarWashServiceList.1')}</StyledItemP>
               </li>
               <li>
-                <StyledItemP>{t('footer.newCarWashServiceList.2')}</StyledItemP>
+                <StyledItemNavLink to="car-service/car-body-repair">
+                  {t('footer.newCarWashServiceList.2')}
+                </StyledItemNavLink>
               </li>
               <li>
                 <StyledItemP>{t('footer.newCarWashServiceList.3')}</StyledItemP>
@@ -115,13 +134,19 @@ const Footer = () => {
             <StyledH5>{t('footer.navLinksTitles.2')}</StyledH5>
             <StyledNavLinksListUl>
               <li>
-                <StyledItemP>{t('footer.tireServiceList.0')}</StyledItemP>
+                <StyledItemNavLink to="car-tire-service/mounting-dismantling-of-tires">
+                  {t('footer.tireServiceList.0')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('footer.tireServiceList.1')}</StyledItemP>
+                <StyledItemNavLink to="/car-tire-service/tires-repair">
+                  {t('footer.tireServiceList.1')}
+                </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemP>{t('footer.tireServiceList.2')}</StyledItemP>
+                <StyledItemNavLink to="/car-tire-service/chassis-maintenance">
+                  {t('footer.tireServiceList.2')}
+                </StyledItemNavLink>
               </li>
               <li>
                 <StyledItemP>{t('header.servicesMenu.4')}</StyledItemP>

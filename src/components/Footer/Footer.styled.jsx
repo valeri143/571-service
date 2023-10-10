@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
@@ -33,8 +34,16 @@ export const StyledImgDiv = styled.div`
   }
 `;
 
-export const StyledPhoneP = styled.p`
+export const StyledPhoneLink = styled.a`
   color: var(--accent-color);
+  transition: color 450ms var(--animation-cubic);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--grey-color);
+    opacity: 0.8;
+  }
 `;
 
 export const StyledNumberDiv = styled.div`
@@ -51,10 +60,17 @@ export const StyledP = styled.p`
   opacity: 0.8;
 `;
 
-export const StyledSpan = styled.span`
+export const StyledLink = styled.a`
   color: var(--light-color);
   font-size: 16px;
   line-height: 1.5;
+  transition: color 450ms var(--animation-cubic);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
 `;
 
 export const StyledTimeDiv = styled.div`
@@ -76,12 +92,27 @@ export const StyledH5 = styled.h3`
   margin-bottom: 20px;
 `;
 
-export const StyledItemP = styled.p`
+export const StyledItemNavLink = styled(NavLink)`
   color: var(--grey-color);
   font-size: 12px;
   font-weight: 300;
   line-height: 1.5;
   opacity: 0.8;
+  transition: color 450ms var(--animation-cubic);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--accent-color);
+  }
+`;
+export const StyledItemP = styled(NavLink)`
+  color: var(--grey-color);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  opacity: 0.8;
+  cursor: auto;
 `;
 
 export const StyledNavLinksListUl = styled.ul`

@@ -33,6 +33,24 @@ export const StyledBackGroundImage = styled.div`
   }
 `;
 
+export const StyledContainerHero = styled.div`
+  padding: 50px 15px 80px 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  @media screen and (min-width: 390px) {
+    width: 390px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1512px) {
+    width: auto;
+    padding: 100px 156px 150px 156px;
+  }
+`;
+
 export const StyledContainer = styled.div`
   padding: 50px 15px 80px 15px;
   margin: 0 auto;

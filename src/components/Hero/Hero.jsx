@@ -8,7 +8,6 @@ import {
   StyledAnimationDiv03,
   StyledAnimationP,
   StyledAnimationUl,
-  StyledContainer,
   StyledH1,
   StyledImg,
   StyledP,
@@ -23,6 +22,7 @@ import {
   StyledNumP01,
   StyledDH1,
   StyledAnimationDiv,
+  StyledContainerHero,
 } from './Hero.styled';
 import sprite from '../../images/sprite.svg';
 import bgCarMobile1x from '../../images/mobile/backgrounds/car-bg@1x-min.png';
@@ -61,7 +61,7 @@ export const Hero = () => {
   return (
     <section>
       <StyledBackGroundImage>
-        <StyledContainer>
+        <StyledContainerHero>
           <StyledAnimationDiv>
             <StyledH1>
               {t('hero.h1.0')} <span>{t('hero.h1.1')}</span>
@@ -149,7 +149,7 @@ export const Hero = () => {
               </StyledBenefitsDiv>
             </li>
           </StyledBenefitsUl>
-        </StyledContainer>
+        </StyledContainerHero>
       </StyledBackGroundImage>
     </section>
   );

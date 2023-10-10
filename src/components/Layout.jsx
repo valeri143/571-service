@@ -12,7 +12,7 @@ const loaderStyle = {
   height: '100vh',
 };
 
-export const Layout = ({ lang }) => {
+export const Layout = () => {
   return (
     <>
       <Header />
