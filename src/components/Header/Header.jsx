@@ -69,7 +69,9 @@ export const Header = () => {
     setIsServiceMenuMobileOpen(!isSeviceMenuMobileOpen);
   };
   const closeServiceMenu = () => {
-    setIsServiceMenuOpen(false);
+    if (isSeviceMenuOpen) {
+      setIsServiceMenuOpen(false);
+    }
   };
 
   const closeServiceMenuMobile = () => {
@@ -78,6 +80,7 @@ export const Header = () => {
 
   return (
     <StyledHeader
+      onMouseLeave={closeServiceMenu}
       style={{
         backgroundColor:
           location.pathname === '/contacts' ||

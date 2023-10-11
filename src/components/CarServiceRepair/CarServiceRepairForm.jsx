@@ -47,64 +47,62 @@ export const CarServiceRepairForm = () => {
         validationSchema={schema}
         onSubmit={handleSubmit}
       >
-        {({ setFieldValue }) => (
-          <Form>
-            <StyledFormDiv>
-              <StyledLabel htmlFor="name">{t('form.labels.0')} </StyledLabel>
-              <StyledBorder></StyledBorder>
-              <StyledSvg width="22" height="22">
-                <use href={`${sprite}#icon-address-book`}></use>
-              </StyledSvg>
-              <StyledField
-                name="name"
-                id="name"
-                placeholder={t('form.placeholderName')}
-                autoComplete="off"
-              />
-              <ErrorMessage name="name" component={Error} />
-            </StyledFormDiv>
+        <Form>
+          <StyledFormDiv>
+            <StyledLabel htmlFor="name">{t('form.labels.0')} </StyledLabel>
+            <StyledBorder></StyledBorder>
+            <StyledSvg width="22" height="22">
+              <use href={`${sprite}#icon-address-book`}></use>
+            </StyledSvg>
+            <StyledField
+              name="name"
+              id="name"
+              placeholder={t('form.placeholderName')}
+              autoComplete="off"
+            />
+            <ErrorMessage name="name" component={Error} />
+          </StyledFormDiv>
 
-            <StyledFormDiv>
-              <StyledLabel htmlFor="number">{t('form.labels.1')}</StyledLabel>
-              <StyledBorderNumber></StyledBorderNumber>
-              <StyledSvg width="22" height="22">
-                <use href={`${sprite}#icon-call-yellow-outline`}></use>
-              </StyledSvg>
-              <StyledField
-                name="number"
-                id="number"
-                type="tel"
-                placeholder="+38 XXX ХXX XX XX"
-                autoComplete="off"
-                onClick={phoneInputHandler}
-              />
-              <ErrorMessage name="number" component={Error} />
-            </StyledFormDiv>
+          <StyledFormDiv>
+            <StyledLabel htmlFor="number">{t('form.labels.1')}</StyledLabel>
+            <StyledBorderNumber></StyledBorderNumber>
+            <StyledSvg width="22" height="22">
+              <use href={`${sprite}#icon-call-yellow-outline`}></use>
+            </StyledSvg>
+            <StyledField
+              name="number"
+              id="number"
+              type="tel"
+              placeholder="+38 XXX ХXX XX XX"
+              autoComplete="off"
+              onClick={phoneInputHandler}
+            />
+            <ErrorMessage name="number" component={Error} />
+          </StyledFormDiv>
 
-            <StyledSubmitDiv>
-              <StyledCheckboxLabel>
-                <StyledCheckboxField name="checkbox" type="checkbox" required />
-                <ErrorMessage name="checkbox" component={Error} />
-                {t('form.checkboxText')}
-              </StyledCheckboxLabel>
-              {!formSubmitted && (
-                <StyledButton type="submit">
-                  {t('header.buttonText')}
-                </StyledButton>
-              )}
-              {formSubmitted && (
-                <StyledSubmittedButton>
-                  <StyledSubmittedP>
-                    <StyledSubmittedSpan>
-                      {t('form.buttonSubmittedText.0')}
-                    </StyledSubmittedSpan>
-                    {t('form.buttonSubmittedText.1')}
-                  </StyledSubmittedP>
-                </StyledSubmittedButton>
-              )}
-            </StyledSubmitDiv>
-          </Form>
-        )}
+          <StyledSubmitDiv>
+            <StyledCheckboxLabel>
+              <StyledCheckboxField name="checkbox" type="checkbox" required />
+              <ErrorMessage name="checkbox" component={Error} />
+              {t('form.checkboxText')}
+            </StyledCheckboxLabel>
+            {!formSubmitted && (
+              <StyledButton type="submit">
+                {t('header.buttonText')}
+              </StyledButton>
+            )}
+            {formSubmitted && (
+              <StyledSubmittedButton>
+                <StyledSubmittedP>
+                  <StyledSubmittedSpan>
+                    {t('form.buttonSubmittedText.0')}
+                  </StyledSubmittedSpan>
+                  {t('form.buttonSubmittedText.1')}
+                </StyledSubmittedP>
+              </StyledSubmittedButton>
+            )}
+          </StyledSubmitDiv>
+        </Form>
       </Formik>
     </StyledFormikDiv>
   );
