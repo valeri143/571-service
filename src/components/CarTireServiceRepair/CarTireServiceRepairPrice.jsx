@@ -8,8 +8,10 @@ import {
   PriceTd,
   StyledTh,
   StyledTrHeaders,
-  ServiceCell,
   StyledTransformDiv,
+  StyledTableTire,
+  StyledH3,
+  ServiceCellTire,
 } from './CarTireServiceRepair.styled';
 
 const CarTireServiceRepairPrice = () => {
@@ -20,82 +22,382 @@ const CarTireServiceRepairPrice = () => {
       <StyledH2 style={{ marginLeft: 0 }}>
         {t('mountingDismantlingOfTires.h2')}
       </StyledH2>
-      <StyledTable>
+      <StyledH3>{t('mountingDismantlingOfTires.tiresList.0')}</StyledH3>
+      <StyledTable style={{ margin: 0 }}>
         <thead>
           <StyledTrHeaders>
-            <StyledTh>{t('mountingDismantlingOfTires.tiresList.0')}</StyledTh>
-            <StyledTh>{t('mountingDismantlingOfTires.tiresList.1')}</StyledTh>
-            <StyledTh>{t('mountingDismantlingOfTires.tiresList.2')}</StyledTh>
+            <StyledTh></StyledTh>
             <StyledTh>{t('mountingDismantlingOfTires.tiresList.3')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.4')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.5')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.6')}</StyledTh>
           </StyledTrHeaders>
         </thead>
         <tbody>
-          <StyledTr>
-            <ServiceCell>R13</ServiceCell>
-            <PriceTd>500 грн</PriceTd>
-            <PriceTd>500 грн</PriceTd>
-            <PriceTd>-</PriceTd>
-          </StyledTr>
           <tr>
-            <ServiceCell>R14</ServiceCell>
-            <PriceTd>600 грн</PriceTd>
-            <PriceTd>600 грн</PriceTd>
-            <PriceTd>-</PriceTd>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <ServiceCellTire>R13</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R14</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R15</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R16</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R17</ServiceCellTire>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>25 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>35 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>25 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>35 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>35 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>35 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>320 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>360 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>400 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>440 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>480 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
           </tr>
-          <StyledTr>
-            <ServiceCell>R15</ServiceCell>
-            <PriceTd>650 грн</PriceTd>
-            <PriceTd>700 грн</PriceTd>
-            <PriceTd>800 грн</PriceTd>
-          </StyledTr>
+        </tbody>
+      </StyledTable>
+      <StyledH3>{t('mountingDismantlingOfTires.tiresList.1')}</StyledH3>
+      <StyledTable style={{ margin: 0 }}>
+        <thead>
+          <StyledTrHeaders>
+            <StyledTh></StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.3')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.4')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.5')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.6')}</StyledTh>
+          </StyledTrHeaders>
+        </thead>
+        <tbody>
           <tr>
-            <ServiceCell>R16</ServiceCell>
-            <PriceTd>700 грн</PriceTd>
-            <PriceTd>800 грн</PriceTd>
-            <PriceTd>900 грн</PriceTd>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <ServiceCellTire>R13/14</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R15</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R16</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R17</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R18</ServiceCellTire>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>25 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>45 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>30 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>45 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>35 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>40 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>45 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>360 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>440 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>520 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>580 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>600 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
           </tr>
-          <StyledTr>
-            <ServiceCell>R17</ServiceCell>
-            <PriceTd>750 грн</PriceTd>
-            <PriceTd>900 грн</PriceTd>
-            <PriceTd>1000 грн</PriceTd>
-          </StyledTr>
+        </tbody>
+      </StyledTable>
+      <StyledH3>{t('mountingDismantlingOfTires.tiresList.2')}</StyledH3>
+      <StyledTable style={{ margin: 0 }}>
+        <thead>
+          <StyledTrHeaders>
+            <StyledTh></StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.3')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.4')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.5')}</StyledTh>
+            <StyledTh>{t('mountingDismantlingOfTires.tiresList.6')}</StyledTh>
+          </StyledTrHeaders>
+        </thead>
+        <tbody>
           <tr>
-            <ServiceCell>R18</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1000 грн</PriceTd>
-            <PriceTd>1000 грн</PriceTd>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <ServiceCellTire>R15(ж)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R15(л)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R16(ж)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R16(л)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R17(ж)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R17(л)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R18(ж)</ServiceCellTire>
+                </StyledTr>
+                <StyledTr>
+                  <ServiceCellTire>R18(л)</ServiceCellTire>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>45 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>45 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>50 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>55 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>60 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>65 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
+            <td>
+              <StyledTableTire>
+                <StyledTr>
+                  <PriceTd>560 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>600 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>620 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>640 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>660 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>680 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>720 грн</PriceTd>
+                </StyledTr>
+                <StyledTr>
+                  <PriceTd>740 грн</PriceTd>
+                </StyledTr>
+              </StyledTableTire>
+            </td>
           </tr>
-          <StyledTr>
-            <ServiceCell>R19</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1100 грн</PriceTd>
-            <PriceTd>1300 грн</PriceTd>
-          </StyledTr>
-          <tr>
-            <ServiceCell>R20</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1200 грн</PriceTd>
-            <PriceTd>1400 грн</PriceTd>
-          </tr>
-          <StyledTr>
-            <ServiceCell>R21</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1300 грн</PriceTd>
-            <PriceTd>1500 грн</PriceTd>
-          </StyledTr>
-          <tr>
-            <ServiceCell>R22</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1400 грн</PriceTd>
-            <PriceTd>1500 грн</PriceTd>
-          </tr>
-          <StyledTr>
-            <ServiceCell>R23</ServiceCell>
-            <PriceTd>-</PriceTd>
-            <PriceTd>1500 грн</PriceTd>
-            <PriceTd>1600 грн</PriceTd>
-          </StyledTr>
         </tbody>
       </StyledTable>
     </StyledTransformDiv>

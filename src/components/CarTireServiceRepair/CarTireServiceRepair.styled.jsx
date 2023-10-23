@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const StyledH3 = styled.h3`
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+`;
+
 export const StyledTrHeaders = styled.tr`
   margin-bottom: 30px;
 `;
@@ -29,6 +38,22 @@ export const ServiceCell = styled.td`
   font-size: 16px;
   font-weight: 300;
   line-height: 1.1;
+`;
+
+export const ServiceCellTire = styled.td`
+  padding-left: 14px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  text-align: left;
+  height: 27px;
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.1;
+`;
+
+export const StyledTableTire = styled.table`
+  width: 100%;
 `;
 
 export const StyledTransformDiv = styled.div`
