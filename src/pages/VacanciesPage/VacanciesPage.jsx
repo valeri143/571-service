@@ -169,7 +169,7 @@ const VacanciesPage = () => {
                   </StyledLi>
                 </ul>
                 <StyledFeedbackFlexDiv>
-                  <StyledSalaryP>25 000 – 40 000 грн</StyledSalaryP>
+                  <StyledSalaryP>40 000 – 50 000 грн</StyledSalaryP>
                   <StyledFeedbackFlexBoxDiv>
                     <img
                       src={call}
@@ -217,19 +217,12 @@ const VacanciesPage = () => {
                       {t('vacancies.responsibilities2.4')}
                     </StyledVacanciesP>
                   </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.5')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.6')}
-                    </StyledVacanciesP>
-                  </StyledLi>
                 </ul>
+                <StyledVacanciesP>
+                  {t('vacancies.responsibilities2.5')}
+                </StyledVacanciesP>
                 <StyledFeedbackFlexDiv>
-                  <StyledSalaryP>15 000 – 40 000 грн</StyledSalaryP>
+                  <StyledSalaryP>50 000 + грн</StyledSalaryP>
                   <StyledFeedbackFlexBoxDiv>
                     <img
                       src={call}
@@ -248,156 +241,43 @@ const VacanciesPage = () => {
             <li>
               <StyledFeedbackDiv>
                 <StyledFeedbackH4>
-                  {t('vacancies.vacancies.0')}
+                  {t('vacancies.vacancies.3')}
                 </StyledFeedbackH4>
                 <StyledFeedbackBracketsSvg width="23" height="21">
                   <use href={`${sprite}#icon-brackets`}></use>
                 </StyledFeedbackBracketsSvg>
                 <StyledVacanciesP>
-                  {t('vacancies.responsibilities0.0')}
+                  {t('vacancies.responsibilities3.0')}
                 </StyledVacanciesP>
                 <ul>
                   <StyledLi>
                     <StyledVacanciesP>
-                      {t('vacancies.responsibilities0.1')}
+                      {t('vacancies.responsibilities3.1')}
                     </StyledVacanciesP>
                   </StyledLi>
                   <StyledLi>
                     <StyledVacanciesP>
-                      {t('vacancies.responsibilities0.2')}
+                      {t('vacancies.responsibilities3.2')}
                     </StyledVacanciesP>
                   </StyledLi>
                   <StyledLi>
                     <StyledVacanciesP>
-                      {t('vacancies.responsibilities0.3')}
+                      {t('vacancies.responsibilities3.3')}
                     </StyledVacanciesP>
                   </StyledLi>
                   <StyledLi>
                     <StyledVacanciesP>
-                      {t('vacancies.responsibilities0.4')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                </ul>
-                <StyledVacanciesP>
-                  {t('vacancies.responsibilities0.5')}
-                </StyledVacanciesP>
-                <StyledFeedbackFlexDiv>
-                  <StyledSalaryP>15 000 – 40 000 грн</StyledSalaryP>
-                  <StyledFeedbackFlexBoxDiv>
-                    <img
-                      src={call}
-                      alt="call"
-                      width={18}
-                      height={18}
-                      loading="lazy"
-                    />
-                    <StyledLink href="tel:050 936 34 00">
-                      050 936 34 00
-                    </StyledLink>
-                  </StyledFeedbackFlexBoxDiv>
-                </StyledFeedbackFlexDiv>
-              </StyledFeedbackDiv>
-            </li>
-            <li>
-              <StyledFeedbackDiv>
-                <StyledFeedbackH4>
-                  {t('vacancies.vacancies.1')}
-                </StyledFeedbackH4>
-                <StyledFeedbackBracketsSvg width="23" height="21">
-                  <use href={`${sprite}#icon-brackets`}></use>
-                </StyledFeedbackBracketsSvg>
-                <StyledVacanciesP>
-                  {t('vacancies.responsibilities1.0')}
-                </StyledVacanciesP>
-                <ul>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities1.1')}
+                      {t('vacancies.responsibilities3.4')}
                     </StyledVacanciesP>
                   </StyledLi>
                   <StyledLi>
                     <StyledVacanciesP>
-                      {t('vacancies.responsibilities1.2')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities1.3')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities1.4')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities1.5')}
+                      {t('vacancies.responsibilities3.5')}
                     </StyledVacanciesP>
                   </StyledLi>
                 </ul>
                 <StyledFeedbackFlexDiv>
                   <StyledSalaryP>25 000 – 40 000 грн</StyledSalaryP>
-                  <StyledFeedbackFlexBoxDiv>
-                    <img
-                      src={call}
-                      alt="call"
-                      width={18}
-                      height={18}
-                      loading="lazy"
-                    />
-                    <StyledLink href="tel:050 936 34 00">
-                      050 936 34 00
-                    </StyledLink>
-                  </StyledFeedbackFlexBoxDiv>
-                </StyledFeedbackFlexDiv>
-              </StyledFeedbackDiv>
-            </li>
-            <li>
-              <StyledFeedbackDiv>
-                <StyledFeedbackH4>
-                  {t('vacancies.vacancies.2')}
-                </StyledFeedbackH4>
-                <StyledFeedbackBracketsSvg width="23" height="21">
-                  <use href={`${sprite}#icon-brackets`}></use>
-                </StyledFeedbackBracketsSvg>
-                <StyledVacanciesP>
-                  {t('vacancies.responsibilities2.0')}
-                </StyledVacanciesP>
-                <ul>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.1')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.2')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.3')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.4')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.5')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                  <StyledLi>
-                    <StyledVacanciesP>
-                      {t('vacancies.responsibilities2.6')}
-                    </StyledVacanciesP>
-                  </StyledLi>
-                </ul>
-                <StyledFeedbackFlexDiv>
-                  <StyledSalaryP>15 000 – 40 000 грн</StyledSalaryP>
                   <StyledFeedbackFlexBoxDiv>
                     <img
                       src={call}
