@@ -4,7 +4,7 @@ import {
   StyledNewPost,
   StyledNewPostMobile,
   StyledPostDateP,
-  StyledPostDiv,
+  StyledPostLink,
   StyledPostText,
   StyledPostTitle,
 } from 'components/PostsItem/PostsItem.styled';
@@ -55,7 +55,7 @@ const BlogPage = () => {
             <li>
               <StyledNewDiv>NEW</StyledNewDiv>
               <StyledNewPost>
-                <StyledPostDiv
+                <StyledPostLink
                   style={{ maxWidth: 'none', width: 794, height: 'auto' }}
                   onClick={() => navigate('/blog/modern-car-service')}
                 >
@@ -79,7 +79,7 @@ const BlogPage = () => {
                   <StyledPostText style={{ maxWidth: 550 }}>
                     {t('blog.posts.0.1')}
                   </StyledPostText>
-                </StyledPostDiv>
+                </StyledPostLink>
               </StyledNewPost>
               <StyledNewPostMobile>
                 <PostsItem

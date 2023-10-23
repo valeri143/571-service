@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledPostDiv = styled.div`
+export const StyledPostLink = styled.a`
   max-width: 360px;
   height: 407px;
   border-radius: 8px;
