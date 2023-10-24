@@ -12,8 +12,9 @@ require 'C:\wamp64\www\571-service\PHPMailer\src\SMTP.php';
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST["name"];
     $number = $_POST["number"];
+    $form = $_POST["form"];
 if($name && $number) {
-    echo 'name: ', $name, 'number: ', $number;
+    echo 'name: ', $name, 'number: ', $number, 'Type of form: ', $form;
 // Создайте объект PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 

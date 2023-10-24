@@ -20,6 +20,7 @@ import {
   StyledSubmittedSpan,
   StyledSubmittedP,
 } from '../SectionForm/SectionForm.styled';
+import { sendEmail } from 'helpers/sendEmail';
 import sprite from '../../images/sprite.svg';
 
 export const schema = yup.object().shape({
@@ -33,10 +34,18 @@ export const schema = yup.object().shape({
 export const CarServiceRepairForm = () => {
   const [t] = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const handleSubmit = ({ name, number }, { resetForm }) => {
+  const handleSubmit = async ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
-    // console.log(name, number);
-    // sending data
+    try {
+      await sendEmail({
+        name,
+        number,
+      });
+      setFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
+    }
+
     resetForm();
   };
   return (

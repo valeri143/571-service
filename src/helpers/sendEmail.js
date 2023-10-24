@@ -1,4 +1,4 @@
-export const sendEmail = ({ name, number }) => {
+export const sendEmail = ({ name, number, form = 'feedback' }) => {
 
     const xhr = new XMLHttpRequest();
     xhr.open('POST', '../../send.php', true);
@@ -11,5 +11,5 @@ export const sendEmail = ({ name, number }) => {
       }
     };
 
-    xhr.send(JSON.stringify({ name, number }));
+    xhr.send(JSON.stringify({ name, number, form }));
 }

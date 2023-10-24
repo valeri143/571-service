@@ -49,7 +49,6 @@ const ContactsPage = () => {
 
   const handleSubmit = async ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
-    // sending data
     try {
       await sendEmail({
         name,
@@ -62,6 +61,7 @@ const ContactsPage = () => {
 
     resetForm();
   };
+
   return (
     <>
       <section>
