@@ -1,7 +1,7 @@
-export const sendEmail = (data) => {
+export const sendEmail = ({ name, number }) => {
 
     const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/procees_form.php', true);
+    xhr.open('POST', '../../send.php', true);
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
@@ -11,5 +11,5 @@ export const sendEmail = (data) => {
       }
     };
 
-    xhr.send(JSON.stringify(data));
+    xhr.send(JSON.stringify({ name, number }));
 }

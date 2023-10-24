@@ -42,7 +42,7 @@ import {
   IframeMob,
   IframeTab,
 } from 'components/SectionContacts/SectionContacts.styled';
-// import { sendEmail } from 'helpers/sendEmail';
+import { sendEmail } from 'helpers/sendEmail';
 const ContactsPage = () => {
   const { t } = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -50,15 +50,15 @@ const ContactsPage = () => {
   const handleSubmit = async ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
     // sending data
-    // try {
-    //   await sendEmail({
-    //     name,
-    //     number,
-    //   });
-    //   setFormSubmitted(true);
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      await sendEmail({
+        name,
+        number,
+      });
+      setFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
+    }
 
     resetForm();
   };
