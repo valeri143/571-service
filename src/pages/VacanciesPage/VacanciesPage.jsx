@@ -49,6 +49,7 @@ import {
   StyledSubmittedSpan,
   StyledSubmittedP,
 } from 'components/SectionForm/SectionForm.styled';
+import { sendEmail } from 'helpers/sendEmail';
 
 const SectionContacts = lazy(() =>
   import('components//SectionContacts/SectionContacts')
@@ -57,10 +58,19 @@ const SectionContacts = lazy(() =>
 const VacanciesPage = () => {
   const { t } = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const handleSubmit = ({ name, number }, { resetForm }) => {
+  const handleSubmit = async ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
-    // console.log(name, number);
-    // sending data
+    try {
+      await sendEmail({
+        name,
+        number,
+        form: 'vacancies',
+      });
+      setFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
+    }
+
     resetForm();
   };
   return (

@@ -37,6 +37,7 @@ import {
   StyledBgDesktopImg,
   StyledFlexFormDesktopDiv,
 } from './SectionForm.styled';
+import { sendEmail } from 'helpers/sendEmail';
 import bg from '../../images/mobile/bg-circle.png';
 import bgD from '../../images/desktop/bg-circle-right.png';
 import sprite from '../../images/sprite.svg';
@@ -53,10 +54,18 @@ const schema = yup.object().shape({
 const SectionForm = () => {
   const [t] = useTranslation();
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const handleSubmit = ({ name, number }, { resetForm }) => {
+  const handleSubmit = async ({ name, number }, { resetForm }) => {
     setFormSubmitted(true);
-    // console.log(name, number);
-    // sending data
+    try {
+      await sendEmail({
+        name,
+        number,
+      });
+      setFormSubmitted(true);
+    } catch (error) {
+      console.log(error);
+    }
+
     resetForm();
   };
 
