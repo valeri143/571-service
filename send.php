@@ -1,42 +1,49 @@
 <?php
-header("Access-Control-Allow-Origin: *"); 
-header("Access-Control-Allow-Methods: POST"); 
-header("Access-Control-Allow-Headers: Content-Type"); 
-header("Content-Type: application/json");
-
 // Путь к файлам  
 require '/PHPMailer/src/PHPMailer.php';
 require '/PHPMailer/src/SMTP.php';
+header('Content-Type: application/json');
+
+// Получаем данные из тела запроса
+$data = json_decode(file_get_contents("php://input"), true);
+
+if ($data && isset($data['name']) && isset($data['number'])) {
+    // Извлекаем данные
+    $name = $data['name'];
+    $number = $data['number'];
 
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $name = $_POST["name"];
-    $number = $_POST["number"];
-    $form = $_POST["form"];
-if($name && $number) {
-    echo 'name: ', $name, 'number: ', $number, 'Type of form: ', $form;
-// Создайте объект PHPMailer
+
+    // Пример ответа от сервера
+    echo json_encode(['success' => true, 'message' => 'Данные успешно получены и обработаны на сервере']);
+} else {
+    // Если данные не были переданы или неверный формат данных
+    echo json_encode(['success' => false, 'message' => 'Ошибка: неверный формат данных']);
+}
+
+
+//  объект PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
 
-    //  параметры SMTP сервера 
+//  параметры SMTP сервера 
 $mail->isSMTP();
 $mail->CharSet = "UTF-8";
 $mail->Host = 'zzz.com.ua';
 $mail->SMTPAuth = true;
 $mail->Username = 'send@sto-service.zzz.com.ua';
-$mail->Password = '1Gthcgtrnbdf2023';
+$mail->Password = 'password';
 $mail->SMTPSecure = 'tls';
 $mail->Port = 587;
 
 //   отправитель и получатель, тема и текст письма.
 
 $mail->setFrom('send@sto-service.zzz.com.ua', '571 Service');
-$mail->addAddress('rusofen1@gmail.com', 'Me');
+$mail->addAddress('sto@571.com.ua', 'Me');
 $mail->Subject = 'Спасибо что выбрали наше СТО!';
 // Set HTML 
 $mail->isHTML(TRUE);
-$mail->Body = '<html>Дякуємо, ми дуже раді <br>що Ви обрали наше СТО. Наш менеджер невдовзі звяжеться з Вами!</br> Ви Неймовірні:)</html>';
-$mail->AltBody = 'Вы не помилились!!!.';
+$mail->Body = '<html>Імя:' . $name . ' Телефон:' . $number . '</html>';
+$mail->AltBody = 'Повідомлення з сайту СТО';
 
 
 // Отправляем письмо
@@ -45,8 +52,4 @@ if ($mail->send()) {
 } else {
     echo 'Ошибка при отправке письма: ' . $mail->ErrorInfo;
 }
-
-}
-}
-
 ?>
