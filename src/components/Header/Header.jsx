@@ -44,6 +44,7 @@ import {
   StyledTelImg,
 } from './Header.styled';
 import { useTranslation } from 'react-i18next';
+
 export const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -54,11 +55,11 @@ export const Header = () => {
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
   const menuRef = useRef(null);
-  const onClose = () => {
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
-  };
+  // const onClose = () => {
+  //   if (isMenuOpen) {
+  //     setIsMenuOpen(false);
+  //   }
+  // };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
