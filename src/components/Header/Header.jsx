@@ -53,6 +53,20 @@ export const Header = () => {
   const [isSeviceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
+  // useEffect(() => {
+  //   if (isMenuOpen) {
+  //     document.addEventListener('click', () => {
+  //       setIsMenuOpen(false);
+  //     });
+  //   } else {
+  //     document.removeEventListener('click', () => setIsMenuOpen(false));
+  //   }
+
+  //   return () => {
+  //     document.removeEventListener('click', () => setIsMenuOpen(false));
+  //   };
+  // }, [isMenuOpen]);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
@@ -80,7 +94,14 @@ export const Header = () => {
 
   return (
     <StyledHeader
-      onMouseLeave={closeServiceMenu}
+      // onMouseLeave={closeServiceMenu}
+      onMouseLeave={() => {
+        if (window.innerWidth >= 1512) {
+          closeServiceMenu();
+        } else {
+          setIsMenuOpen(false);
+        }
+      }}
       style={{
         backgroundColor:
           location.pathname === '/contacts' ||
