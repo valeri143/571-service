@@ -59,6 +59,7 @@ export const Header = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
   };
+
   const toggleServiceMenu = () => {
     setIsServiceMenuOpen(!isSeviceMenuOpen);
   };
@@ -80,35 +81,25 @@ export const Header = () => {
     setIsServiceMenuMobileOpen(false);
   };
 
-  const closeMenusOnMouseLeave = () => {
-    if (window.innerWidth >= 1512) {
-      closeServiceMenu();
-    } else {
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    }
-  };
   return (
     <StyledHeader
-      onMouseLeave={closeMenusOnMouseLeave}
-      // onMouseLeave={() => {
-      //   // if (menuRef.current) {
-      //   //   // console.log(5);
-      //   //   onclick = () => {
-      //   //     setIsMenuOpen(false);
-      //   //   };
-      //   // }
-      //   if (window.innerWidth >= 1512) {
-      //     closeServiceMenu();
-      //   } else {
-      //     onclick = () => {
-      //       if (isMenuOpen) {
-      //         setIsMenuOpen(false);
-      //       }
-      //     };
-      //   }
-      // }}
+      onMouseLeave={() => {
+        // if (menuRef.current) {
+        //   // console.log(5);
+        //   onclick = () => {
+        //     setIsMenuOpen(false);
+        //   };
+        // }
+        if (window.innerWidth >= 1512) {
+          closeServiceMenu();
+        } else {
+          if (isMenuOpen) {
+            onclick = () => {
+              toggleMenu();
+            };
+          }
+        }
+      }}
       style={{
         backgroundColor:
           location.pathname === '/contacts' ||
