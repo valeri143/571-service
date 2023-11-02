@@ -202,6 +202,7 @@ export const StyledAnimationUl = styled.ul`
 `;
 
 export const StyledAnimationDiv01 = styled.div`
+  pointer-events: none;
   position: absolute;
   left: 10px;
   display: inline-flex;
@@ -227,6 +228,7 @@ export const StyledAnimationDiv01 = styled.div`
 `;
 
 export const StyledAnimationDiv02 = styled.div`
+  pointer-events: none;
   position: absolute;
   top: 25px;
   right: 10px;
@@ -253,6 +255,7 @@ export const StyledAnimationDiv02 = styled.div`
 `;
 
 export const StyledAnimationDiv03 = styled.div`
+  pointer-events: none;
   position: absolute;
   top: 85px;
   display: inline-flex;
