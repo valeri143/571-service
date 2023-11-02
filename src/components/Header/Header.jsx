@@ -54,6 +54,11 @@ export const Header = () => {
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
   const menuRef = useRef(null);
+  const onClose = () => {
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -94,7 +99,7 @@ export const Header = () => {
           closeServiceMenu();
         } else {
           if (isMenuOpen) {
-            toggleMenu();
+            setIsMenuOpen(false);
           }
         }
       }}
