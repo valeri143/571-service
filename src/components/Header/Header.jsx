@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { scrollToForm } from 'helpers/scrollToForm';
 import sprite from '../../images/sprite.svg';
@@ -53,19 +53,7 @@ export const Header = () => {
   const [isSeviceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
-  // useEffect(() => {
-  //   if (isMenuOpen) {
-  //     document.addEventListener('click', () => {
-  //       setIsMenuOpen(false);
-  //     });
-  //   } else {
-  //     document.removeEventListener('click', () => setIsMenuOpen(false));
-  //   }
-
-  //   return () => {
-  //     document.removeEventListener('click', () => setIsMenuOpen(false));
-  //   };
-  // }, [isMenuOpen]);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -92,16 +80,35 @@ export const Header = () => {
     setIsServiceMenuMobileOpen(false);
   };
 
+  const closeMenusOnMouseLeave = () => {
+    if (window.innerWidth >= 1512) {
+      closeServiceMenu();
+    } else {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    }
+  };
   return (
     <StyledHeader
-      // onMouseLeave={closeServiceMenu}
-      onMouseLeave={() => {
-        if (window.innerWidth >= 1512) {
-          closeServiceMenu();
-        } else {
-          setIsMenuOpen(false);
-        }
-      }}
+      onMouseLeave={closeMenusOnMouseLeave}
+      // onMouseLeave={() => {
+      //   // if (menuRef.current) {
+      //   //   // console.log(5);
+      //   //   onclick = () => {
+      //   //     setIsMenuOpen(false);
+      //   //   };
+      //   // }
+      //   if (window.innerWidth >= 1512) {
+      //     closeServiceMenu();
+      //   } else {
+      //     onclick = () => {
+      //       if (isMenuOpen) {
+      //         setIsMenuOpen(false);
+      //       }
+      //     };
+      //   }
+      // }}
       style={{
         backgroundColor:
           location.pathname === '/contacts' ||
@@ -222,7 +229,7 @@ export const Header = () => {
         </StyledMenuButton>
       </StyledDiv>
       {isMenuOpen && (
-        <StyledHamburgerMenu>
+        <StyledHamburgerMenu ref={menuRef}>
           <nav>
             <StyledMenuNavLinkUl>
               <li>
