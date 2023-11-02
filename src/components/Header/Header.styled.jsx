@@ -134,7 +134,8 @@ export const StyledHamburgerMenu = styled.div`
   right: 50%;
   transform: translateX(50%);
   width: 100vw;
-  height: 510px;
+  // height: 510px;
+  height: 480px;
   padding-top: 34px;
   background: var(--primary-color);
   z-index: 80;
