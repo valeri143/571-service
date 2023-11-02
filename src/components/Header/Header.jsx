@@ -77,20 +77,14 @@ export const Header = () => {
   };
 
   const closeServiceMenuMobile = () => {
-    setIsServiceMenuMobileOpen(false);
+    if (setIsServiceMenuMobileOpen) {
+      setIsServiceMenuMobileOpen(false);
+    }
   };
 
   return (
     <StyledHeader
-      onMouseLeave={() => {
-        if (window.innerWidth >= 1512) {
-          closeServiceMenu();
-        } else {
-          if (isMenuOpen) {
-            setIsMenuOpen(false);
-          }
-        }
-      }}
+      onMouseLeave={closeServiceMenu}
       style={{
         backgroundColor:
           location.pathname === '/contacts' ||
@@ -308,6 +302,7 @@ export const Header = () => {
             <img src={call} alt="call" width={18} height={18} loading="lazy" />
             <StyledTel href="tel:050 936 34 00">050 936 34 00</StyledTel>
           </StyledTelDiv>
+          <div onClick={toggleMenu} style={{ height: 300 }}></div>
         </StyledHamburgerMenu>
       )}
       {isSeviceMenuOpen && (
