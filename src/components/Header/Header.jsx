@@ -94,9 +94,7 @@ export const Header = () => {
           closeServiceMenu();
         } else {
           if (isMenuOpen) {
-            onclick = () => {
-              toggleMenu();
-            };
+            toggleMenu();
           }
         }
       }}
