@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { scrollToForm } from 'helpers/scrollToForm';
 import sprite from '../../images/sprite.svg';
@@ -54,13 +54,6 @@ export const Header = () => {
   const [isSeviceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
   const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
-  const menuRef = useRef(null);
-  // const onClose = () => {
-  //   if (isMenuOpen) {
-  //     setIsMenuOpen(false);
-  //   }
-  // };
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     document.body.style.overflow = isMenuOpen ? 'auto' : 'hidden';
@@ -90,12 +83,6 @@ export const Header = () => {
   return (
     <StyledHeader
       onMouseLeave={() => {
-        // if (menuRef.current) {
-        //   // console.log(5);
-        //   onclick = () => {
-        //     setIsMenuOpen(false);
-        //   };
-        // }
         if (window.innerWidth >= 1512) {
           closeServiceMenu();
         } else {
@@ -224,7 +211,7 @@ export const Header = () => {
         </StyledMenuButton>
       </StyledDiv>
       {isMenuOpen && (
-        <StyledHamburgerMenu ref={menuRef}>
+        <StyledHamburgerMenu>
           <nav>
             <StyledMenuNavLinkUl>
               <li>
