@@ -30,7 +30,7 @@ import {
   StyledUnderlineSpan,
 } from 'components/SectionFeedbacks/SectionFeedbacks.styled';
 const SectionBlog = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const getSlidesPerView = () => {
     if (window.innerWidth >= 768 && window.innerWidth < 1512) {
       return 2;
@@ -105,7 +105,7 @@ const SectionBlog = () => {
             loading="lazy"
           />
         </StyledSwiperButton>
-        <StyledNavLink to="/blog">
+        <StyledNavLink to={`/${i18n.language}/blog`}>
           <StyledUnderlineSpan> {t('blog.buttonText.0')}</StyledUnderlineSpan>
           {t('blog.buttonText.1')}
         </StyledNavLink>

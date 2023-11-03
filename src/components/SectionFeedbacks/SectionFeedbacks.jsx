@@ -27,7 +27,7 @@ import {
 import { StyledContentContainer } from 'components/SectionCertifications/SectionCertifications.styled';
 
 const SectionFeedbacks = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const getSlidesPerView = () => {
     if (window.innerWidth >= 768 && window.innerWidth < 1512) {
       return 2;
@@ -154,7 +154,7 @@ const SectionFeedbacks = () => {
             />
           </StyledSwiperButton>
         </motion.div>
-        <StyledNavLink to="/feedbacks">
+        <StyledNavLink to={`/${i18n.language}/feedbacks`}>
           <StyledUnderlineSpan>
             {t('feedbacks.buttonText.0')}
           </StyledUnderlineSpan>

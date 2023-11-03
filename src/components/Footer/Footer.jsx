@@ -24,7 +24,7 @@ import {
 import logo from '../../images/logo.svg';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   return (
     <StyledFooter>
@@ -39,7 +39,7 @@ const Footer = () => {
                 width={43}
                 height={38}
                 onClick={() => {
-                  navigate('/');
+                  navigate(`/${i18n.language}`);
                 }}
               />
             </StyledImgDiv>
@@ -144,12 +144,12 @@ const Footer = () => {
                 </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemNavLink to="/car-tire-service/tires-repair">
+                <StyledItemNavLink to="car-tire-service/tires-repair">
                   {t('footer.tireServiceList.1')}
                 </StyledItemNavLink>
               </li>
               <li>
-                <StyledItemNavLink to="/car-tire-service/chassis-maintenance">
+                <StyledItemNavLink to="car-tire-service/chassis-maintenance">
                   {t('footer.tireServiceList.2')}
                 </StyledItemNavLink>
               </li>

@@ -1,5 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
-import { lazy } from 'react';
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { lazy, useEffect } from 'react';
 import { Layout } from './Layout';
 import { NotFound } from 'pages/NotFound/NotFound';
 
@@ -96,70 +97,96 @@ const VacanciesPage = lazy(() =>
 );
 
 export const App = () => {
+  const { i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const currentLanguage = i18n.language;
+
+    const language = currentPath.split('/')[1];
+
+    if (language === 'ru' || language === 'ua') {
+      i18n.changeLanguage(language);
+    } else {
+      currentLanguage === 'ru' ? navigate('/ru') : navigate('/ua');
+    }
+  }, [i18n, navigate, location]);
+
   return (
     <Routes basename="/571-service/">
-      <Route path="/" element={<Layout />}>
+      <Route path="/:lang" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/car-service" element={<CarServicePage />} />
+        <Route path="/:lang/car-service/" element={<CarServicePage />} />
         <Route
-          path="/car-service/wheel-alignment"
+          path="/:lang/car-service/wheel-alignment"
           element={<CarServiceWheelAlignmentRepairPage />}
         />
         <Route
-          path="/car-service/engine-repair"
+          path="/:lang/car-service/engine-repair"
           element={<CarServiceEngineRepairPage />}
         />
         <Route
-          path="/car-service/gearbox-repair"
+          path="/:lang/car-service/gearbox-repair"
           element={<CarServiceGearboxRepairPage />}
         />
         <Route
-          path="/car-service/chassis-repair"
+          path="/:lang/car-service/chassis-repair"
           element={<CarServiceChassisRepairPage />}
         />
         <Route
-          path="/car-service/electric-repair"
+          path="/:lang/car-service/electric-repair"
           element={<CarServiceElectricRepairPage />}
         />
         <Route
-          path="/car-service/car-body-repair"
+          path="/:lang/car-service/car-body-repair"
           element={<CarServiceBodyRepairPage />}
         />
         <Route
-          path="/car-service/extra-services"
+          path="/:lang/car-service/extra-services"
           element={<CarServiceExtraRepairPage />}
         />
-        <Route path="/car-wash-service" element={<CarWashServicePage />} />
         <Route
-          path="/car-wash-service/headlight-polishing"
+          path="/:lang/car-wash-service"
+          element={<CarWashServicePage />}
+        />
+        <Route
+          path="/:lang/car-wash-service/headlight-polishing"
           element={<CarWashServiceHeadlightPolishingPage />}
         />
         <Route
-          path="/car-wash-service/cleaning"
+          path="/:lang/car-wash-service/cleaning"
           element={<CarWashServiceCleaningPage />}
         />
         <Route
-          path="/car-wash-service/extra-services"
+          path="/:lang/car-wash-service/extra-services"
           element={<CarWashServiceExtraPage />}
         />
-        <Route path="/car-tire-service" element={<CarTireServicePage />} />
         <Route
-          path="/car-tire-service/mounting-dismantling-of-tires"
+          path="/:lang/car-tire-service"
+          element={<CarTireServicePage />}
+        />
+        <Route
+          path="/:lang/car-tire-service/mounting-dismantling-of-tires"
           element={<CarTireServiceMountingDismantlingOfTiresPage />}
         />
         <Route
-          path="/car-tire-service/tires-repair"
+          path="/:lang/car-tire-service/tires-repair"
           element={<CarTireServiceTiresRapairPage />}
         />
         <Route
-          path="/car-tire-service/chassis-maintenance"
+          path="/:lang/car-tire-service/chassis-maintenance"
           element={<CarTireServiceChassisMaintenancePage />}
         />
-        <Route path="/feedbacks" element={<FeedbacksPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/modern-car-service" element={<BlogDetailsPage />} />
-        <Route path="/vacancies" element={<VacanciesPage />} />
-        <Route path="/contacts" element={<ContactsPage />} />
+        <Route path="/:lang/feedbacks" element={<FeedbacksPage />} />
+        <Route path="/:lang/blog" element={<BlogPage />} />
+        <Route
+          path="/:lang/blog/modern-car-service"
+          element={<BlogDetailsPage />}
+        />
+        <Route path="/:lang/vacancies" element={<VacanciesPage />} />
+        <Route path="/:lang/contacts" element={<ContactsPage />} />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>

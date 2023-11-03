@@ -32,7 +32,7 @@ import post0301x from '../../images/posts/post03@1x-min.jpg';
 import post0302x from '../../images/posts/post03@2x-min.jpg';
 
 const SectionContacts = lazy(() =>
-  import('components//SectionContacts/SectionContacts')
+  import('components/SectionContacts/SectionContacts')
 );
 
 const BlogPage = () => {
@@ -57,7 +57,7 @@ const BlogPage = () => {
               <StyledNewPost>
                 <StyledPostLink
                   style={{ maxWidth: 'none', width: 794, height: 'auto' }}
-                  onClick={() => navigate('/blog/modern-car-service')}
+                  onClick={() => navigate('modern-car-service')}
                 >
                   <picture>
                     <source

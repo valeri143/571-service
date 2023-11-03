@@ -46,13 +46,13 @@ import {
 import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.language;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSeviceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
-  const [isSeviceMenuOpen, setIsServiceMenuOpen] = useState(false);
+  const [isServiceMenuMobileOpen, setIsServiceMenuMobileOpen] = useState(false);
+  const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -60,7 +60,7 @@ export const Header = () => {
   };
 
   const toggleServiceMenu = () => {
-    setIsServiceMenuOpen(!isSeviceMenuOpen);
+    setIsServiceMenuOpen(!isServiceMenuOpen);
   };
 
   const toggleServiceMenuOpen = () => {
@@ -68,10 +68,10 @@ export const Header = () => {
   };
 
   const toggleServiceMenuMobile = () => {
-    setIsServiceMenuMobileOpen(!isSeviceMenuMobileOpen);
+    setIsServiceMenuMobileOpen(!isServiceMenuMobileOpen);
   };
   const closeServiceMenu = () => {
-    if (isSeviceMenuOpen) {
+    if (isServiceMenuOpen) {
       setIsServiceMenuOpen(false);
     }
   };
@@ -87,11 +87,11 @@ export const Header = () => {
       onMouseLeave={closeServiceMenu}
       style={{
         backgroundColor:
-          location.pathname === '/contacts' ||
-          location.pathname === '/feedbacks' ||
-          location.pathname === '/blog' ||
-          location.pathname === '/blog/modern-car-service' ||
-          location.pathname === '/vacancies'
+          pathname === `/${currentLanguage}/contacts` ||
+          pathname === `/${currentLanguage}/feedbacks` ||
+          pathname === `/${currentLanguage}/blog` ||
+          pathname === `/${currentLanguage}/blog/modern-car-service` ||
+          pathname === `/${currentLanguage}/vacancies`
             ? 'rgba(71, 71, 71, 1)'
             : 'rgba(71, 71, 71, 0.5)',
       }}
@@ -105,7 +105,7 @@ export const Header = () => {
             width={43}
             height={38}
             onClick={() => {
-              navigate('/');
+              navigate(`/${currentLanguage}`);
               closeServiceMenu();
             }}
           />
@@ -122,22 +122,22 @@ export const Header = () => {
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/feedbacks" onClick={closeServiceMenu}>
+                <StyledNavLink to="feedbacks" onClick={closeServiceMenu}>
                   {t('header.navLinksList.1')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/blog" onClick={closeServiceMenu}>
+                <StyledNavLink to="blog" onClick={closeServiceMenu}>
                   {t('header.navLinksList.2')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/vacancies" onClick={closeServiceMenu}>
+                <StyledNavLink to="vacancies" onClick={closeServiceMenu}>
                   {t('header.navLinksList.3')}
                 </StyledNavLink>
               </li>
               <li>
-                <StyledNavLink to="/contacts" onClick={closeServiceMenu}>
+                <StyledNavLink to="contacts" onClick={closeServiceMenu}>
                   {t('header.navLinksList.4')}
                 </StyledNavLink>
               </li>
@@ -149,7 +149,10 @@ export const Header = () => {
                 <StyledLangButton
                   type="submit"
                   key="ru"
-                  onClick={() => i18n.changeLanguage('ru')}
+                  onClick={() => {
+                    i18n.changeLanguage('ru');
+                    navigate(`/ru${pathname.slice(3)}`);
+                  }}
                   disabled={i18n.resolvedLanguage === 'ru'}
                   className={currentLanguage === 'ru' ? 'active' : 'unactive'}
                 >
@@ -163,7 +166,10 @@ export const Header = () => {
                 <StyledLangButton
                   type="submit"
                   key="ua"
-                  onClick={() => i18n.changeLanguage('ua')}
+                  onClick={() => {
+                    i18n.changeLanguage('ua');
+                    navigate(`/ua${pathname.slice(3)}`);
+                  }}
                   disabled={i18n.resolvedLanguage === 'ua'}
                   className={currentLanguage === 'ua' ? 'active' : 'unactive'}
                 >
@@ -215,7 +221,7 @@ export const Header = () => {
               </li>
               <li>
                 <StyledNavLink
-                  to="/feedbacks"
+                  to="feedbacks"
                   onClick={() => {
                     closeServiceMenuMobile();
                     toggleMenu();
@@ -226,7 +232,7 @@ export const Header = () => {
               </li>
               <li>
                 <StyledNavLink
-                  to="/blog"
+                  to="blog"
                   onClick={() => {
                     closeServiceMenuMobile();
                     toggleMenu();
@@ -237,7 +243,7 @@ export const Header = () => {
               </li>
               <li>
                 <StyledNavLink
-                  to="/vacancies"
+                  to="vacancies"
                   onClick={() => {
                     closeServiceMenuMobile();
                     toggleMenu();
@@ -248,7 +254,7 @@ export const Header = () => {
               </li>
               <li>
                 <StyledNavLink
-                  to="/contacts"
+                  to="contacts"
                   onClick={() => {
                     closeServiceMenuMobile();
                     toggleMenu();
@@ -264,7 +270,10 @@ export const Header = () => {
               <StyledLangButton
                 type="submit"
                 key="ru"
-                onClick={() => i18n.changeLanguage('ru')}
+                onClick={() => {
+                  i18n.changeLanguage('ru');
+                  navigate(`/ru${pathname.slice(3)}`);
+                }}
                 disabled={i18n.resolvedLanguage === 'ru'}
                 className={currentLanguage === 'ru' ? 'active' : 'unactive'}
               >
@@ -278,7 +287,10 @@ export const Header = () => {
               <StyledLangButton
                 type="submit"
                 key="ua"
-                onClick={() => i18n.changeLanguage('ua')}
+                onClick={() => {
+                  i18n.changeLanguage('ua');
+                  navigate(`/ua${pathname.slice(3)}`);
+                }}
                 disabled={i18n.resolvedLanguage === 'ua'}
                 className={currentLanguage === 'ua' ? 'active' : 'unactive'}
               >
@@ -305,14 +317,14 @@ export const Header = () => {
           <div onClick={toggleMenu} style={{ height: 300 }}></div>
         </StyledHamburgerMenu>
       )}
-      {isSeviceMenuOpen && (
+      {isServiceMenuOpen && (
         <StyledServiceMenu>
           <StyledServiceMenuUl>
             <li>
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-service');
+                  navigate('car-service');
                 }}
               >
                 <StyledServiceMenuP>
@@ -332,7 +344,7 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-service/wheel-alignment');
+                  navigate('car-service/wheel-alignment');
                 }}
               >
                 <StyledServiceMenuP>
@@ -352,7 +364,7 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-wash-service');
+                  navigate('car-wash-service');
                 }}
               >
                 <StyledServiceMenuP>
@@ -372,7 +384,7 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-tire-service');
+                  navigate('car-tire-service');
                 }}
               >
                 <StyledServiceMenuP>
@@ -392,7 +404,7 @@ export const Header = () => {
               <StyledServiceMenuDiv
                 onClick={() => {
                   toggleServiceMenu();
-                  navigate('/car-service/car-body-repair');
+                  navigate('car-service/car-body-repair');
                 }}
               >
                 <StyledServiceMenuP>
@@ -411,7 +423,7 @@ export const Header = () => {
           </StyledServiceMenuUl>
         </StyledServiceMenu>
       )}
-      {isSeviceMenuMobileOpen && (
+      {isServiceMenuMobileOpen && (
         <StyledServiceMenuMobile>
           <StyledServiceMenuUlMobile>
             <li>
@@ -419,7 +431,7 @@ export const Header = () => {
                 onClick={() => {
                   toggleServiceMenuMobile();
                   toggleMenu();
-                  navigate('/car-service');
+                  navigate('car-service');
                 }}
               >
                 <StyledServiceMenuPMobile>
@@ -440,7 +452,7 @@ export const Header = () => {
                 onClick={() => {
                   toggleServiceMenuMobile();
                   toggleMenu();
-                  navigate('/car-service/wheel-alignment');
+                  navigate('car-service/wheel-alignment');
                 }}
               >
                 <StyledServiceMenuPMobile>
@@ -459,8 +471,9 @@ export const Header = () => {
             <li>
               <StyledServiceMenuDivMobile
                 onClick={() => {
-                  toggleServiceMenu();
-                  navigate('/car-wash-service');
+                  toggleServiceMenuMobile();
+                  toggleMenu();
+                  navigate('car-wash-service');
                 }}
               >
                 <StyledServiceMenuPMobile>
@@ -481,7 +494,7 @@ export const Header = () => {
                 onClick={() => {
                   toggleServiceMenuMobile();
                   toggleMenu();
-                  navigate('/car-tire-service');
+                  navigate('car-tire-service');
                 }}
               >
                 <StyledServiceMenuPMobile>
@@ -502,7 +515,7 @@ export const Header = () => {
                 onClick={() => {
                   toggleServiceMenuMobile();
                   toggleMenu();
-                  navigate('/car-service/car-body-repair');
+                  navigate('car-service/car-body-repair');
                 }}
               >
                 <StyledServiceMenuPMobile>
